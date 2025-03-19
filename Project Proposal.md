@@ -3,7 +3,7 @@ The proposal does not have to be a formal presentation. Though if that helps the
 What are you building? 
 
 practice making a pull request. making cheanges to see what we can see
-
+struggling to do this
 
 What are the initial features for the application?
 
