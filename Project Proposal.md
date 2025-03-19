@@ -84,3 +84,4 @@ The proposal does not have to be a formal presentation. Though if that helps the
        * testing gui 
    * By 4/18: Project Turned in! 
        * double check DRY code / java doc comments
+       * demo with Albert or TA
