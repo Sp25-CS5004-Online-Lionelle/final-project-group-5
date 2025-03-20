@@ -33,20 +33,25 @@ The proposal does not have to be a formal presentation. Though if that helps the
 
     Model: files to be put in the model package
     * Movie, a class to hold movie object details (title, average rating, year, genre, cast, description, and image?) include getter and setter methods
-    * MovieCollection class, manages the entire collection with methods for adding and removing from list
+    * IMovieCollection interface that sets up the filter and sorts
+    * MovieCollection class, manages the entire collection of movie objects for adding, removing, filtering, sorting etc
+    * IMovieList, interface for MovieList
+    * MovieList class, the list of Movie Objects
+    * Operations enum for operations that remain constant for filtering/sorting
     * MovieFilter class, a class with various methods to filter movie data such as filterByGenre, filterByYear, filterByKeyword etc
     * MovieSort, a class to sort movie data ascending or ascending. sortByYear, sortByRating etc
     * MovieDataFetch interface, an interface to fetch the data from various APIs (TMBD, OMDB, or another)
     * OMDBMovieData, a class that fetches movie data from the specfic API we decide to use
-    * MovieStorage, a class to load/save the list to multiple file types
-    * UserProfile, a class to create userprofile
-    * UserProfileStorage, a class to save the user profile to a file
+    * MovieStorage, a class to load/save the MovieList to multiple file types
+    * UserProfile, a class to create userprofile for ratings and short reviews
+    * UserProfileStorage, a class to save the user profile to a file and retreive it between sessions
 
     Controller: files to be put in the controller package 
     * MovieController, connects the model with the view, will have start() to make view visible
 
     View: files to be put in the view package
     * MovieView, the class for the graphical user interface using JFrame. Show's search, sort, and filter results and user profile. 
+    * ConsoleApp, a way to use the command line as well as the GUI?
   
     Testing: testing files
     * TestMovie 
