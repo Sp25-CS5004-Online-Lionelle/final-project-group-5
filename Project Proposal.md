@@ -54,14 +54,18 @@ The proposal does not have to be a formal presentation. Though if that helps the
    Model: files to be put in the model package
 
    - Movie, a class to hold movie object details (title, average rating, year, genre, cast, description, and image?) include getter and setter methods
+   - IMovieCollection interface that sets up initial filters and sorts
    - MovieCollection class, manages the entire collection with methods for adding and removing from list
+   - IMovieList interface for a list of Movie objects
+   - MovieList class for list of Movie Objects
+   - Operations enum for operations that remain constant for filtering
    - MovieFilter class, a class with various methods to filter movie data such as filterByGenre, filterByYear, filterByKeyword etc
    - MovieSort, a class to sort movie data ascending or ascending. sortByYear, sortByRating etc
    - MovieDataFetch interface, an interface to fetch the data from various APIs (TMBD, OMDB, or another)
    - OMDBMovieData, a class that fetches movie data from the specfic API we decide to use
-   - MovieStorage, a class to load/save the list to multiple file types
-   - UserProfile, a class to create userprofile
-   - UserProfileStorage, a class to save the user profile to a file
+   - MovieStorage, a class to load/save the MovieList to multiple file types
+   - UserProfile, a class to create userprofile for Movie ratings and reviews
+   - UserProfileStorage, a class to save the user profile to a file and retrive it between sessions
    - InputReader, a class with method to read saved moives from local xml/csv/json files
    - MovieWritter, a class with methods to write movies to local xml/csv/json files
 
@@ -75,10 +79,12 @@ The proposal does not have to be a formal presentation. Though if that helps the
    - JFrameView, a class serves as the main window for this application. This is the class for the graphical user interface using JFrame. Show's search, sort, and filter results and user profile.
    - MovieDisplay, a class to display the list of movies, including movie details
    - ButtonCommands, a class to define the button listener, such as sorting, searching by keywords, list all saved movies, etc
+   - Console, a view to use the command line as well as the GUI?
 
    Testing: testing files
 
    - TestMovie
+   - TestMovieList
    - TestMovieCollection
    - TestMovieFilter
    - TestMovieSort
