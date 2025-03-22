@@ -146,6 +146,7 @@ class IMovieList {
   +getMovies()
   +addMovie()
   +removeMovie()
+  +rateMovie()
 }
 class IMovieDataFetch {
   <<interface>>
@@ -264,7 +265,7 @@ ConsoleView --> MovieController : "interacts with"
 
 **5.  How do you plan to break up the work?**
    We plan to break up the work by using a github projects template to assign tasks to different group members.
-   We will initially divide the tasks evenly by class and testfile.
+   We will initially divide the tasks evenly by class and test file.
 
 **6.  What is your teams timeline and major check-in points?**
    Major check-in points will be weekly check ins on Tuesday during our meeting time: 3/25, 4/1, 4/8, 4/15.
