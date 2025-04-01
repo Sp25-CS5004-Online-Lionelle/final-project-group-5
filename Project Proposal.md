@@ -267,6 +267,46 @@ ConsoleView --> MovieController : "interacts with"
    We plan to break up the work by using a github projects template to assign tasks to different group members.
    We will initially divide the tasks evenly by class and test file.
 
+   #### Week 1: Models, API, Storage (potential tasks by group member for week 1)
+
+  Person 1
+  * Implement Movie class and unit tests
+  * Implement IMovieCollection, MovieCollection with tests
+  * Implement IMovieList, MovieList with tests
+
+  Person 2
+  * Implement MovieFilter with filterByGenre, filterByYear, filterByKeyword
+  * Implement MovieSort with sortByYear, sortByRating
+  * Define and implement Operations enum
+  
+  Person 3
+  * Create IMovieDataFetch, OMDBMovieData class to fetch API data
+  * Implement IStorage, MovieStorage, and file IO classes: InputReader, MovieWriter
+  * Write tests for data fetch and storage logic
+  
+  Person 4
+  * Implement UserProfile for storing ratings/reviews
+  * Implement UserProfileStorage for persistent storage
+  * Write tests for profile handling and file operations
+
+
+#### Weeks 2-4 (will divide as we go)
+
+CONTROLLER + GUI 
+ * Implement MovieController and IController
+ * Connect controller to MovieCollection and GUI
+ * Testing of controller methods
+ * Set up JFrameView GUI with search bar, filters, and layout
+ * Create MovieDisplay
+ * Implement ButtonCommands (search, save, filter, sort)
+ * Create ConsoleView for command-line testing?
+ * Display movie poster images from API
+ * Enable delete functionality from saved movie list
+ * Final code polish + JavaDoc comments
+ * DRY review/refactor + GUI enhancements
+ * Demo prep for TA/Albert
+
+
 **6.  What is your teams timeline and major check-in points?**
    Major check-in points will be weekly check ins on Tuesday during our meeting time: 3/25, 4/1, 4/8, 4/15.
    - By 3/25: Proposal and Initial Design Complete
@@ -274,11 +314,11 @@ ConsoleView --> MovieController : "interacts with"
      - assign tasks
      - decide on API
    - By 4/1: TDD-- Models, API, + storage
-     - implmenent Movie and MovieCollection
+     - implement Movie and MovieCollection
      - build MovieDataFetch with testing
      - build MovieStorage with testing
      - build userprofile with testing
-   - By 4/8: GUI and Controlller
+   - By 4/8: GUI and Controller
      - build MovieView GUI
      - implement controller, start, search, filter, sort
      - connect GUI to model
