@@ -1,4 +1,4 @@
-package student;
+package student.model;
 
 import java.util.*;
 import java.util.stream.Collectors;
