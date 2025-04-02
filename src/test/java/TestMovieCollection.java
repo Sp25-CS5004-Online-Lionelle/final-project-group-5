@@ -28,10 +28,9 @@ public class TestMovieCollection {
     }
 
     @Test
-    public void testFilterByTitle(){
-        filteredMovieList = movies.filterByTitle("Minions");
+    public void testConstructor(){
 
-        assertEquals("Minions", movies.get(0).getTitle());
+        assertEquals("Minions", filteredMovieList.get(0).getTitle());
     }
 
 }
