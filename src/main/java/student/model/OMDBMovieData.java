@@ -13,7 +13,7 @@ public final class OMDBMovieData {
     private static final String API_URL_FORMAT_TITLE= "http://www.omdbapi.com/?t=%s&apikey=%s&";
     private static final String API_URL_FORMAT_YEAR= "http://www.omdbapi.com/?t=%s&y=%s&apikey=%s&";
 
-    private static final String API_KEY = "ad1dc365";
+    private static final String API_KEY = "";
 
    /**
      * Prevent instantiation.
