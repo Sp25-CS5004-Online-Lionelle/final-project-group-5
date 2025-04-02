@@ -1,25 +1,10 @@
-package model;
+package student.model;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class MovieCollection implements IMovieCollection{
 
@@ -33,36 +18,40 @@ public class MovieCollection implements IMovieCollection{
      */
     private List<Movie> filteredMovieList;
 
-    /**
-     * constructor. load all movies that saved in the local Json file.
-     * @param database
-     */
-    public MovieCollection(String database) {
-        try {
-            loadMovieRecords(new FileInputStream(database));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.out.println(System.err);
-        }
-    }
+    // /**
+    //  * constructor. load all movies that saved in the local Json file.
+    //  * @param database
+    //  */
+    // public MovieCollection(String database) {
+    //     try {
+    //         loadMovieRecords(new FileInputStream(database));
+    //     } catch (FileNotFoundException e) {
+    //         e.printStackTrace();
+    //         System.out.println(System.err);
+    //     }
+    // }
 
-    /**
-     * add the movie records to the movieRecords set.
-     * @param in
-     */
-    private void loadMovieRecords(InputStream in) {
-        movieRecords.addAll(InputReader.readJSON(in, JSON));
+    // /**
+    //  * add the movie records to the movieRecords set.
+    //  * @param in
+    //  */
+    // private void loadMovieRecords(InputStream in) {
+    //     movieRecords.addAll(InputReader.readJSON(in, JSON));
+    // }
+
+    public MovieCollection(){
+
     }
 
 
      @Override
-     public Stream<Movie> filter(Operations operation) {
+     public Stream<Movie> filter(Operations operation, String value) {
         // TODO Auto-generated method stub
         switch (operation) {
             case TITLE:
-                return filterByTitle(title);
+                return filterByTitle(value);
             case YEAR:
-                return filterByYear(year);
+                return filterByYear(Integer.parseInt(value));
             default:
                 return Stream.empty(); // will update this later, currently return an empty stream.
         }
@@ -86,7 +75,7 @@ public class MovieCollection implements IMovieCollection{
         }
 
         // if no movie's title in the local json file match the title, then we fetch from API
-        if (filteredMovieList == 0){
+        if (filteredMovieList.size() == 0){
             // look up movie by Title
             // get movie details
             // add movie to the local file and then return the move
@@ -113,7 +102,7 @@ public class MovieCollection implements IMovieCollection{
         }
 
         // if no movie's year in the local json file match the year, then we fetch from API
-        if (filteredMovieList == 0){
+        if (filteredMovieList.size() == 0){
             // look up movie by year of release
             // get movie details
             // add movie to the local file and then return the move
@@ -133,19 +122,19 @@ public class MovieCollection implements IMovieCollection{
         switch (operation) {
             case TITLE:
             if (ascending){
-                filteredMovieList.sort((m1, m2) -> m1.geTitle().toLowerCase().compareTo(m2.getTitle().toLowerCase()));
+                filteredMovieList.sort((m1, m2) -> m1.getTitle().toLowerCase().compareTo(m2.getTitle().toLowerCase()));
             } else {
-                filteredMovieList.sort((m1, m2) -> m2.geTitle().toLowerCase().compareTo(m1.getTitle().toLowerCase()));
+                filteredMovieList.sort((m1, m2) -> m2.getTitle().toLowerCase().compareTo(m1.getTitle().toLowerCase()));
             }
-                return filteredMovieList;
-            case ID:
+                return filteredMovieList.stream();
+            case YEAR:
             if (ascending) {
                 filteredMovieList.sort((m1, m2) -> m1.getYear() - m2.getYear());
             } else {
                 filteredMovieList.sort((m1, m2) -> m2.getYear() - m1.getYear());
             }
             default:
-                return filteredMovieList;
+                return filteredMovieList.stream();
         }
      }
 
