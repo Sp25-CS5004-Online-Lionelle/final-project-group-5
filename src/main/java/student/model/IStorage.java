@@ -1,4 +1,4 @@
-import java.io.FileWriter;
+package student.model;
 
 public interface IStorage {
 

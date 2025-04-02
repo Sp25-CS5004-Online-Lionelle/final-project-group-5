@@ -68,7 +68,7 @@
    - `IMovieDataFetch` interface, an interface to fetch the data from various APIs (TMBD, OMDB, or another)
    - `OMDBMovieData`, a class that fetches movie data from the specfic API we decide to use
    - `MovieStorage`, a class to load/save the MovieList to multiple file types
-   - `IStorage`, interface for saving/loading for both MovieStorage and UserProfileStorage
+   - `student.model.IStorage`, interface for saving/loading for both MovieStorage and UserProfileStorage
    - `UserProfile`, a class to create userprofile for Movie ratings and reviews
    - `UserProfileStorage`, a class to save the user profile to a file and retrive it between sessions
    - `InputReader`, a class with method to read saved moives from local xml/csv/json files
@@ -116,7 +116,7 @@ src/
 │   ├── IMovieDataFetch.java
 │   ├── OMDBMovieData.java
 │   ├── MovieStorage.java
-│   ├── IStorage.java
+│   ├── student.model.IStorage.java
 │   ├── UserProfile.java
 │   ├── UserProfileStorage.java
 │   ├── InputReader.java
@@ -152,7 +152,7 @@ class IMovieDataFetch {
   <<interface>>
   +fetchData(query)
 }
-class IStorage {
+class student.model.IStorage {
   <<interface>>
   +save(data, format)
   +load(format)
@@ -251,8 +251,8 @@ MovieList --> Movie : "contains"
 MovieCollection ..|> IMovieCollection : "implements"
 MovieList ..|> IMovieList : "implements"
 OMDBMovieData ..|> IMovieDataFetch : "implements"
-MovieStorage ..|> IStorage : "implements"
-UserProfileStorage ..|> IStorage : "implements"
+MovieStorage ..|> student.model.IStorage : "implements"
+UserProfileStorage ..|> student.model.IStorage : "implements"
 MovieController ..|> IController : "implements"
 MovieController --> MovieCollection : "uses"
 MovieController --> MovieList : "uses"
@@ -281,7 +281,7 @@ ConsoleView --> MovieController : "interacts with"
   
   Person 3
   * Create IMovieDataFetch, OMDBMovieData class to fetch API data
-  * Implement IStorage, MovieStorage, and file IO classes: InputReader, MovieWriter
+  * Implement student.model.IStorage, MovieStorage, and file IO classes: InputReader, MovieWriter
   * Write tests for data fetch and storage logic
   
   Person 4
