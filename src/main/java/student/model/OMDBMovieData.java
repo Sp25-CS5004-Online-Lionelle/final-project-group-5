@@ -1,5 +1,6 @@
 package student.model;
 
+
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
@@ -13,7 +14,7 @@ public final class OMDBMovieData {
     private static final String API_URL_FORMAT_TITLE= "http://www.omdbapi.com/?t=%s&apikey=%s&";
     private static final String API_URL_FORMAT_YEAR= "http://www.omdbapi.com/?t=%s&y=%s&apikey=%s&";
 
-    private static final String API_KEY = "";
+    private static final String API_KEY = "<api_key>";
 
    /**
      * Prevent instantiation.
@@ -30,7 +31,8 @@ public final class OMDBMovieData {
      * @return The URL for the API request.
      */
     public static String getApiUrl(String title) {
-        return String.format(API_URL_FORMAT_TITLE, title, API_KEY);
+        String updatedTitle = title.replace(' ', '+');
+        return String.format(API_URL_FORMAT_TITLE, updatedTitle, API_KEY);
     }
 
        /**
@@ -71,7 +73,7 @@ public final class OMDBMovieData {
      * @param title the movie title to get the information about
      * @return the contents of the URL as an InputStream, or the null InputStream if the connection
      */
-    public static InputStream getIpDetails(String title) {
+    public static InputStream getMovieDetails(String title) {
         String urlStr = getApiUrl(title);
         return getUrlContents(urlStr);
     }

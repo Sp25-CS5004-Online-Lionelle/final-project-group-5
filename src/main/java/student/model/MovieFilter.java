@@ -1,6 +1,8 @@
 package student.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MovieFilter implements IMovieFilter{
@@ -9,7 +11,7 @@ public class MovieFilter implements IMovieFilter{
         /**
      * A list of filtered movies.
      */
-    private List<Movie> filteredMovieList;
+    private List<Movie> filteredMovieList = new ArrayList<>();
 
     @Override
      public Stream<Movie> filter(List<Movie> movieList,  FilterType filterType, String value) {
@@ -35,20 +37,14 @@ public class MovieFilter implements IMovieFilter{
 
      public Stream<Movie> filterByTitle(List<Movie> movieList, String title) {
 
-        for (Movie movie : movieList) {
-            if (movie.getTitle() == title){
-                filteredMovieList.add(movie);
-            }
-        }
+         List<Movie> filteredMovieList = new ArrayList<>();
 
-        // if no movie's title in the local json file match the title, then we fetch from API
-        if (filteredMovieList.size() == 0){
-            // look up movie by Title
-            // get movie details
-            // add movie to the local file and then return the move
-
-            throw new UnsupportedOperationException("Unimplemented method 'sort'");
-        }
+         for (Movie movie : movieList){
+             if (movie.getTitle().contains(title)){
+                 filteredMovieList.add(movie);
+             }
+         }
+//         List<Movie> filteredMovieList = movieList.stream().filter(movie -> movie.getTitle().contains(title)).collect(Collectors.toUnmodifiableList());
         return filteredMovieList.stream();
 
      }
@@ -62,21 +58,8 @@ public class MovieFilter implements IMovieFilter{
       */
 
      public Stream<Movie> filterByYear(List<Movie> movieList, int year) {
-        for (Movie movie : movieList) {
-            if (movie.getYear() == year){
-                filteredMovieList.add(movie);
-            }
-        }
 
-        // if no movie's year in the local json file match the year, then we fetch from API
-        if (filteredMovieList.size() == 0){
-            // look up movie by year of release
-            // get movie details
-            // add movie to the local file and then return the move
-
-            throw new UnsupportedOperationException("Unimplemented method 'sort'");
-        }
-        return filteredMovieList.stream();
+         return movieList.stream().filter(movie -> movie.getYear() == year);
     }
 
     @Override

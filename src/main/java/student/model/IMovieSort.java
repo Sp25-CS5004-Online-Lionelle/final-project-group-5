@@ -11,9 +11,7 @@ public interface IMovieSort {
      * @param filterType
      * @return A stream of sorted movie
      */
-Stream<Movie> sort(List<Movie> filteredMovieList, FilterType filterType);
-
-
+List<Movie> sort(List<Movie> filteredMovieList, FilterType filterType);
 
 /**
  *
@@ -22,5 +20,5 @@ Stream<Movie> sort(List<Movie> filteredMovieList, FilterType filterType);
  * @param ascending
  * @return
  */
-Stream<Movie> sort( List<Movie> filteredMovieList, FilterType filterType, boolean ascending);
+List<Movie> sort( List<Movie> filteredMovieList, FilterType filterType, boolean ascending);
 }
