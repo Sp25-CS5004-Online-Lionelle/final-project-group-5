@@ -21,7 +21,7 @@ public interface IMovieCollection {
    *
    * @return the list of movies
    */
-    List<Movie> getFilteredMovies(String value);
+    List<Movie> getFilteredMovies(String value, FilterType filterType);
   /**
    *
    * @param sortType the type we need to the sort base on, such as RATING, TEAR

@@ -35,18 +35,18 @@ public class TestMovieCollection {
 
     @Test
     public void testGetFilteredMovies() {
-        assertEquals(2, movieCollection.getFilteredMovies("M").size());
+        assertEquals(2, movieCollection.getFilteredMovies("M", FilterType.TITLE).size());
     }
 
     @Test
     public void testGetFilteredMovieswithFetch() {
 
-        movieCollection.getFilteredMovies("Dog Man");
+        movieCollection.getFilteredMovies("Dog Man", FilterType.TITLE);
         assertEquals(4, movieCollection.getMovies().size());
     }
     @Test
     public void testSortFilteredMoviesYear() {
-        movieCollection.getFilteredMovies("M");
+        movieCollection.getFilteredMovies("M", FilterType.TITLE);
         List<Movie> sortedMovieList = movieCollection.sortFilteredMovies(FilterType.YEAR, true);
         List<Movie> sortedMovieList1 = movieCollection.sortFilteredMovies(FilterType.YEAR, false);
 
@@ -58,7 +58,7 @@ public class TestMovieCollection {
 
     @Test
     public void testSortFilteredMoviesRating() {
-        movieCollection.getFilteredMovies("M");
+        movieCollection.getFilteredMovies("M", FilterType.TITLE);
         List<Movie> sortedMovieList = movieCollection.sortFilteredMovies(FilterType.RATING, true);
         List<Movie> sortedMovieList1 = movieCollection.sortFilteredMovies(FilterType.RATING, false);
 

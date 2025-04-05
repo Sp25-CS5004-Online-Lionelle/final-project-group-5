@@ -70,11 +70,11 @@ public class MovieCollection implements IMovieCollection{
 //        return movieFilter.filter(movieList, FilterType.TITLE, title);
 //	}
     @Override
-    public List<Movie> getFilteredMovies(String value){
+    public List<Movie> getFilteredMovies(String value, FilterType filterType){
 
         MovieFilter movieFilter = new MovieFilter();
 
-        filteredMovieList = movieFilter.filter(this.getMovies(), FilterType.TITLE, value).collect(Collectors.toList());
+        filteredMovieList = movieFilter.filter(this.getMovies(), filterType, value).collect(Collectors.toList());
 //        MovieSort movieSort = new MovieSort();
         if (filteredMovieList.isEmpty()) {
             System.out.println("No movies found");
