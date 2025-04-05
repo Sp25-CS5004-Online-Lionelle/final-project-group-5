@@ -1,11 +1,17 @@
 package student.model;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.util.List;
 
 /**
  * Movie class that represents a movie object.
  */
+@JsonIgnoreProperties(ignoreUnknown = true) // Ignore unknown properties
+@JsonPropertyOrder({"title", "year", "averageRating", "cast", "genre", "description", "imageUrl"}) // Order of properties in JSON
 public class Movie {
     /**
      * title: Title of the movie
