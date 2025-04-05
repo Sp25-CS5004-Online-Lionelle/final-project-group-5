@@ -71,6 +71,7 @@ public class MovieCollection implements IMovieCollection{
 //	}
     @Override
     public List<Movie> getFilteredMovies(String value){
+
         MovieFilter movieFilter = new MovieFilter();
 
         filteredMovieList = movieFilter.filter(this.getMovies(), FilterType.TITLE, value).collect(Collectors.toList());
@@ -79,7 +80,6 @@ public class MovieCollection implements IMovieCollection{
             System.out.println("No movies found");
             try{  ObjectMapper mapper = new ObjectMapper();
                 Movie movie = mapper.readValue(OMDBMovieData.getMovieDetails(value), Movie.class);
-                System.out.println("DEBUGGING: " + movie.getTitle());
                 movieRecords.add(movie);
                 filteredMovieList.add(movie);
             }catch (StreamReadException e) {

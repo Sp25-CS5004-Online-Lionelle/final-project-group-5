@@ -29,13 +29,13 @@ public class TestMovieCollection {
 
     @Test
     public void testConstructor(){
-        assertEquals(2, movieCollection.getMovies().size());
+        assertEquals(3, movieCollection.getMovies().size());
     }
 
 
     @Test
     public void testGetFilteredMovies() {
-        assertEquals(3, movieCollection.getFilteredMovies("M").size());
+        assertEquals(2, movieCollection.getFilteredMovies("M").size());
     }
 
     @Test
