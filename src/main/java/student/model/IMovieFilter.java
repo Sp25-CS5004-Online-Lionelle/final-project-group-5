@@ -9,11 +9,11 @@ public interface IMovieFilter {
  * @param operation the filter to apply to the movie collections.
  * @return A stream of movies that match the filter
  */
-Stream<Movie> filter(List<Movie> movieList, FilterType filterType, String value);
+Stream<Movie> filter(List<Movie> movieList, Operations op, FilterType filterType, String value);
 
 /**
  * clear the filteredMovieList
  */
 
-void reset();
+//void reset();
 }

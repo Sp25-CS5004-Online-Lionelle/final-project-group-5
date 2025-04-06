@@ -1,8 +1,6 @@
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import student.model.FilterType;
-import student.model.MovieCollection;
-import student.model.Movie;
+import student.model.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import student.model.OMDBMovieData;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -35,18 +32,29 @@ public class TestMovieCollection {
 
     @Test
     public void testGetFilteredMovies() {
-        assertEquals(2, movieCollection.getFilteredMovies("M", FilterType.TITLE).size());
+        assertEquals(2, movieCollection.getFilteredMovies("M",Operations.CONTAINS, FilterType.TITLE).size());
     }
 
     @Test
     public void testGetFilteredMovieswithFetch() {
 
-        movieCollection.getFilteredMovies("Dog Man", FilterType.TITLE);
+        movieCollection.getFilteredMovies("Dog Man", Operations.CONTAINS, FilterType.TITLE);
         assertEquals(4, movieCollection.getMovies().size());
     }
+
+    @Test
+    public void testGetFilteredMoviesYearGreater() {
+        assertEquals(2, movieCollection.getFilteredMovies("2009", Operations.GREATER_THAN_EQUAL, FilterType.YEAR).size());
+    }
+
+    @Test
+    public void testGetFilteredMoviesYeaEqualS() {
+        assertEquals(1, movieCollection.getFilteredMovies("2009", Operations.EQUALS, FilterType.YEAR).size());
+    }
+
     @Test
     public void testSortFilteredMoviesYear() {
-        movieCollection.getFilteredMovies("M", FilterType.TITLE);
+        movieCollection.getFilteredMovies("M", Operations.CONTAINS, FilterType.TITLE);
         List<Movie> sortedMovieList = movieCollection.sortFilteredMovies(FilterType.YEAR, true);
         List<Movie> sortedMovieList1 = movieCollection.sortFilteredMovies(FilterType.YEAR, false);
 
@@ -58,7 +66,7 @@ public class TestMovieCollection {
 
     @Test
     public void testSortFilteredMoviesRating() {
-        movieCollection.getFilteredMovies("M", FilterType.TITLE);
+        movieCollection.getFilteredMovies("M", Operations.CONTAINS, FilterType.TITLE);
         List<Movie> sortedMovieList = movieCollection.sortFilteredMovies(FilterType.RATING, true);
         List<Movie> sortedMovieList1 = movieCollection.sortFilteredMovies(FilterType.RATING, false);
 
