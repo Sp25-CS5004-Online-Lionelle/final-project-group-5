@@ -47,9 +47,15 @@ public class TestMovieCollection {
         assertEquals(2, movieCollection.getFilteredMovies("2009", Operations.GREATER_THAN_EQUAL, FilterType.YEAR).size());
     }
 
+
     @Test
     public void testGetFilteredMoviesYeaEqualS() {
         assertEquals(1, movieCollection.getFilteredMovies("2009", Operations.EQUALS, FilterType.YEAR).size());
+    }
+
+    @Test
+    public void testGetFilteredMoviesGenre() {
+        assertEquals("Moon", movieCollection.getFilteredMovies("Drama", Operations.CONTAINS, FilterType.GENRE).get(0).getTitle());
     }
 
     @Test
