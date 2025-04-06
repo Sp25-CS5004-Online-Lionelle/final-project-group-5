@@ -21,7 +21,7 @@ public class TestMovieCollection {
     static MovieCollection movieCollection;
     @BeforeAll
     public static void setup(){
-        movieCollection = new MovieCollection("movieList.json");
+        movieCollection = new MovieCollection("src/main/resources/movieList.json");
     }
 
     @Test
