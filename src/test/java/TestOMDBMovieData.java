@@ -1,6 +1,9 @@
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.JsonNode;
+
 import student.model.MovieCollection;
+import student.model.OMDBMovieAdapter;
 import student.model.Movie;
 
 import java.io.IOException;
@@ -15,18 +18,17 @@ import org.junit.jupiter.api.Test;
 import student.model.OMDBMovieData;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestOMDBMovieData {
 
      @Test
      public void testGetApiUrl() {
-         assertEquals("http://www.omdbapi.com/?t=moon&apikey=<api_ley>&", OMDBMovieData.getApiUrl("moon"));
+         assertEquals("http://www.omdbapi.com/?t=moon&apikey=ef778ba2&", OMDBMovieData.getApiUrl("moon"));
      }
 
-    @Test
+/*     @Test
     public void testGetMovieDetails() {
 
         ObjectMapper mapper = new ObjectMapper();
@@ -45,7 +47,32 @@ public class TestOMDBMovieData {
 
         assertEquals("Moon", movie.getTitle());
         assertEquals("Dog Man", movieOne.getTitle());
-    }
+    } */
+
+    @Test
+    public void testGetMovieDetails() {
+        ObjectMapper mapper = new ObjectMapper();
+        Movie movie = null;
+        Movie movieOne = null;
+
+        try {
+            JsonNode node1 = mapper.readTree(OMDBMovieData.getMovieDetails("Moon"));
+            JsonNode node2 = mapper.readTree(OMDBMovieData.getMovieDetails("Dog Man"));
+
+            movie = OMDBMovieAdapter.convert(node1);
+            movieOne = OMDBMovieAdapter.convert(node2);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        assertNotNull(movie);
+        assertNotNull(movieOne);
+
+        assertEquals("Moon", movie.getTitle());
+        assertEquals("Dog Man", movieOne.getTitle());
+        }
+
 
 }
 

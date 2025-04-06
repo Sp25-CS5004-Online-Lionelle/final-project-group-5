@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 
@@ -33,7 +34,7 @@ public class MovieCollection implements IMovieCollection{
      */
     public MovieCollection(String database) {
         try {
-            loadMoives(new FileInputStream(database));
+            loadMovies(new FileInputStream(database));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println(System.err);
@@ -44,11 +45,21 @@ public class MovieCollection implements IMovieCollection{
      * add the movie records to the movieRecords set.
      * @param in
      */
-    private void loadMoives(InputStream in) {
-        ObjectMapper mapper = new JsonMapper();
+    private void loadMovies(InputStream in) {
+        //ObjectMapper mapper = new JsonMapper(); // MLT: Removed this line
+        ObjectMapper mapper = new ObjectMapper(); // MLT: Changed to ObjectMapper 
         List<Movie> movieList = new ArrayList<>();
        try {
-        movieList = mapper.readValue(in, new TypeReference<List<Movie>>() {});
+        //movieList = mapper.readValue(in, new TypeReference<List<Movie>>() {}); // MLT: Removed this line
+        JsonNode root = mapper.readTree(in); // MLT: Changed to readTree
+        if  (root.isArray()) { // MLT: Check if root is an array
+            for (JsonNode movieNode : root) { // MLT: Iterate over each node in the array
+                Movie movie = OMDBMovieAdapter.convert(movieNode); // MLT: Convert each node to a Movie object
+                movieList.add(movie); 
+            }
+        } else {
+            System.out.println("Root should be a JSON array");
+        }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +90,9 @@ public class MovieCollection implements IMovieCollection{
         if (filteredMovieList.isEmpty()) {
             System.out.println("No movies found");
             try{  ObjectMapper mapper = new ObjectMapper();
-                Movie movie = mapper.readValue(OMDBMovieData.getMovieDetails(value), Movie.class);
+                //Movie movie = mapper.readValue(OMDBMovieData.getMovieDetails(value), Movie.class);
+                JsonNode omdbJson = mapper.readTree(OMDBMovieData.getMovieDetails(value)); // MLT: Changed to readTree
+                Movie movie = OMDBMovieAdapter.convert(omdbJson); // MLT: Convert JSON to Movie object
                 movieRecords.add(movie);
                 filteredMovieList.add(movie);
             }catch (StreamReadException e) {
