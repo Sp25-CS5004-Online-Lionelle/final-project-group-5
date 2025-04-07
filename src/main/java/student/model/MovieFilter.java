@@ -20,6 +20,8 @@ public class MovieFilter implements IMovieFilter{
                 return filterByTitle(movieList, op, value);
             case GENRE:
                 return filterByGenre(movieList, op, value);
+            case DESCRIPTION:
+                return filterByDesc(movieList, op, value);
             case YEAR:
                 return filterByYear(movieList, op, Integer.parseInt(value));
             default:
@@ -61,9 +63,18 @@ public class MovieFilter implements IMovieFilter{
             }
         }
         return filteredMovieList.stream();
+     }
 
+    public Stream<Movie> filterByDesc(List<Movie> movieList, Operations op, String desc) {
 
-//         List<Movie> filteredMovieList = movieList.stream().filter(movie -> movie.getTitle().contains(title)).collect(Collectors.toUnmodifiableList());
+        List<Movie> filteredMovieList = new ArrayList<>();
+
+        for (Movie movie : movieList){
+            if (movie.getDescription().contains(desc)){
+                filteredMovieList.add(movie);
+            }
+        }
+        return filteredMovieList.stream();
     }
 
      /**

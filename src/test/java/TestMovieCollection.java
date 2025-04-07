@@ -59,6 +59,11 @@ public class TestMovieCollection {
     }
 
     @Test
+    public void testGetFilteredMoviesDesc() {
+        assertEquals("Minions", movieCollection.getFilteredMovies("inventor", Operations.CONTAINS, FilterType.DESCRIPTION).get(0).getTitle());
+    }
+
+    @Test
     public void testSortFilteredMoviesYear() {
         movieCollection.getFilteredMovies("M", Operations.CONTAINS, FilterType.TITLE);
         List<Movie> sortedMovieList = movieCollection.sortFilteredMovies(FilterType.YEAR, true);
