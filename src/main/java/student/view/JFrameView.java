@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 /**
- * The main JFrame view that implements the IView interface.
+ * The main JFrame that implements the IView interface.
  * It connects ButtonCommands and MovieDisplay into a single window.
  */
 public class JFrameView extends JFrame implements IView{
@@ -19,16 +19,20 @@ public class JFrameView extends JFrame implements IView{
 
     public JFrameView(){
         setTitle("Movie App Title TBD");
-        setSize(1000, 600);
+        setSize(600, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-         // testing a component added!
-        add(new JLabel("Hello Test!"), BorderLayout.CENTER);
+        JLabel welcomeLabel = new JLabel("<html><div style='text-align: center;'>"
+        + "🎬 Welcome to our Movie App!<br>"
+        + "Use the filter and sort options to explore movies.<br>"
+        + "Add your favorites to a list and save them to a file!"
+        + "</div></html>", SwingConstants.CENTER);
 
          // Initialize components
          buttonPanel = new ButtonCommands();
          //movieDisplay = new MovieDisplay();
+         add(welcomeLabel, BorderLayout.CENTER);
          messageLabel = new JLabel(" ");  // For help and/or error messages
 
 
@@ -70,56 +74,55 @@ public class JFrameView extends JFrame implements IView{
 
     @Override
     public String getSearchQuery() {
-        return ""; //buttonPanel.getSearchQuery();
+        return buttonPanel.getSearchQuery();
     }
 
     @Override
     public String getSelectedFilter() {
-        return ""; // buttonPanel.getSelectedFilter();
+        return buttonPanel.getSelectedFilter();
     }
 
     @Override
     public String getSelectedOperator() {
-        return ""; //buttonPanel.getSelectedOperator();
+        return buttonPanel.getSelectedOperator();
     }
 
     @Override
     public boolean getSort() {
-        return true; //buttonPanel.isSortAscending();
+        return buttonPanel.isSortAscending();
     }
 
     // button listeners 
 
-    @Override
-    public void addSearchListener(ActionListener listener) {
-        //buttonPanel.addSearchListener(listener);
-    }
 
     @Override
     public void addFilterListener(ActionListener listener) {
-        //buttonPanel.addFilterListener(listener);
+        buttonPanel.addFilterListener(listener);
     }
 
     @Override
     public void addSortListener(ActionListener listener) {
-        //buttonPanel.addSortListener(listener);
+        buttonPanel.addSortListener(listener);
     }
 
     @Override
     public void addAddMovieListener(ActionListener listener) {
-        //buttonPanel.addAddMovieListener(listener);
+        buttonPanel.addAddMovieListener(listener);
     }
 
     @Override
     public void addRemoveMovieListener(ActionListener listener) {
-        //buttonPanel.addRemoveMovieListener(listener);
+        buttonPanel.addRemoveMovieListener(listener);
     }
 
     @Override
     public void addSaveListener(ActionListener listener) {
-        //buttonPanel.addSaveListener(listener);
+        buttonPanel.addSaveListener(listener);
     }
-
+    @Override
+    public void addHelpListener(ActionListener listener) {
+        buttonPanel.addHelpListener(listener);
+    }
 
 
 }
