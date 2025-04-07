@@ -76,7 +76,6 @@ public class MovieCollection implements IMovieCollection{
         filteredMovieList = movieFilter.filter(this.getMovies(), op, filterType, value).collect(Collectors.toList());
 //        MovieSort movieSort = new MovieSort();
         if (filteredMovieList.isEmpty()) {
-            System.out.println("No movies found");
             try{  ObjectMapper mapper = new ObjectMapper();
                 Movie movie = mapper.readValue(OMDBMovieData.getMovieDetails(value), Movie.class);
                 movieRecords.add(movie);
