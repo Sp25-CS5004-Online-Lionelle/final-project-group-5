@@ -1,0 +1,17 @@
+ [{
+  "Title" : "Ratatouille",
+  "imdbRating" : 8.1,
+  "Year" : 2007,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : "Brad Garrett, Lou Romano, Patton Oswalt",
+  "Plot" : "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Spring Breakers",
+  "imdbRating" : 5.3,
+  "Year" : 2012,
+  "Genre" : "Crime, Drama, Thriller",
+  "Actors" : "Vanessa Hudgens, Selena Gomez, Ashley Benson",
+  "Plot" : "Four college girls hold up a restaurant in order to fund their spring break vacation. While partying, drinking, and taking drugs, they are arrested, only to be bailed out by a drug and arms dealer.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTk3NjMwMjYtODg3Ny00ZDU2LTgzZDAtNDJjYjlmYjJjNGQ3XkEyXkFqcGc@._V1_SX300.jpg"
+}]
