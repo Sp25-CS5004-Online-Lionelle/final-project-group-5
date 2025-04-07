@@ -8,11 +8,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.util.List;
 
 /**
  * Movie class that represents a movie object.
  */
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonPropertyOrder({"Title", "imdbRating", "Year", "Genre", "Actors", "Plot", "Poster"})
 public class Movie {

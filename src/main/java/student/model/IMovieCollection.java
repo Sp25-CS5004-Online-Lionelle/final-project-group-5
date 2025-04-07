@@ -1,37 +1,72 @@
 package student.model;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.List;
 import java.util.stream.Stream;
 
 public interface IMovieCollection {
+  /** Do not change the file address! */
+    String DATABASE = "movieList.json";
 
-/**
- *
- * @param operation the filter to apply to the movie collections.
- * @return A stream of movies that match the filter
- */
-Stream<Movie> filter(Operations operation, String value);
-
-
-/**
- *
- * @param operation The sort condition to apply to the movie collections.
- * @return A stream of movies that sorted
- */
-Stream<Movie> sort(Operations operations);
+    /**
+     * Get the whole list of movie that saved in the local json file.
+     *
+     * @return the list of movies
+     */
+    List<Movie> getMovies();
 
 
+  /**
+   * Get the list of movies that matches the filter conditions.
+   *
+   * @return the list of movies
+   */
+    List<Movie> getFilteredMovies(String value);
+  /**
+   *
+   * @param sortType the type we need to the sort base on, such as RATING, TEAR
+   * @param ascending, if we want to sort the movies ascending or descending
+   * @return return the list of filtered movie in a sorted order
+   */
+    List<Movie> sortFilteredMovies(FilterType sortType, boolean ascending );
 
-/**
- *
- * @param operation The sort condition to apply to the movie collections.
- * @param ascending Whether to sort the results in ascending order or descending order.
- * @return  A stream of movies that sorted
- */
-Stream<Movie> sort(Operations operation, boolean ascending);
 
-/**
-* Resets the collection to have no filters applied.
-*/
-void reset();
+    /**
+     * Writes out the records to the outputstream.
+     *
+     * OutputStream could be System.out or a FileOutputStream.
+     *
+     * @param records the records to write, could be a single entry.
+     * @param format the format to write the records in
+     * @param out the output stream to write to
+     */
+    // static void writeRecords(List<Movie> records, FilterType filterType, OutputStream out) {
+    //     InputWritter.write(records, filterType, out);
+    // }
+
+
+    /**
+     * Gets an instance of the model using the 'default' location.
+     *
+     * @return the instance of the model
+     */
+    static IMovieCollection getInstance() {
+        return getInstance(DATABASE);
+    }
+
+    /**
+     * Gets an instance of the model using the 'default' class.
+     * Good spot to get the InputStream from the DATABASE file, and use that stream to build the
+     * model.
+     *
+     * @param database the name of the file to use
+     * @return the instance of the model
+     */
+    static IMovieCollection getInstance(String database) {
+        return new MovieCollection(database);
+    }
+
+  void reset();
 
 }
 
