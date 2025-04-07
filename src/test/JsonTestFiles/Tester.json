@@ -1,0 +1,25 @@
+[ {
+  "Title" : "Ratatouille",
+  "imdbRating" : 8.1,
+  "Year" : 2007,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : "Brad Garrett, Lou Romano, Patton Oswalt",
+  "Plot" : "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "The Shawshank Redemption",
+  "imdbRating" : 9.3,
+  "Year" : 1994,
+  "Genre" : "Drama",
+  "Actors" : "Tim Robbins, Morgan Freeman, Bob Gunton",
+  "Plot" : "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Godfather",
+  "imdbRating" : 9.2,
+  "Year" : 1972,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Marlon Brando, Al Pacino, James Caan",
+  "Plot" : "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg"
+} ]

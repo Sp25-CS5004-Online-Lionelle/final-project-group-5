@@ -1,5 +1,12 @@
 package student.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -10,36 +17,55 @@ import java.util.List;
 /**
  * Movie class that represents a movie object.
  */
-@JsonIgnoreProperties(ignoreUnknown = true) // Ignore unknown properties
-@JsonPropertyOrder({"title", "year", "averageRating", "cast", "genre", "description", "imageUrl"}) // Order of properties in JSON
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonPropertyOrder({"Title", "imdbRating", "Year", "Genre", "Actors", "Plot", "Poster"})
 public class Movie {
+
     /**
      * title: Title of the movie
      */
+    @JsonProperty("Title")
     private String title;
+
     /**
      * averageRating: Average rating of the movie
      */
+    @JsonProperty("imdbRating")
     private double averageRating;
+
     /**
      * year: Year of release
      */
+    @JsonProperty("Year")
     private int year;
+
     /**
      * genre: Genre of the movie
      */
-    private String genre;
+    @JsonProperty("Genre")
+    @JsonDeserialize(using = ListOfStringDeserializer.class)
+    @JsonSerialize(using = ListOfStringSerializer.class)
+    private List<String> genre;
+
     /**
      * cast: List of actors in the movie -- change once we know from api what the cast looks like
      */
+    @JsonProperty("Actors")
+    @JsonDeserialize(using = ListOfStringDeserializer.class)
+    @JsonSerialize(using = ListOfStringSerializer.class)
     private List<String> cast;
+
     /**
      * description: Description of the movie
      */
+    @JsonProperty("Plot")
     private String description;
+
     /**
      * imageUrl: URL of the movie poster -- or from api?
      */
+    @JsonProperty("Poster")
     private String imageUrl;
 
     /**
@@ -52,8 +78,11 @@ public class Movie {
      * @param description Description of the movie
      * @param imageUrl URL of the movie poster
      */
-    public Movie(String title, double averageRating, int year, String genre,
-                 List<String> cast, String description, String imageUrl) {
+    @JsonCreator
+    public Movie(@JsonProperty("Title") String title, @JsonProperty("imdbRating") double averageRating,
+                 @JsonProperty("Year") int year, @JsonProperty("Genre") List<String> genre,
+                 @JsonProperty("Actors") List<String> cast, @JsonProperty("Plot") String description,
+                 @JsonProperty("Poster") String imageUrl) {
         this.title = title;
         this.averageRating = averageRating;
         this.year = year;
@@ -93,7 +122,7 @@ public class Movie {
      * Getter method for the genre of the movie.
      * @return Genre of the movie
      */
-    public String getGenre() {
+    public List<String> getGenre() {
         return genre;
     }
 
@@ -151,7 +180,7 @@ public class Movie {
      * Setter method for the genre of the movie.
      * @param genre Genre of the movie
      */
-    public void setGenre(String genre) {
+    public void setGenre(List<String> genre) {
         this.genre = genre;
     }
 
