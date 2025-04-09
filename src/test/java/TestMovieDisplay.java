@@ -17,7 +17,7 @@ public class TestMovieDisplay {
                 "Ratatouille",
                 8.1,
                 2007,
-                "Animation, Adventure, Comedy",
+                 List.of("Animation, Adventure, Comedy"),
                 List.of("Brad Garrett", "Lou Romano", "Patton Oswalt"),
                 "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
                 "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"

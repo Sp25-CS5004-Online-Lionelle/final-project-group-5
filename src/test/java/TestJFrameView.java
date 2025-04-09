@@ -1,7 +1,8 @@
-package student.view;
 
 
-public class Main {
+import student.view.JFrameView;
+
+public class TestJFrameView {
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(() -> {
             
@@ -12,3 +13,4 @@ public class Main {
 
 
 }
+

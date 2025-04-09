@@ -14,7 +14,8 @@ import java.util.List;
 public class JFrameView extends JFrame implements IView{
 
     private final ButtonCommands buttonPanel;
-    //private final MovieDisplay movieDisplay = new MovieDisplay(); //placeholder???
+    private MovieGridDisplay movieGrid;
+    private JScrollPane scrollPane;
     private final JLabel messageLabel;
 
     public JFrameView(){
@@ -40,6 +41,14 @@ public class JFrameView extends JFrame implements IView{
         add(buttonPanel, BorderLayout.NORTH);
         //add(movieDisplay, BorderLayout.CENTER);
         add(messageLabel, BorderLayout.SOUTH);
+        
+
+        movieGrid = new MovieGridDisplay(List.of());  // Empty grid
+        scrollPane = new JScrollPane(movieGrid);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        add(scrollPane, BorderLayout.CENTER);
+
+
     }
     
     // IView Display Methods
@@ -57,7 +66,9 @@ public class JFrameView extends JFrame implements IView{
 
     @Override
     public void viewMovieCollection(List<Movie> movies) {
-        //movieDisplay.updateMovieList(movies);
+        scrollPane.setViewportView(new MovieGridDisplay(movies));
+        revalidate();
+        repaint();
     }
 
     @Override
