@@ -8,13 +8,16 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 
 public class MovieStorage implements IStorage {
 
 
 // ----------------------------------------------Update If Needed------------------------------------------------------
-    private static final String DATABASE = "src/main/resources/database.json";
+    private static final String DATABASE = "src/main/resources/movieList.json";
+    /** The default output location.*/
+    private static final String DEFAULT_OUTPUT_LOCATION = "src/main/resources/movieList.json";
 // ----------------------------------------------Update If Needed------------------------------------------------------
 
 
@@ -31,13 +34,14 @@ public class MovieStorage implements IStorage {
      */
     public static List<Movie> readJSON(InputStream inputStream) {
         ObjectMapper mapper = new ObjectMapper();
+        List<Movie> movies = new ArrayList<>();
         try {
-            List<Movie> movies = mapper.readValue(inputStream, new TypeReference<List<Movie>>() { });
+            movies = mapper.readValue(inputStream, new TypeReference<List<Movie>>() { });
             return movies;
         } catch (IOException e) {
             e.printStackTrace();
+            return movies;
         }
-        return null;
     }
 
     /**
@@ -47,7 +51,7 @@ public class MovieStorage implements IStorage {
      */
     public static List<Movie> loadDatabase() {
         try{
-            readJSON(new FileInputStream(DATABASE));
+            return readJSON(new FileInputStream(DATABASE));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,25 +80,26 @@ public class MovieStorage implements IStorage {
 // =================================================Writers============================================================
 
     /**
-     * Takes in JSON movie content and appends it to a JSON database of other movies.
      *
-     * @param in An input stream of JSON information
+     * @param movies A set of movies need to be written to JSON file
      */
-    public static void appendNewMovieJsonToDatabase(InputStream in) {
+    public static void writeJsonData(Set<Movie> movies){
+
+        OutputStream out;
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-            List<Movie> currentDatabase = new ArrayList<>(loadDatabase());
-            List<Movie> movieToAppend = new ArrayList<>(readJSON(in));
-            currentDatabase.addAll(movieToAppend);
-
-            FileOutputStream out = new FileOutputStream(DATABASE);
-            mapper.writeValue(out, currentDatabase);
+            out = new FileOutputStream(DEFAULT_OUTPUT_LOCATION);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        try {
+            mapper.writeValue(out, movies);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
     /**
      * Takes in an ArrayList of Movie objects ArrayList<Movie> and writes it to a specified user's movie list.

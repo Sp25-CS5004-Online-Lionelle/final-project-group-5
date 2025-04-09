@@ -21,12 +21,12 @@ public class TestMovieCollection {
     static MovieCollection movieCollection;
     @BeforeAll
     public static void setup(){
-        movieCollection = new MovieCollection("src/main/resources/movieList.json");
+        movieCollection = new MovieCollection();
     }
 
     @Test
     public void testConstructor(){
-        assertEquals(3, movieCollection.getMovies().size());
+        assertEquals(6, movieCollection.getMovies().size());
     }
 
 
@@ -39,7 +39,10 @@ public class TestMovieCollection {
     public void testGetFilteredMovieswithFetch() {
 
         movieCollection.getFilteredMovies("Dog Man", Operations.CONTAINS, FilterType.TITLE);
-        assertEquals(4, movieCollection.getMovies().size());
+        assertEquals(5, movieCollection.getMovies().size());
+        movieCollection.getFilteredMovies("Super Mario", Operations.CONTAINS, FilterType.TITLE);
+        assertEquals(6, movieCollection.getMovies().size());
+
     }
 
     @Test
