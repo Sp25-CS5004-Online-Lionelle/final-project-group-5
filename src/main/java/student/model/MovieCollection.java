@@ -33,7 +33,7 @@ public class MovieCollection implements IMovieCollection{
      */
     public MovieCollection(String database) {
         try {
-            loadMoives(new FileInputStream(database));
+            loadMovies(new FileInputStream(database));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println(System.err);
@@ -44,7 +44,7 @@ public class MovieCollection implements IMovieCollection{
      * add the movie records to the movieRecords set.
      * @param in
      */
-    private void loadMoives(InputStream in) {
+    private void loadMovies(InputStream in) {
         ObjectMapper mapper = new JsonMapper();
         List<Movie> movieList = new ArrayList<>();
        try {
