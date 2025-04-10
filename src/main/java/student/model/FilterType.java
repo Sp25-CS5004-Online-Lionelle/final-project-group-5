@@ -2,7 +2,7 @@ package student.model;
 
 /** A list of filter types allowed for filtering and sort. */
 public enum FilterType {
-    GENRE, RATING, YEAR, TITLE;
+    GENRE, RATING, YEAR, TITLE, DESCRIPTION;
 
     /**
      * Helper function to check if a value is in the list of formats.

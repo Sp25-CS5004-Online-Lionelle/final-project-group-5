@@ -20,6 +20,8 @@ public class MovieFilter implements IMovieFilter{
                 return filterByTitle(movieList, op, value);
             case GENRE:
                 return filterByGenre(movieList, op, value);
+            case DESCRIPTION:
+                return filterByDesc(movieList, op, value);
             case YEAR:
                 return filterByYear(movieList, op, Integer.parseInt(value));
             default:
