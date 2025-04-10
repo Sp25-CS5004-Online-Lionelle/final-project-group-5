@@ -39,42 +39,29 @@ public class MovieFilter implements IMovieFilter{
       */
 
      public Stream<Movie> filterByTitle(List<Movie> movieList, Operations op, String title) {
-
-         List<Movie> filteredMovieList = new ArrayList<>();
-
-                 for (Movie movie : movieList){
-                     if (movie.getTitle().contains(title)){
-                         filteredMovieList.add(movie);
-                     }
-                 }
-                 return filteredMovieList.stream();
-
-
-//         List<Movie> filteredMovieList = movieList.stream().filter(movie -> movie.getTitle().contains(title)).collect(Collectors.toUnmodifiableList());
+         switch (op) {
+             case EQUALS:
+                 return movieList.stream()
+                         .filter(m -> m.getTitle().equalsIgnoreCase(title));
+             case CONTAINS:
+                 return movieList.stream()
+                         .filter(m -> m.getTitle().toLowerCase().contains(title.toLowerCase()));
+             default:
+                 return movieList.stream();
+         }
      }
 
     public Stream<Movie> filterByGenre(List<Movie> movieList, Operations op, String genre) {
-
-        List<Movie> filteredMovieList = new ArrayList<>();
-
-        for (Movie movie : movieList){
-            if (movie.getGenre().contains(genre)){
-                filteredMovieList.add(movie);
-            }
+        switch (op) {
+            case EQUALS:
+                return movieList.stream()
+                        .filter(m -> m.getGenre().stream().anyMatch(g -> g.equalsIgnoreCase(genre)));
+            case CONTAINS:
+                return movieList.stream()
+                        .filter(m -> m.getGenre().stream().anyMatch(g -> g.toLowerCase().contains(genre.toLowerCase())));
+            default:
+                return movieList.stream();
         }
-        return filteredMovieList.stream();
-     }
-
-    public Stream<Movie> filterByDesc(List<Movie> movieList, Operations op, String desc) {
-
-        List<Movie> filteredMovieList = new ArrayList<>();
-
-        for (Movie movie : movieList){
-            if (movie.getDescription().contains(desc)){
-                filteredMovieList.add(movie);
-            }
-        }
-        return filteredMovieList.stream();
     }
 
      /**

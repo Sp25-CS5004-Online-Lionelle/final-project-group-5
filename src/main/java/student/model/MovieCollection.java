@@ -30,13 +30,11 @@ public class MovieCollection implements IMovieCollection{
      */
         public MovieCollection() {
             movieRecords = MovieStorage.loadDatabase().stream().collect(Collectors.toSet());
-    }
 
     /**
      * add the movie records to the movieRecords set.
      * @param in the input stream where we want to load the movies from
      */
-
 
 	@Override
 	public List<Movie> getMovies() {
