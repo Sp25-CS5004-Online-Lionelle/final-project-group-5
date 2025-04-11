@@ -2,7 +2,7 @@ package student.view;
 import java.util.List;
 
 import student.model.Movie;
-//Rowan's main test file for the GUI.... I know it's the wrong folder, will move it before we're done. 
+//Rowan's main test file for the JFrameView full GUI.... I know it's the wrong folder and name, will move it before we're done. 
 
 public class Main {
     public static void main(String[] args) {
