@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 /**
  * A JPanel that contains all buttons, dropdowns, and input fields
- * used for user interaction in the movie application.
+ * used for user interaction at the top of the movie application.
  */
 public class ButtonCommands extends JPanel {
     
@@ -23,15 +23,15 @@ public class ButtonCommands extends JPanel {
     // command Buttons
     private final JButton filterBtn;
     private final JButton sortBtn;
-    private final JButton addBtn;
-    private final JButton removeBtn;
-    private final JButton saveBtn;
+    private final JButton addAllBtn;
+    private final JButton resetBtn;
     private final JButton helpBtn;
 
      /**
      * Constructs a new ButtonCommands panel with all interactive components.
      */
-    public ButtonCommands() {
+    public ButtonCommands(){
+
         setLayout(new GridLayout(3, 1)); // Two rows: top (filters), bottom (actions)
 
     // initialize components 
@@ -44,9 +44,8 @@ public class ButtonCommands extends JPanel {
 
     filterBtn = new JButton("Filter");
     sortBtn = new JButton("Sort");
-    addBtn = new JButton("Add to List");
-    removeBtn = new JButton("Remove from List");
-    saveBtn = new JButton("Save to File");
+    addAllBtn = new JButton("Add All");
+    resetBtn = new JButton("Reset Collection");
     helpBtn = new JButton( "Help");
 
     // layout all the components
@@ -65,9 +64,9 @@ public class ButtonCommands extends JPanel {
     sortRow.add(sortBtn);
 
     JPanel actionRow = new JPanel(new FlowLayout(FlowLayout.CENTER));
-    actionRow.add(addBtn);
-    actionRow.add(removeBtn);
-    actionRow.add(saveBtn);
+    actionRow.add(addAllBtn);
+    actionRow.add(resetBtn);
+    
     actionRow.add(helpBtn);
 
     //add to the main panel?
@@ -132,7 +131,7 @@ public void addSortListener(ActionListener listener) {
  * @param listener the ActionListener to be notified when the add button is clicked
  */
 public void addAddMovieListener(ActionListener listener) {
-    addBtn.addActionListener(listener);
+    addAllBtn.addActionListener(listener);
 }
 
 /**
@@ -141,17 +140,9 @@ public void addAddMovieListener(ActionListener listener) {
  * @param listener the ActionListener to be notified when the remove button is clicked
  */
 public void addRemoveMovieListener(ActionListener listener) {
-    removeBtn.addActionListener(listener);
+    resetBtn.addActionListener(listener);
 }
 
-/**
- * Adds an ActionListener to the "Save to File" button.
- *
- * @param listener the ActionListener to be notified when the save button is clicked
- */
-public void addSaveListener(ActionListener listener) {
-    saveBtn.addActionListener(listener);
-}
 
 /**
  * Adds an ActionListener to the Help button.

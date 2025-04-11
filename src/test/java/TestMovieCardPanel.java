@@ -28,7 +28,7 @@ public class TestMovieCardPanel {
             // Grid layout
             JPanel gridPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 20, 20));
             for (Movie movie : sampleMovies) {
-                gridPanel.add(new MovieCardPanel(movie));
+                gridPanel.add(new MovieCardPanel(movie, "Add"));
             }
 
             JScrollPane scrollPane = new JScrollPane(gridPanel);

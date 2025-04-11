@@ -3,137 +3,168 @@ package student.view;
 import student.model.Movie;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The main JFrame that implements the IView interface.
- * It connects ButtonCommands and MovieDisplay into a single window.
+ * The main JFrame for the Movie App.
+ * Displays the ButtonCommands at the top and holds a split view of the movie collection and user movie list.
  */
 public class JFrameView extends JFrame implements IView{
+    UserMovieListPanel userListPanel;
 
-    private final ButtonCommands buttonPanel;
-    private MovieGridDisplay movieGrid;
-    private JScrollPane scrollPane;
-    private final JLabel messageLabel;
+public JFrameView(List<Movie> movies) {
 
-    public JFrameView(){
-        setTitle("Movie App Title TBD");
-        setSize(600, 600);
+        setTitle("Movie App");
+        setSize(1000, 1000);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        JLabel welcomeLabel = new JLabel("<html><div style='text-align: center;'>"
-        + "🎬 Welcome to our Movie App!<br>"
-        + "Use the filter and sort options to explore movies.<br>"
-        + "Add your favorites to a list and save them to a file!"
-        + "</div></html>", SwingConstants.CENTER);
+        // Show the main window first
+        this.setVisible(true); 
 
-         // Initialize components
-         buttonPanel = new ButtonCommands();
-         //movieDisplay = new MovieDisplay();
-         add(welcomeLabel, BorderLayout.CENTER);
-         messageLabel = new JLabel(" ");  // For help and/or error messages
+        JOptionPane.showMessageDialog(
+            this,
+            "<html><div style='text-align: center;'>🎬 <b>Welcome to our Movie App!</b><br><br>" +
+            "Use the filter and sort options to explore movies.<br>" +
+            "Add your favorites to a list and save them to a file!<br><br>" +
+            "Enjoy browsing! </div></html>",
+            "Welcome",
+            JOptionPane.INFORMATION_MESSAGE
+        );
 
-
-         //GUI components
+         // top control panel
+        ButtonCommands buttonPanel = new ButtonCommands();
         add(buttonPanel, BorderLayout.NORTH);
-        //add(movieDisplay, BorderLayout.CENTER);
-        add(messageLabel, BorderLayout.SOUTH);
+
+       // User list to track added movies (starts empty)
+        List<Movie> userList = new ArrayList<>();
+
+        userListPanel = new UserMovieListPanel(List.of(), "Remove", movie -> {
+            userList.remove(movie);
+            userListPanel.updateMovieList(userList);
+        });
         
 
-        movieGrid = new MovieGridDisplay(List.of());  // Empty grid
-        scrollPane = new JScrollPane(movieGrid);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        add(scrollPane, BorderLayout.CENTER);
+         // Left panel (movie collection grid)
+         MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
+            if (!userList.contains(movie)) {
+                userList.add(movie);
+                userListPanel.updateMovieList(userList);
+            }
+        });
 
-
-    }
+        JScrollPane leftScrollPane = new JScrollPane(movieGrid);
     
-    // IView Display Methods
+        // Right: User Movie List Panel
+        
+        JScrollPane rightScrollPane = new JScrollPane(userListPanel);
+        
+        // Update user list when a movie is removed
+        userListPanel.getClearButton().addActionListener(e -> {
+            userList.clear();
+            userListPanel.updateMovieList(userList);
+        });
 
-    @Override
-    public void showHelpMessage(String message) {
-    messageLabel.setText(message);  
+        // Center: Split Pane
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
+        splitPane.setDividerLocation(500);
+        add(splitPane, BorderLayout.CENTER);
+
+         // Optional bottom message label
+         JLabel messageLabel = new JLabel(" ");
+         add(messageLabel, BorderLayout.SOUTH);
+ 
+         setVisible(true);
+     }
+
+@Override
+public void viewMovieCollection(List<Movie> movies) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'viewMovieCollection'");
 }
 
-
-    @Override
-    public void setVisible(boolean visible) {
-        super.setVisible(visible);
-    }
-
-    @Override
-    public void viewMovieCollection(List<Movie> movies) {
-        scrollPane.setViewportView(new MovieGridDisplay(movies));
-        revalidate();
-        repaint();
-    }
-
-    @Override
-    public void viewMovieList(List<Movie> movies) {
-        //movieDisplay.updateUserList(movies);
-    }
-
-    @Override
-    public void showErrorMessage(String errorMessage) {
-        messageLabel.setText(errorMessage);
-    }
-
-    // getter methods for input
-
-    @Override
-    public String getSearchQuery() {
-        return buttonPanel.getSearchQuery();
-    }
-
-    @Override
-    public String getSelectedFilter() {
-        return buttonPanel.getSelectedFilter();
-    }
-
-    @Override
-    public String getSelectedOperator() {
-        return buttonPanel.getSelectedOperator();
-    }
-
-    @Override
-    public boolean getSort() {
-        return buttonPanel.isSortAscending();
-    }
-
-    // button listeners 
-
-
-    @Override
-    public void addFilterListener(ActionListener listener) {
-        buttonPanel.addFilterListener(listener);
-    }
-
-    @Override
-    public void addSortListener(ActionListener listener) {
-        buttonPanel.addSortListener(listener);
-    }
-
-    @Override
-    public void addAddMovieListener(ActionListener listener) {
-        buttonPanel.addAddMovieListener(listener);
-    }
-
-    @Override
-    public void addRemoveMovieListener(ActionListener listener) {
-        buttonPanel.addRemoveMovieListener(listener);
-    }
-
-    @Override
-    public void addSaveListener(ActionListener listener) {
-        buttonPanel.addSaveListener(listener);
-    }
-    @Override
-    public void addHelpListener(ActionListener listener) {
-        buttonPanel.addHelpListener(listener);
-    }
-
-
+@Override
+public void viewMovieList(List<Movie> movies) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'viewMovieList'");
 }
+
+@Override
+public void showErrorMessage(String errorMessage) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'showErrorMessage'");
+}
+
+@Override
+public void showHelpMessage(String helpMessage) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'showHelpMessage'");
+}
+
+@Override
+public String getSearchQuery() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getSearchQuery'");
+}
+
+@Override
+public String getSelectedFilter() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getSelectedFilter'");
+}
+
+@Override
+public String getSelectedOperator() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getSelectedOperator'");
+}
+
+@Override
+public boolean getSort() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getSort'");
+}
+
+@Override
+public void addFilterListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addFilterListener'");
+}
+
+@Override
+public void addSortListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addSortListener'");
+}
+
+@Override
+public void addAddMovieListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addAddMovieListener'");
+}
+
+@Override
+public void addRemoveMovieListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addRemoveMovieListener'");
+}
+
+@Override
+public void addSaveListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addSaveListener'");
+}
+
+@Override
+public void addHelpListener(ActionListener listener) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'addHelpListener'");
+}
+ }
+ 
+
+        
