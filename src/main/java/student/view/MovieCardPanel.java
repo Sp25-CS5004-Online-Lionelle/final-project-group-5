@@ -11,6 +11,7 @@ import java.net.URL;
  */
 public class MovieCardPanel extends JPanel {
     private final Movie movie;
+    private JButton actionButton;
 
     /**
      * Constructor for MovieCardPanel.
@@ -18,14 +19,14 @@ public class MovieCardPanel extends JPanel {
      *
      * @param movie The movie object to display.
      */
-    public MovieCardPanel(Movie movie) {
+    public MovieCardPanel(Movie movie, String buttonLabel) {
         this.movie = movie;
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(150, 250));
+        setPreferredSize(new Dimension(150, 200));
         setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
-        // === Poster image
+        // Poster image
         JLabel imageLabel = new JLabel();
         imageLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -41,22 +42,48 @@ public class MovieCardPanel extends JPanel {
             imageLabel.setText("Image Error");
         }
 
-        // === Movie title
+        add(imageLabel, BorderLayout.CENTER);
+
+        // Bottom panel with vertical layout
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new BoxLayout(bottomPanel, BoxLayout.Y_AXIS));
+        bottomPanel.setOpaque(false);
+
+        //  Movie title
         JLabel titleLabel = new JLabel("<html><center>" + movie.getTitle() + "</center></html>");
-        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        titleLabel.setHorizontalAlignment(SwingConstants.CENTER); // Center the text inside the JLabel
         titleLabel.setFont(new Font("SansSerif", Font.PLAIN, 12));
 
-        add(imageLabel, BorderLayout.CENTER);
-        add(titleLabel, BorderLayout.SOUTH);
 
-        // === On click: open MovieDisplay popup
+        // add or remove button
+        actionButton = new JButton(buttonLabel); //default label
+        actionButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        actionButton.setForeground(Color.BLACK);
+        actionButton.setFont(new Font("SansSerif", Font.PLAIN, 12));
+        
+
+
+        // Add title and button to bottom moviecardpanel
+        bottomPanel.add(titleLabel);
+        bottomPanel.add(Box.createRigidArea(new Dimension(0, 5))); 
+        bottomPanel.add(actionButton);
+
+        // Add that bottom panel to the bottom of the card
+        add(bottomPanel, BorderLayout.SOUTH);
+
+        // On click: open MovieDisplay popup
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 showFullDetails();
             }
         });
     }
+    public JButton getActionButton() {
+        return actionButton;
+    }
 
+   
     /**
      * Sets the movie for this panel.
      *
