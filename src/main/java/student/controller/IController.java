@@ -1,5 +1,8 @@
 package student.controller;
 
+import student.model.FilterType;
+import student.model.Operations;
+
 public interface IController {
 
     /**
@@ -10,9 +13,11 @@ public interface IController {
 
     /**
      * Handle user-initiated search.
-     * @param query the search text (movie title, keyword, genre etc.)
+     * @param value the search text (movie title, keyword, genre etc.)
+     * @param op the operation type (EQUALS, CONTAINS, etc.)
+     * @param filterType the filterType type (GENRE, RATING, YEAR, TITLE, DESCRIPTION;)
      */
-    void handleSearch(String query);
+    void handleSearch(String value, Operations op, FilterType filterType);
 
     /**
      * Handle filtering based on parameter/operator/value.

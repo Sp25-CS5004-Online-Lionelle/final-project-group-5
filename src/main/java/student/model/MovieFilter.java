@@ -64,6 +64,19 @@ public class MovieFilter implements IMovieFilter{
         }
     }
 
+
+    public Stream<Movie> filterByDesc(List<Movie> movieList, Operations op, String desc) {
+
+        List<Movie> filteredMovieList = new ArrayList<>();
+
+        for (Movie movie : movieList){
+            if (movie.getDescription().contains(desc)){
+                filteredMovieList.add(movie);
+            }
+        }
+        return filteredMovieList.stream();
+    }
+
      /**
       *
       * @param year search movie by year of release, if can find the movie from local stored json file,
