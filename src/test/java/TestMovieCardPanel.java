@@ -12,7 +12,7 @@ public class TestMovieCardPanel {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(800, 600);
 
-            // Sample movie data
+                        // Sample movie data
             List<Movie> sampleMovies = List.of(
                 new Movie("Ratatouille", 8.1, 2007, List.of("Animation"),
                         List.of("Patton Oswalt", "Brad Garrett"),
@@ -23,11 +23,12 @@ public class TestMovieCardPanel {
                         "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
                         "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg")
             );
+             
 
             // Grid layout
             JPanel gridPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 20, 20));
             for (Movie movie : sampleMovies) {
-                gridPanel.add(new MovieCardPanel(movie));
+                gridPanel.add(new MovieCardPanel(movie, "Add"));
             }
 
             JScrollPane scrollPane = new JScrollPane(gridPanel);

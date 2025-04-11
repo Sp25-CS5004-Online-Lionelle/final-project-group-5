@@ -74,12 +74,6 @@ public interface IView {
     //event listenters to connect view to controller
     //waiting for user action (click button, typing in field, dropdown menu)
 
-      /**
-     * Registers a listener for the search action.
-     *
-     * @param listener the ActionListener to be notified when the search button is clicked
-     */
-    void addSearchListener(ActionListener listener);
 
      /**
      * Registers a listener for the filter action.
@@ -117,6 +111,16 @@ public interface IView {
      * @param listener the ActionListener to be notified when the save button is clicked
      */
     void addSaveListener(ActionListener listener);
+
+    /**
+ * Registers a listener for the "Help" button.
+ *
+ * @param listener the ActionListener to be notified when the help button is clicked
+ */
+void addHelpListener(ActionListener listener);
+
+
+
 }
 
     
