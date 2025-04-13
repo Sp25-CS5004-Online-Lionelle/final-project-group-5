@@ -40,9 +40,9 @@ package student.controller;
      }
 
      @Override
-     public void handleSearch(String query) {
+     public void handleSearch(String value, Operations op, FilterType filterType) {
          try {
-             List<Movie> results = model.getFilteredMovies(query);
+             List<Movie> results = model.getFilteredMovies(value, op, filterType);
              // code to update the view with search results
          } catch (Exception e) {
              view.showErrorMessage("Search failed: " + e.getMessage());
