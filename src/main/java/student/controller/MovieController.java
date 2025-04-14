@@ -2,6 +2,8 @@ package student.controller;
 
  import student.model.*;
  import student.view.IView;
+
+ import java.util.ArrayList;
  import java.util.List;
 
  /**
@@ -21,6 +23,7 @@ package student.controller;
       */
      private final IView view;
 
+     private List<Movie> results = new ArrayList<>();
      /**
       * Constructor for MovieController.
       *
@@ -40,9 +43,9 @@ package student.controller;
      }
 
      @Override
-     public void handleSearch(String query) {
+     public void handleSearch(String value, Operations op, FilterType filterType) {
          try {
-             List<Movie> results = model.getFilteredMovies(query);
+             results = model.getFilteredMovies(value, op, filterType);
              // code to update the view with search results
          } catch (Exception e) {
              view.showErrorMessage("Search failed: " + e.getMessage());
@@ -55,8 +58,8 @@ package student.controller;
      }
 
      @Override
-     public void handleSort(boolean ascending) {
-         List<Movie> sorted = model.sortFilteredMovies(FilterType.TITLE, ascending); // default sort by title
+     public void handleSort(FilterType filterType, boolean ascending) {
+         results = model.sortFilteredMovies(filterType, ascending); // default sort by title
          // code to update the view with sorted movies
      }
 
@@ -87,5 +90,9 @@ package student.controller;
      @Override
      public void handleSave(String fileType) {
          // placeholder for saving the movie list
+     }
+
+     public List<Movie> getResults() {
+         return this.results;
      }
  }

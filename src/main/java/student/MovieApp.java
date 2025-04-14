@@ -13,13 +13,13 @@ package student;
 
      public static void main(String[] args) {
          // Set up model
-         IMovieCollection model = new MovieCollection("MovieCollection.json");
+         IMovieCollection model = new MovieCollection();
 
          // User’s saved movie list
          IMovieList userList = new MovieList();
 
          // Set up view 
-         IView view = new JFrameView(); 
+         IView view = new JFrameView(model.getMovies());
 
          // Connect model and view via controller
          IController controller = new MovieController(model, userList, view);

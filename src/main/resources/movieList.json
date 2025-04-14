@@ -1,29 +1,33 @@
-[
-  {
-    "imdbRating": "8.1",
-    "Cast": "Brad Garrett, Lou Romano, Patton Oswalt",
-    "Plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
-    "Genre": "Animation, Adventure, Comedy",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg",
-    "Title": "Ratatouille",
-    "Year": "2007"
-  },
-{
-  "Title": "Moon",
-  "Year": "2009",
-  "imdbRating": "7.8",
-  "Genre": "Drama, Mystery, Sci-Fi",
-  "Cast": "Sam Rockwell, Kevin Spacey, Dominique McElligott",
-  "Plot": "Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish o...",
-  "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg"
-},
-  {
-    "Title": "Minions",
-    "Year": "2015",
-    "imdbRating": "6.4",
-    "Genre": "Animation, Adventure, Comedy",
-    "Cast": "Sandra Bullock, Jon Hamm, Michael Keaton",
-    "Plot": "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_SX300.jpg"
-  }
-]
+[ {
+  "Title" : "Dog Man",
+  "imdbRating" : 6.5,
+  "Year" : 2025,
+  "Genre" : "Animation, Action, Adventure",
+  "Actors" : "Pete Davidson, Poppy Liu, Lil Rel Howery",
+  "Plot" : "Dog Man, half dog and half man, he is sworn to protect and serve as he doggedly pursues the feline supervillain Petey the Cat.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDVlZGQyM2MtNjA2OS00MjdkLThiNDQtZTYzMTA1MGU3M2M0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Ratatouille",
+  "imdbRating" : 8.1,
+  "Year" : 2007,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : null,
+  "Plot" : "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Minions",
+  "imdbRating" : 6.4,
+  "Year" : 2015,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : null,
+  "Plot" : "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_SX300.jpg"
+}, {
+  "Title" : "Moon",
+  "imdbRating" : 7.8,
+  "Year" : 2009,
+  "Genre" : "Drama, Mystery, Sci-Fi",
+  "Actors" : null,
+  "Plot" : "Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish o...",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg"
+} ]
