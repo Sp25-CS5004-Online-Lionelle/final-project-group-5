@@ -31,7 +31,7 @@ public interface IController {
      * Handle sorting of the movie collection.
      * @param ascending true for ascending order, false for descending
      */
-    void handleSort(boolean ascending);
+    void handleSort(FilterType filterType, boolean ascending);
 
     /**
      * Add a selected movie to the user's saved movie list.
