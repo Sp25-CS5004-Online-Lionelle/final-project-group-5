@@ -3,6 +3,8 @@ package student.view;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -10,7 +12,9 @@ import java.awt.event.ActionListener;
  * used for user interaction at the top of the movie application.
  */
 public class ButtonCommands extends JPanel {
-    
+    // Store all "Add" listeners (used when a movie card is clicked)
+    private final List<ActionListener> addListeners = new ArrayList<>();
+
 
     // Input & dropdowns
     private final JTextField searchField;
@@ -130,9 +134,9 @@ public void addSortListener(ActionListener listener) {
  *
  * @param listener the ActionListener to be notified when the add button is clicked
  */
-public void addAddMovieListener(ActionListener listener) {
+/* public void addAddMovieListener(ActionListener listener) {
     addAllBtn.addActionListener(listener);
-}
+} */
 
 /**
  * Adds an ActionListener to the "Remove from List" button.
@@ -152,6 +156,30 @@ public void addRemoveMovieListener(ActionListener listener) {
 public void addHelpListener(ActionListener listener) {
     helpBtn.addActionListener(listener);
 }
+
+/**
+ * Adds an ActionListener to the "Add All" button.
+ *
+ * @param listener the ActionListener to be notified when the add all button is clicked
+ */
+public void addAddAllListener(ActionListener listener) {
+    addAllBtn.addActionListener(listener);
+}
+
+public void setSearchQuery(String query) {
+    searchField.setText(query);
+}
+
+public void addAddMovieListener(ActionListener listener) {
+    addListeners.add(listener);
+}
+
+public List<ActionListener> getAddListeners() {
+    return addListeners;
+}
+
+
+
 
 
 }
