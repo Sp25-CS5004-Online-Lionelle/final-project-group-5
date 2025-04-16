@@ -15,7 +15,7 @@ class IController {
   + handleSort(FilterType: filterType, boolean: ascending): void
   + handleAddMovie(String: movieTitle): void
   + handRemoveMovie(String: movieTitle): void
-  + handleSave(String: fileType): void
+  + handleSave(String: fileType): void 
 }
 class IMovieCollection {
   <<interface>>
