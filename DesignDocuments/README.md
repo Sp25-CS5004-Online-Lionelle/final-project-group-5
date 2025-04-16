@@ -166,10 +166,11 @@ class FilterType{
 }
 
 %% === RELATIONSHIPS ===
+IView <|.. JFrameView
 MovieApp --> MovieController : "starts"
-MovieCollection --> Movie : "manages"
 MovieList --> Movie : "contains"
 MovieCollection ..|> IMovieCollection : "implements"
+MovieCollection --> Movie : "manages"
 MovieList ..|> IMovieList : "implements"
 OMDBMovieData ..|> IMovieDataFetch : "implements"
 MovieController ..|> IController : "implements"
