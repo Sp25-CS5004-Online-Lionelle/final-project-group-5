@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class MovieStorage implements IStorage {
+public class MovieStorage {
 
 
 // ----------------------------------------------Update If Needed------------------------------------------------------
