@@ -55,6 +55,16 @@ package student.controller;
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
+
+        view.addAddAllListener(e -> {
+            List<Movie> toAdd = results.isEmpty() ? model.getMovies() : results;
+            System.out.println("Before addAll, userList has: " + userList.getMovieTitles());
+            userList.addAll(toAdd);
+            System.out.println("After addAll, userList has: " + userList.getMovieTitles());
+            view.viewMovieList(userList.getMovies());
+        });
+        
+
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
     }
     

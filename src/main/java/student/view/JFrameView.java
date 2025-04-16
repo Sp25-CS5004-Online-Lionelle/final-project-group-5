@@ -54,9 +54,12 @@ public JFrameView(List<Movie> movies) {
 
          // Left panel (movie collection grid)
          MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            if (!userList.contains(movie)) {
-                userList.add(movie);
-                userListPanel.updateMovieList(userList);
+            // Fake a search query and trigger the controller's existing add flow
+            // Store the movie title in the search field so controller picks it up
+            buttonPanel.setSearchQuery(movie.getTitle());
+            // Trigger the add handler
+            for (ActionListener listener : buttonPanel.getAddListeners()) {
+                listener.actionPerformed(null);
             }
         });
 
@@ -111,8 +114,7 @@ public JFrameView(List<Movie> movies) {
 
 @Override
 public void viewMovieList(List<Movie> movies) {
-    this.userList = new ArrayList<>(movies);
-    userListPanel.updateMovieList(userList);
+    userListPanel.updateMovieList(movies); // update the user list panel with the new movies
 }
 
 @Override
@@ -158,7 +160,7 @@ public void addSortListener(ActionListener listener) {
 @Override
 public void addAddMovieListener(ActionListener listener) {
     buttonPanel.addAddMovieListener(listener);
-}
+} 
 
 @Override
 public void addRemoveMovieListener(ActionListener listener) {
@@ -174,6 +176,12 @@ public void addSaveListener(ActionListener listener) {
 public void addHelpListener(ActionListener listener) {
     buttonPanel.addHelpListener(listener);
 }
+
+@Override
+public void addAddAllListener(ActionListener listener) {
+    buttonPanel.addAddAllListener(listener);
+}
+
  }
  
 

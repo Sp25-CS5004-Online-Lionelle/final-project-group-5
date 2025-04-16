@@ -18,4 +18,18 @@ public enum FilterType {
         }
         return null;
     }
+
+/*     public static FilterType fromString(String value) {
+        String cleaned = value.toUpperCase().replaceAll("[^A-Z]", "");
+
+        for (FilterType type : FilterType.values()) {
+            if (type.name().replaceAll("[^A-Z]", "").equalsIgnoreCase(cleaned)) {
+                return type;
+            }
+        }
+
+        throw new IllegalArgumentException("Invalid filter type: " + value);
+    }
+}
+ */
 }

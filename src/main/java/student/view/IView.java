@@ -90,13 +90,12 @@ public interface IView {
     void addSortListener(ActionListener listener);
 
 
-      /**
+     /**
      * Registers a listener for the "Add to List" button.
      *
      * @param listener the ActionListener to be notified when a movie is added to the user's list
      */
-
-    void addAddMovieListener(ActionListener listener);
+    void addAddMovieListener(ActionListener listener); 
 
       /**
      * Registers a listener for the "Remove from List" button.
@@ -113,11 +112,19 @@ public interface IView {
     void addSaveListener(ActionListener listener);
 
     /**
- * Registers a listener for the "Help" button.
+* Registers a listener for the "Help" button.
  *
  * @param listener the ActionListener to be notified when the help button is clicked
  */
 void addHelpListener(ActionListener listener);
+
+/**
+* Registers a listener for the "add all" button.
+* 
+* @param listener the ActionListener to be notified when the add all button is clicked
+*/
+void addAddAllListener(ActionListener listener);
+
 
 
 
