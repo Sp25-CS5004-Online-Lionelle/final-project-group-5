@@ -100,4 +100,13 @@ public class MovieList implements IMovieList {
     public int size() {
         return movies.size();
     }
+
+    @Override
+    public void save(String fileType) throws Exception {
+    if (!fileType.equalsIgnoreCase("json")) {
+        throw new UnsupportedOperationException("Only JSON format is supported.");
+    }
+    IStorage.writeToUserMovieList(new ArrayList<>(movies)); // default user file
+}
+
 }
