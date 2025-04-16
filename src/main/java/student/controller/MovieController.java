@@ -39,14 +39,31 @@ package student.controller;
 
      @Override
      public void start() {
-         // placeholder for starting the application
-     }
+        view.setVisible(true);
+        view.viewMovieCollection(model.getMovies());
+
+        view.addFilterListener(e -> handleFilter(
+                view.getSelectedFilter(),
+                view.getSelectedOperator(),
+                view.getSearchQuery()
+        ));
+
+        view.addSortListener(e -> handleSort(
+                FilterType.valueOf(view.getSelectedFilter().toUpperCase()),
+                view.getSort()
+        ));
+
+        view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
+        view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
+        view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
+    }
+    
 
      @Override
      public void handleSearch(String value, Operations op, FilterType filterType) {
          try {
              results = model.getFilteredMovies(value, op, filterType);
-             // code to update the view with search results
+             view.viewMovieCollection(results);
          } catch (Exception e) {
              view.showErrorMessage("Search failed: " + e.getMessage());
          }
@@ -54,13 +71,24 @@ package student.controller;
 
      @Override
      public void handleFilter(String filter, String operator, String value) {
-         // placeholder for filtering logic
+        try {
+            FilterType filterType = FilterType.valueOf(filter.toUpperCase());
+            Operations op = Operations.fromOperator(operator);
+            results = model.getFilteredMovies(value, op, filterType);
+            view.viewMovieCollection(results);
+        } catch (Exception e) {
+            view.showErrorMessage("Filter failed: " + e.getMessage());
+        }
      }
 
      @Override
      public void handleSort(FilterType filterType, boolean ascending) {
-         results = model.sortFilteredMovies(filterType, ascending); // default sort by title
-         // code to update the view with sorted movies
+        try {
+            results = model.sortFilteredMovies(filterType, ascending);
+            view.viewMovieCollection(results);
+        } catch (Exception e) {
+            view.showErrorMessage("Sort failed: " + e.getMessage());
+        }
      }
 
      @Override
@@ -68,7 +96,7 @@ package student.controller;
          for (Movie movie : model.getMovies()) {
              if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
                  userList.add(movie);
-                 // code to update the view
+                 view.viewMovieList(userList.getMovies());
                  return;
              }
          }
@@ -80,7 +108,7 @@ package student.controller;
          for (Movie movie : userList.getMovies()) {
              if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
                  userList.remove(movie);
-                 // code to update the view
+                 view.viewMovieList(userList.getMovies());
                  return;
              }
          }
@@ -89,7 +117,14 @@ package student.controller;
 
      @Override
      public void handleSave(String fileType) {
-         // placeholder for saving the movie list
+        try {
+            userList.save(fileType);
+            view.showHelpMessage("🎉 Your movie list was saved as a ." + fileType + " file!");
+        } catch (UnsupportedOperationException e) {
+            view.showErrorMessage("Unsupported file type: " + fileType);
+        } catch (Exception e) {
+            view.showErrorMessage("Failed to save list: " + e.getMessage());
+        }
      }
 
      public List<Movie> getResults() {

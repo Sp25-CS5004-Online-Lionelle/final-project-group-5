@@ -35,6 +35,7 @@ public class MovieGridDisplay extends JPanel {
         // Add each movie card to the panel
         for (Movie movie : movies) {
             MovieCardPanel card = new MovieCardPanel(movie, "Add");
+            card.getActionButton().addActionListener(e -> addAction.accept(movie));
             add(card);
         }
     }

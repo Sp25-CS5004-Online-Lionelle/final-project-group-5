@@ -25,6 +25,7 @@ package student;
          IController controller = new MovieController(model, userList, view);
 
          // Launch the app
+         System.out.println("Movie App is running!!!");
          controller.start();
      }
  }

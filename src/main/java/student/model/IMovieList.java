@@ -46,4 +46,12 @@ public interface IMovieList {
      * Returns the number of movies in the list.
      */
     int size();
+
+     /**
+     * Saves the movie list to a file.
+     *
+     * @param fileType the format
+     * @throws Exception if the save fails
+     */
+    void save(String fileType) throws Exception;
 }

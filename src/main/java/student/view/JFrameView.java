@@ -15,6 +15,9 @@ import java.util.List;
  */
 public class JFrameView extends JFrame implements IView{
     UserMovieListPanel userListPanel;
+    private ButtonCommands buttonPanel;
+    private JSplitPane splitPane;
+    private List<Movie> userList = new ArrayList<>();
 
 public JFrameView(List<Movie> movies) {
 
@@ -37,11 +40,11 @@ public JFrameView(List<Movie> movies) {
         );
 
          // top control panel
-        ButtonCommands buttonPanel = new ButtonCommands();
+        buttonPanel = new ButtonCommands();
         add(buttonPanel, BorderLayout.NORTH);
 
        // User list to track added movies (starts empty)
-        List<Movie> userList = new ArrayList<>();
+        userList = new ArrayList<>();
 
         userListPanel = new UserMovieListPanel(List.of(), "Remove", movie -> {
             userList.remove(movie);
@@ -70,7 +73,7 @@ public JFrameView(List<Movie> movies) {
         });
 
         // Center: Split Pane
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
         splitPane.setDividerLocation(500);
         add(splitPane, BorderLayout.CENTER);
 
@@ -81,88 +84,95 @@ public JFrameView(List<Movie> movies) {
          setVisible(true);
      }
 
-@Override
-public void viewMovieCollection(List<Movie> movies) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'viewMovieCollection'");
-}
+    @Override
+    public void viewMovieCollection(List<Movie> movies) {
+        MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
+            if (!userList.contains(movie)) {
+                userList.add(movie);
+                userListPanel.updateMovieList(userList);
+            }
+        });
+    
+        JScrollPane leftScrollPane = new JScrollPane(movieGrid);
+        JScrollPane rightScrollPane = new JScrollPane(userListPanel);
+    
+        if (splitPane != null) {
+            getContentPane().remove(splitPane);  // safely remove only if it exists
+        }
+    
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
+        splitPane.setDividerLocation(500);
+        add(splitPane, BorderLayout.CENTER);
+    
+        revalidate();
+        repaint();
+    }
+     
 
 @Override
 public void viewMovieList(List<Movie> movies) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'viewMovieList'");
+    this.userList = new ArrayList<>(movies);
+    userListPanel.updateMovieList(userList);
 }
 
 @Override
 public void showErrorMessage(String errorMessage) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'showErrorMessage'");
+    JOptionPane.showMessageDialog(this, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
 }
 
 @Override
 public void showHelpMessage(String helpMessage) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'showHelpMessage'");
+    JOptionPane.showMessageDialog(this, helpMessage, "Help", JOptionPane.INFORMATION_MESSAGE);
 }
 
 @Override
 public String getSearchQuery() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getSearchQuery'");
+    return buttonPanel.getSearchQuery();
 }
 
 @Override
 public String getSelectedFilter() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getSelectedFilter'");
+    return buttonPanel.getSelectedFilter();
 }
 
 @Override
 public String getSelectedOperator() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getSelectedOperator'");
+    return buttonPanel.getSelectedOperator();
 }
 
 @Override
 public boolean getSort() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getSort'");
+    return buttonPanel.isSortAscending();
 }
 
 @Override
 public void addFilterListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addFilterListener'");
+    buttonPanel.addFilterListener(listener);
 }
 
 @Override
 public void addSortListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addSortListener'");
+    buttonPanel.addSortListener(listener);
 }
 
 @Override
 public void addAddMovieListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addAddMovieListener'");
+    buttonPanel.addAddMovieListener(listener);
 }
 
 @Override
 public void addRemoveMovieListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addRemoveMovieListener'");
+    buttonPanel.addRemoveMovieListener(listener);
 }
 
 @Override
 public void addSaveListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addSaveListener'");
+    userListPanel.getSaveButton().addActionListener(listener);
 }
 
 @Override
 public void addHelpListener(ActionListener listener) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addHelpListener'");
+    buttonPanel.addHelpListener(listener);
 }
  }
  
