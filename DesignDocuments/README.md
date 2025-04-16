@@ -166,23 +166,21 @@ class FilterType{
 }
 
 %% === RELATIONSHIPS ===
-IView <|.. JFrameView
+IView <|.. JFrameView : implements
 MovieApp --> MovieController : "starts"
 MovieList --> Movie : "contains"
 MovieCollection ..|> IMovieCollection : "implements"
 MovieCollection --> Movie : "manages"
 MovieList ..|> IMovieList : "implements"
-OMDBMovieData ..|> IMovieDataFetch : "implements"
-MovieController ..|> IController : "implements"
+IController <|.. MovieController : "implements"
 MovieController --> MovieCollection : "uses"
 MovieController --> MovieList : "uses"
 JFrameView --> MovieController : "interacts with"
-JFrameView --> MovieDisplay : "displays"
-ButtonCommands --> JFrameView : "attached to"
-MovieCardPanel -->JFrameView : "attached to"
-MovieGridDisplay -->JFrameView : "attached to"
-UserMovieListPanel -->JFrameView : "attached to"
-ConsoleView --> MovieController : "interacts with"
+JFrameView --> MovieDisplay : "uses"
+JFrameView --> ButtonCommands : "uses"
+JFrameView --> MovieGridDisplay : "displays"
+MovieGridDisplay --> MovieCardPanel: "contains"
+JFrameView --> UserMovieListPanel : "displays"
 Movie --> ListOfStringDeserializer : uses
 Movie --> ListOfStringSerializer : uses
 
