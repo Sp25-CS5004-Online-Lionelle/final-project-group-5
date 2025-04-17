@@ -48,10 +48,20 @@ package student.controller;
                 view.getSearchQuery()
         ));
 
-        view.addSortListener(e -> handleSort(
-                FilterType.valueOf(view.getSelectedFilter().toUpperCase()),
-                view.getSort()
-        ));
+        view.addSortListener(e -> {
+            if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("year")){
+                handleSort(
+                        FilterType.YEAR,
+                        view.getSort()
+                );
+            } else if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("IMDB RATING")){
+                handleSort(
+                        FilterType.RATING,
+                        view.getSort()
+                );
+            }
+
+        });
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));

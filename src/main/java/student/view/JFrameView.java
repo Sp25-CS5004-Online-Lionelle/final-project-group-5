@@ -138,6 +138,11 @@ public String getSelectedFilter() {
 }
 
 @Override
+public String getSelectedSort() {
+        return buttonPanel.getSelectedSort();
+    }
+
+@Override
 public String getSelectedOperator() {
     return buttonPanel.getSelectedOperator();
 }

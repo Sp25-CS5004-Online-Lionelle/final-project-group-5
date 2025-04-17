@@ -94,6 +94,14 @@ public String getSelectedFilter() {
 }
 
 /**
+* Returns the selected sort filter type (e.g., IMDB Rating, Year).
+* @return selected sorted filter as a String
+*/
+public String getSelectedSort() {
+        return sortDropdown.getSelectedItem().toString();
+}
+
+/**
  * Returns the selected filter operator (e.g., ==, >=, ~=).
  * @return selected operator as a String
  */

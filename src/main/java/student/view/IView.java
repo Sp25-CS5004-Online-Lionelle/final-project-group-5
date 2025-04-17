@@ -54,7 +54,14 @@ public interface IView {
      *
      * @return the filter field selected by the user
      */
-    String getSelectedFilter(); 
+    String getSelectedFilter();
+
+
+    /**
+     * Retuens the selected sort parameter (e.g. year, IMDB Rating)
+     * @return the sorted filter by the user in a String type
+     */
+    String getSelectedSort();
 
     /**
      * Returns the selected comparison operator (e.g., ==, >=, <=).
