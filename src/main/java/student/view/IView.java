@@ -77,7 +77,11 @@ public interface IView {
      */
     boolean getSort(); // sort the filtered collection ascending or decsending
 
-
+    /**
+     * check if Asc or Dec button is checked
+     * @return
+     */
+    boolean getNotAscDec();
     //event listenters to connect view to controller
     //waiting for user action (click button, typing in field, dropdown menu)
 

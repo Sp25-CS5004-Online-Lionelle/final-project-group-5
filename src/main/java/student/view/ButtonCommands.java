@@ -137,9 +137,16 @@ public boolean isSortAscending() {
     return sortAscCheckbox.isSelected();
 }
 
+public boolean notAscDec() {
+    if (!sortAscCheckbox.isSelected() && !sortDecCheckbox.isSelected()) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
-/**
+    /**
  * Adds an ActionListener to the Filter button.
  *
  * @param listener the ActionListener to be notified when the filter button is clicked

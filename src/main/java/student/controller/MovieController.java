@@ -106,6 +106,10 @@ package student.controller;
              view.showErrorMessage("Please search some movies to sort");
              return;
          }
+         if (view.getNotAscDec()){
+             view.showErrorMessage("You must check sort Ascending or Descending");
+             return;
+         }
         try {
             results = model.sortFilteredMovies(filterType, ascending);
             view.viewMovieCollection(results);

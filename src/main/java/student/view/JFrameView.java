@@ -153,6 +153,11 @@ public boolean getSort() {
 }
 
 @Override
+public boolean getNotAscDec(){
+    return buttonPanel.notAscDec();
+}
+
+@Override
 public void addFilterListener(ActionListener listener) {
     buttonPanel.addFilterListener(listener);
 }
