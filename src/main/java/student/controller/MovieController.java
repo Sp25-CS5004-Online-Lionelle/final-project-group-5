@@ -64,7 +64,7 @@ package student.controller;
         });
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
-        view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
+        view.addRemoveMovieListener(e -> handleResetMovieCollection());
 
         view.addAddAllListener(e -> {
             List<Movie> toAdd = results.isEmpty() ? model.getMovies() : results;
@@ -73,7 +73,6 @@ package student.controller;
             System.out.println("After addAll, userList has: " + userList.getMovieTitles());
             view.viewMovieList(userList.getMovies());
         });
-        
 
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
     }
@@ -134,6 +133,21 @@ package student.controller;
          }
          view.showErrorMessage("Movie not in saved list: " + movieTitle);
      }
+
+     @Override
+     public void handleResetMovieCollection() {
+//         for (Movie movie : model.getMovies()) {
+//             if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
+//                 userList.remove(movie);
+//                 view.viewMovieList(userList.getMovies());
+//                 return;
+//             }
+//         }
+//         view.showErrorMessage("Movie not in saved list: " + movieTitle);
+         results = model.getMovies();
+         view.viewMovieCollection(results);
+     }
+
 
      @Override
      public void handleSave(String fileType) {
