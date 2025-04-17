@@ -102,6 +102,10 @@ package student.controller;
 
      @Override
      public void handleSort(FilterType filterType, boolean ascending) {
+         if (model.getFilteredMovieList().size() == 0){
+             view.showErrorMessage("Please search some movies to sort");
+             return;
+         }
         try {
             results = model.sortFilteredMovies(filterType, ascending);
             view.viewMovieCollection(results);
