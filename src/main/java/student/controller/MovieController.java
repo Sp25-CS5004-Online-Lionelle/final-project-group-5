@@ -136,14 +136,6 @@ package student.controller;
 
      @Override
      public void handleResetMovieCollection() {
-//         for (Movie movie : model.getMovies()) {
-//             if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
-//                 userList.remove(movie);
-//                 view.viewMovieList(userList.getMovies());
-//                 return;
-//             }
-//         }
-//         view.showErrorMessage("Movie not in saved list: " + movieTitle);
          results = model.getMovies();
          view.viewMovieCollection(results);
      }
