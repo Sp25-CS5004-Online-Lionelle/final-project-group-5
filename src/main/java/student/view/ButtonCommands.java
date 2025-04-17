@@ -46,6 +46,7 @@ public class ButtonCommands extends JPanel {
     sortAscCheckbox = new JCheckBox("Ascending");
     sortDecCheckbox = new JCheckBox("Descending");
 
+
     filterBtn = new JButton("Filter");
     sortBtn = new JButton("Sort");
     addAllBtn = new JButton("Add All");
@@ -66,6 +67,25 @@ public class ButtonCommands extends JPanel {
     sortRow.add(sortAscCheckbox);
     sortRow.add(sortDecCheckbox);
     sortRow.add(sortBtn);
+
+    // if the Asc button is checked, then set dec button to disable
+    sortAscCheckbox.addActionListener(e->{
+        if (sortAscCheckbox.isSelected()){
+            sortDecCheckbox.setEnabled(false);
+        } else {
+            sortDecCheckbox.setEnabled(true);
+        }
+    });
+
+    // if the Dec button is checked, then set Asc button to disable
+    sortDecCheckbox.addActionListener(e->{
+        if(sortDecCheckbox.isSelected()){
+            sortAscCheckbox.setEnabled(false);
+        }else {
+            sortAscCheckbox.setEnabled(true);
+        }
+    });
+
 
     JPanel actionRow = new JPanel(new FlowLayout(FlowLayout.CENTER));
     actionRow.add(addAllBtn);
