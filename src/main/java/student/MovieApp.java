@@ -19,10 +19,15 @@ package student;
          IMovieList userList = new MovieList();
 
          // Set up view 
-         IView view = new JFrameView(model.getMovies());
+         IView view = new JFrameView(model.getMovies(), null);
 
          // Connect model and view via controller
          IController controller = new MovieController(model, userList, view);
+
+         // Set the controller in the view
+         if (view instanceof JFrameView) {
+            ((JFrameView) view).setController(controller); 
+        }
 
          // Launch the app
          System.out.println("Movie App is running!!!");

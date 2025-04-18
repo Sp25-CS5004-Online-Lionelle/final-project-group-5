@@ -4,6 +4,10 @@ import student.model.Movie;
 import java.util.List;
 import java.util.function.Consumer;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.TitledBorder;
@@ -15,6 +19,8 @@ public class UserMovieListPanel extends JPanel {
     private JButton clearButton;
     private JPanel cardPanel;
     private Consumer<Movie> removeAction;
+    private List<ActionListener> removeListeners = new ArrayList<>(); // NEW
+
 
     public UserMovieListPanel(List<Movie> movies, String buttonLabel, Consumer<Movie> removeAction) {
         this.removeAction = removeAction;
@@ -56,12 +62,25 @@ public class UserMovieListPanel extends JPanel {
 
         for (Movie movie : movies) {
             MovieCardPanel card = new MovieCardPanel(movie, "Remove");
+
+            JButton removeButton = card.getActionButton();
+            removeButton.setActionCommand(movie.getTitle());
+            removeButton.addActionListener(e -> {
+                for (ActionListener listener : removeListeners) {
+                    listener.actionPerformed(new ActionEvent(removeButton, ActionEvent.ACTION_PERFORMED, movie.getTitle()));
+                }
+            });
             cardPanel.add(card);
         }
 
         cardPanel.revalidate();
         cardPanel.repaint();
+        System.out.println("updateMovieList called with " + movies.size() + " movie(s).");
     }
+
+    public void addRemoveListener(ActionListener listener) { // NEW
+        removeListeners.add(listener);
+    }    
 
     public JButton getClearButton() {
         return clearButton;
@@ -70,4 +89,6 @@ public class UserMovieListPanel extends JPanel {
     public JButton getSaveButton() {
         return saveButton;
     }
+
+    
 }

@@ -136,6 +136,14 @@ void addHelpListener(ActionListener listener);
 */
 void addAddAllListener(ActionListener listener);
 
+/**
+ * Registers a listener for the "remove all" button.
+ * 
+ * @param listener the ActionListener to be notified when the remove all button is clicked
+ */
+void addResetCollectionListener(ActionListener listener);
+
+
 
 
 
