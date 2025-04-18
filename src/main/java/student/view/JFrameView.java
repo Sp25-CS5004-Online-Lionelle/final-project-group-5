@@ -1,9 +1,9 @@
 package student.view;
 
-import student.controller.IController; 
 import student.model.Movie;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,13 +14,12 @@ import java.util.List;
  * Displays the ButtonCommands at the top and holds a split view of the movie collection and user movie list.
  */
 public class JFrameView extends JFrame implements IView{
-    private IController controller; 
     UserMovieListPanel userListPanel;
     private ButtonCommands buttonPanel;
     private JSplitPane splitPane;
+    private List<Movie> userList = new ArrayList<>();
 
-public JFrameView(List<Movie> movies, IController controller) {
-        this.controller = controller;
+public JFrameView(List<Movie> movies) {
 
         setTitle("Movie App");
         setSize(1000, 1000);
@@ -44,18 +43,25 @@ public JFrameView(List<Movie> movies, IController controller) {
         buttonPanel = new ButtonCommands();
         add(buttonPanel, BorderLayout.NORTH);
 
+       // User list to track added movies (starts empty)
+        userList = new ArrayList<>();
+
         userListPanel = new UserMovieListPanel(List.of(), "Remove", movie -> {
-            if (controller != null) {
-                controller.handleRemoveMovie(movie.getTitle()); 
-            }
+            userList.remove(movie);
+            userListPanel.updateMovieList(userList);
         });
         
 
          // Left panel (movie collection grid)
          MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            controller.handleAddMovie(movie.getTitle()); 
+            // Fake a search query and trigger the controller's existing add flow
+            // Store the movie title in the search field so controller picks it up
+            buttonPanel.setSearchQuery(movie.getTitle());
+            // Trigger the add handler
+            for (ActionListener listener : buttonPanel.getAddListeners()) {
+                listener.actionPerformed(null);
+            }
         });
-
 
         JScrollPane leftScrollPane = new JScrollPane(movieGrid);
     
@@ -63,6 +69,11 @@ public JFrameView(List<Movie> movies, IController controller) {
         
         JScrollPane rightScrollPane = new JScrollPane(userListPanel);
         
+        // Update user list when a movie is removed
+        userListPanel.getClearButton().addActionListener(e -> {
+            userList.clear();
+            userListPanel.updateMovieList(userList);
+        });
 
         // Center: Split Pane
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
@@ -74,14 +85,14 @@ public JFrameView(List<Movie> movies, IController controller) {
          add(messageLabel, BorderLayout.SOUTH);
  
          setVisible(true);
-
      }
 
     @Override
     public void viewMovieCollection(List<Movie> movies) {
         MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            if (controller != null) {
-                controller.handleAddMovie(movie.getTitle());  
+            if (!userList.contains(movie)) {
+                userList.add(movie);
+                userListPanel.updateMovieList(userList);
             }
         });
     
@@ -104,8 +115,6 @@ public JFrameView(List<Movie> movies, IController controller) {
 @Override
 public void viewMovieList(List<Movie> movies) {
     userListPanel.updateMovieList(movies); // update the user list panel with the new movies
-    revalidate();  
-    repaint();    
 }
 
 @Override
@@ -165,7 +174,7 @@ public void addAddMovieListener(ActionListener listener) {
 
 @Override
 public void addRemoveMovieListener(ActionListener listener) {
-    userListPanel.addRemoveListener(listener);
+    buttonPanel.addRemoveMovieListener(listener);
 }
 
 @Override
@@ -182,22 +191,6 @@ public void addHelpListener(ActionListener listener) {
 public void addAddAllListener(ActionListener listener) {
     buttonPanel.addAddAllListener(listener);
 }
-
-public void setController(IController controller) { 
-    this.controller = controller;
-
-    userListPanel.getClearButton().addActionListener(e -> {
-        System.out.println(" Clear button clicked!");
-        controller.handleClearMovieList();
-    });
-}
-
-
-@Override
-public void addResetCollectionListener(ActionListener listener) {
-    buttonPanel.addResetListener(listener); // assuming you have a reset button
-}
-
 
  }
  

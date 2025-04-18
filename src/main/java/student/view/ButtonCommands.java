@@ -31,8 +31,6 @@ public class ButtonCommands extends JPanel {
     private final JButton resetBtn;
     private final JButton helpBtn;
 
-
-
      /**
      * Constructs a new ButtonCommands panel with all interactive components.
      */
@@ -42,9 +40,9 @@ public class ButtonCommands extends JPanel {
 
     // initialize components 
     searchField = new JTextField(15);
-    filterDropdown = new JComboBox<>(new String[]{"Title","IMDB Rating", "Genre", "Year", "Cast", "Plot"});
+    filterDropdown = new JComboBox<>(new String[]{"Title", "Genre", "Year", "Description"});
     operatorDropdown = new JComboBox<>(new String[]{"==", "!=", ">=", "<=", ">", "<", "~="});
-    sortDropdown = new JComboBox<>(new String []{"Title","IMDB Rating", "Genre", "Year"});
+    sortDropdown = new JComboBox<>(new String []{"Rating", "Year"});
     sortAscCheckbox = new JCheckBox("Ascending");
     sortDecCheckbox = new JCheckBox("Descending");
 
@@ -54,7 +52,6 @@ public class ButtonCommands extends JPanel {
     addAllBtn = new JButton("Add All");
     resetBtn = new JButton("Reset Collection");
     helpBtn = new JButton( "Help");
-
 
     // layout all the components
     JPanel filterRow = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -149,7 +146,7 @@ public boolean notAscDec() {
 }
 
 
-/**
+    /**
  * Adds an ActionListener to the Filter button.
  *
  * @param listener the ActionListener to be notified when the filter button is clicked
@@ -203,12 +200,6 @@ public void addHelpListener(ActionListener listener) {
 public void addAddAllListener(ActionListener listener) {
     addAllBtn.addActionListener(listener);
 }
-
-
-public void addResetListener(ActionListener listener) {
-    resetBtn.addActionListener(listener);
-}
-
 
 public void setSearchQuery(String query) {
     searchField.setText(query);

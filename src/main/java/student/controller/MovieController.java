@@ -63,15 +63,8 @@ package student.controller;
 
         });
 
-        view.addResetCollectionListener(e -> handleResetMovieCollection());
-
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
-
-        view.addRemoveMovieListener(e -> {
-            String title = e.getActionCommand();
-            handleRemoveMovie(title);            
-        });
-        
+        view.addRemoveMovieListener(e -> handleResetMovieCollection());
 
         view.addAddAllListener(e -> {
             List<Movie> toAdd = results.isEmpty() ? model.getMovies() : results;
@@ -82,9 +75,6 @@ package student.controller;
         });
 
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
-
-        view.addSaveListener(e -> handleSave("json"));
-
     }
     
 
@@ -129,64 +119,33 @@ package student.controller;
      }
 
      @Override
-    public void handleAddMovie(String movieTitle) {
-    System.out.println("Attempting to add movie with title: \"" + movieTitle + "\""); // DEBUG
-    // DEBUG: Log what's currently in the model
-    System.out.println(" Available in model:");
-    for (Movie m : model.getMovies()) {
-        System.out.println(" - " + m.getTitle());
-    }
-    // DEBUG: Log user list before
-    System.out.println("User list before adding:");
-    for (Movie m : userList.getMovies()) {
-        System.out.println(" - " + m.getTitle());
-    }
-
-    for (Movie movie : model.getMovies()) {
-        if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
-            userList.add(movie);
-            System.out.println("Movie added to user list: " + movie.getTitle()); // DEBUG
-            view.viewMovieList(userList.getMovies());
-            return;
-        }
-    }
-
-    // Log user list after (if not found)
-    System.out.println("Movie not found in model: " + movieTitle); // DEBUG
-    view.showErrorMessage("Movie not found: " + movieTitle); // DEBUG
-}
+     public void handleAddMovie(String movieTitle) {
+         for (Movie movie : model.getMovies()) {
+             if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
+                 userList.add(movie);
+                 view.viewMovieList(userList.getMovies());
+                 return;
+             }
+         }
+         view.showErrorMessage("Movie not found: " + movieTitle);
+     }
 
      @Override
-    public void handleRemoveMovie(String movieTitle) {
-    System.out.println("Attempting to remove movie with title: \"" + movieTitle + "\"");
-
-    // DEBUG: List what's currently in the user list
-    System.out.println("Current user list:");
-    for (Movie movie : userList.getMovies()) {
-        System.out.println(" - " + movie.getTitle());
-    }
-
-    for (Movie movie : userList.getMovies()) {
-        if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
-            userList.remove(movie);
-            System.out.println(" Movie removed from user list: " + movie.getTitle()); // DEBUG
-            view.viewMovieList(userList.getMovies());
-            return;
-        }
-    }
-
-    // If not found
-    System.out.println(" Movie not found in user list: " + movieTitle);
-    view.showErrorMessage("Movie not in saved list: " + movieTitle);
-}
-
+     public void handleRemoveMovie(String movieTitle) {
+         for (Movie movie : userList.getMovies()) {
+             if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
+                 userList.remove(movie);
+                 view.viewMovieList(userList.getMovies());
+                 return;
+             }
+         }
+         view.showErrorMessage("Movie not in saved list: " + movieTitle);
+     }
 
      @Override
      public void handleResetMovieCollection() {
-        model.reset();
-        results = model.getMovies();
-        System.out.println("Reset pressed, reloading movie collection with " + results.size() + " movie(s).");
-        view.viewMovieCollection(results);
+         results = model.getMovies();
+         view.viewMovieCollection(results);
      }
 
 
@@ -205,17 +164,4 @@ package student.controller;
      public List<Movie> getResults() {
          return this.results;
      }
-
-     @Override
-    public void handleClearMovieList() {
-        System.out.println("Clearing all movies from user list...");
-        userList.clear();
-    
-        List<Movie> current = userList.getMovies();
-        System.out.println("Cleared list has " + current.size() + " movie(s).");
-    
-        view.viewMovieList(current); 
-        view.showHelpMessage("Movie list has been cleared.");
-}
-
  }
