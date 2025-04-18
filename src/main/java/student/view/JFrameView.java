@@ -1,9 +1,9 @@
 package student.view;
 
+import student.controller.IController; 
 import student.model.Movie;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,12 +14,14 @@ import java.util.List;
  * Displays the ButtonCommands at the top and holds a split view of the movie collection and user movie list.
  */
 public class JFrameView extends JFrame implements IView{
+    private IController controller; 
     UserMovieListPanel userListPanel;
     private ButtonCommands buttonPanel;
     private JSplitPane splitPane;
     private List<Movie> userList = new ArrayList<>();
 
-public JFrameView(List<Movie> movies) {
+public JFrameView(List<Movie> movies, IController controller) {
+        this.controller = controller;
 
         setTitle("Movie App");
         setSize(1000, 1000);
@@ -54,14 +56,9 @@ public JFrameView(List<Movie> movies) {
 
          // Left panel (movie collection grid)
          MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            // Fake a search query and trigger the controller's existing add flow
-            // Store the movie title in the search field so controller picks it up
-            buttonPanel.setSearchQuery(movie.getTitle());
-            // Trigger the add handler
-            for (ActionListener listener : buttonPanel.getAddListeners()) {
-                listener.actionPerformed(null);
-            }
+            controller.handleAddMovie(movie.getTitle()); 
         });
+
 
         JScrollPane leftScrollPane = new JScrollPane(movieGrid);
     
@@ -90,9 +87,8 @@ public JFrameView(List<Movie> movies) {
     @Override
     public void viewMovieCollection(List<Movie> movies) {
         MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            if (!userList.contains(movie)) {
-                userList.add(movie);
-                userListPanel.updateMovieList(userList);
+            if (controller != null) {
+                controller.handleAddMovie(movie.getTitle());  
             }
         });
     
@@ -190,6 +186,10 @@ public void addHelpListener(ActionListener listener) {
 @Override
 public void addAddAllListener(ActionListener listener) {
     buttonPanel.addAddAllListener(listener);
+}
+
+public void setController(IController controller) { 
+    this.controller = controller;
 }
 
  }

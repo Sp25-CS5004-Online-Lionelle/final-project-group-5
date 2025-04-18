@@ -119,16 +119,33 @@ package student.controller;
      }
 
      @Override
-     public void handleAddMovie(String movieTitle) {
-         for (Movie movie : model.getMovies()) {
-             if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
-                 userList.add(movie);
-                 view.viewMovieList(userList.getMovies());
-                 return;
-             }
-         }
-         view.showErrorMessage("Movie not found: " + movieTitle);
-     }
+    public void handleAddMovie(String movieTitle) {
+    System.out.println("Attempting to add movie with title: \"" + movieTitle + "\""); // DEBUG
+    // DEBUG: Log what's currently in the model
+    System.out.println("📦 Available in model:");
+    for (Movie m : model.getMovies()) {
+        System.out.println(" - " + m.getTitle());
+    }
+    // DEBUG: Log user list before
+    System.out.println("👤 User list before adding:");
+    for (Movie m : userList.getMovies()) {
+        System.out.println(" - " + m.getTitle());
+    }
+
+    for (Movie movie : model.getMovies()) {
+        if (movie.getTitle().equalsIgnoreCase(movieTitle)) {
+            userList.add(movie);
+            System.out.println("Movie added to user list: " + movie.getTitle()); // DEBUG
+            view.viewMovieList(userList.getMovies());
+            return;
+        }
+    }
+
+    // Log user list after (if not found)
+    System.out.println("Movie not found in model: " + movieTitle); // DEBUG
+    view.showErrorMessage("Movie not found: " + movieTitle); // DEBUG
+}
+
 
      @Override
      public void handleRemoveMovie(String movieTitle) {
