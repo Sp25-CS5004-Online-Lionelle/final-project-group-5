@@ -40,11 +40,12 @@ public class ButtonCommands extends JPanel {
 
     // initialize components 
     searchField = new JTextField(15);
-    filterDropdown = new JComboBox<>(new String[]{"Title","IMDB Rating", "Genre", "Year", "Cast", "Plot"});
+    filterDropdown = new JComboBox<>(new String[]{"Title", "Genre", "Year", "Description"});
     operatorDropdown = new JComboBox<>(new String[]{"==", "!=", ">=", "<=", ">", "<", "~="});
-    sortDropdown = new JComboBox<>(new String []{"Title","IMDB Rating", "Genre", "Year"});
+    sortDropdown = new JComboBox<>(new String []{"Rating", "Year"});
     sortAscCheckbox = new JCheckBox("Ascending");
     sortDecCheckbox = new JCheckBox("Descending");
+
 
     filterBtn = new JButton("Filter");
     sortBtn = new JButton("Sort");
@@ -66,6 +67,25 @@ public class ButtonCommands extends JPanel {
     sortRow.add(sortAscCheckbox);
     sortRow.add(sortDecCheckbox);
     sortRow.add(sortBtn);
+
+    // if the Asc button is checked, then set dec button to disable
+    sortAscCheckbox.addActionListener(e->{
+        if (sortAscCheckbox.isSelected()){
+            sortDecCheckbox.setEnabled(false);
+        } else {
+            sortDecCheckbox.setEnabled(true);
+        }
+    });
+
+    // if the Dec button is checked, then set Asc button to disable
+    sortDecCheckbox.addActionListener(e->{
+        if(sortDecCheckbox.isSelected()){
+            sortAscCheckbox.setEnabled(false);
+        }else {
+            sortAscCheckbox.setEnabled(true);
+        }
+    });
+
 
     JPanel actionRow = new JPanel(new FlowLayout(FlowLayout.CENTER));
     actionRow.add(addAllBtn);
@@ -94,6 +114,14 @@ public String getSelectedFilter() {
 }
 
 /**
+* Returns the selected sort filter type (e.g., IMDB Rating, Year).
+* @return selected sorted filter as a String
+*/
+public String getSelectedSort() {
+        return sortDropdown.getSelectedItem().toString();
+}
+
+/**
  * Returns the selected filter operator (e.g., ==, >=, ~=).
  * @return selected operator as a String
  */
@@ -109,9 +137,16 @@ public boolean isSortAscending() {
     return sortAscCheckbox.isSelected();
 }
 
+public boolean notAscDec() {
+    if (!sortAscCheckbox.isSelected() && !sortDecCheckbox.isSelected()) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
-/**
+    /**
  * Adds an ActionListener to the Filter button.
  *
  * @param listener the ActionListener to be notified when the filter button is clicked

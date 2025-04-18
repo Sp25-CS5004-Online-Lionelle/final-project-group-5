@@ -48,14 +48,25 @@ package student.controller;
                 view.getSearchQuery()
         ));
 
-        view.addSortListener(e -> handleSort(
-                FilterType.valueOf(view.getSelectedFilter().toUpperCase()),
-                view.getSort()
-        ));
+        view.addSortListener(e -> {
+            if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("year")){
+                handleSort(
+                        FilterType.YEAR,
+                        view.getSort()
+                );
+            } else if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("IMDB RATING")){
+                handleSort(
+                        FilterType.RATING,
+                        view.getSort()
+                );
+            }
+
+        });
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
         view.setRemoveAction(this::handleRemoveMovie);
+
 
         view.addAddAllListener(e -> {
             List<Movie> toAdd = results.isEmpty() ? model.getMovies() : results;
@@ -64,7 +75,6 @@ package student.controller;
             System.out.println("After addAll, userList has: " + userList.getMovieTitles());
             view.viewMovieList(userList.getMovies());
         });
-        
 
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
     }
@@ -94,6 +104,14 @@ package student.controller;
 
      @Override
      public void handleSort(FilterType filterType, boolean ascending) {
+         if (model.getFilteredMovieList().size() == 0){
+             view.showErrorMessage("Please search some movies to sort");
+             return;
+         }
+         if (view.getNotAscDec()){
+             view.showErrorMessage("You must check sort Ascending or Descending");
+             return;
+         }
         try {
             results = model.sortFilteredMovies(filterType, ascending);
             view.viewMovieCollection(results);
@@ -130,6 +148,13 @@ package student.controller;
          userList.remove(movie);
          view.viewMovieList(userList.getMovies());
      }
+
+     @Override
+     public void handleResetMovieCollection() {
+         results = model.getMovies();
+         view.viewMovieCollection(results);
+     }
+
 
      @Override
      public void handleSave(String fileType) {

@@ -130,6 +130,11 @@ public String getSelectedFilter() {
 }
 
 @Override
+public String getSelectedSort() {
+        return buttonPanel.getSelectedSort();
+    }
+
+@Override
 public String getSelectedOperator() {
     return buttonPanel.getSelectedOperator();
 }
@@ -137,6 +142,11 @@ public String getSelectedOperator() {
 @Override
 public boolean getSort() {
     return buttonPanel.isSortAscending();
+}
+
+@Override
+public boolean getNotAscDec(){
+    return buttonPanel.notAscDec();
 }
 
 @Override

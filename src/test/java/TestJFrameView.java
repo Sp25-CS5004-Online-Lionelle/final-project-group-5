@@ -1,10 +1,10 @@
-package student.view;
-import java.util.List;
 
+import java.util.List;
+import student.view.*;
 import student.model.Movie;
 //Rowan's main test file for the JFrameView full GUI.... I know it's the wrong folder and name, will move it before we're done. 
 
-public class Main {
+public class TestJFrameView {
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(() -> {
             
@@ -31,9 +31,6 @@ public class Main {
                 List.of("Michael J. Fox", "Christopher Lloyd"),
                 "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean.",
                 "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg")
-
-
-
                                 
         );
         //create the view
