@@ -170,7 +170,7 @@ public void addAddMovieListener(ActionListener listener) {
 
 @Override
 public void addRemoveMovieListener(ActionListener listener) {
-    buttonPanel.addRemoveMovieListener(listener);
+    userListPanel.addRemoveListener(listener);
 }
 
 @Override
