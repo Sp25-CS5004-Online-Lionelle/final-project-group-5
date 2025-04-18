@@ -54,7 +54,7 @@ package student.controller;
                         FilterType.YEAR,
                         view.getSort()
                 );
-            } else if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("IMDB RATING")){
+            } else if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("RATING")){
                 handleSort(
                         FilterType.RATING,
                         view.getSort()
