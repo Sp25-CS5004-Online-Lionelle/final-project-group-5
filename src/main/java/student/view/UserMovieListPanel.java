@@ -56,11 +56,16 @@ public class UserMovieListPanel extends JPanel {
 
         for (Movie movie : movies) {
             MovieCardPanel card = new MovieCardPanel(movie, "Remove");
+            card.getActionButton().addActionListener(e -> removeAction.accept(movie));
             cardPanel.add(card);
         }
 
         cardPanel.revalidate();
         cardPanel.repaint();
+    }
+
+    public void setRemoveAction(Consumer<Movie> removeAction) {
+        this.removeAction = removeAction;
     }
 
     public JButton getClearButton() {
@@ -70,4 +75,7 @@ public class UserMovieListPanel extends JPanel {
     public JButton getSaveButton() {
         return saveButton;
     }
+
+
+
 }

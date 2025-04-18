@@ -55,6 +55,7 @@ package student.controller;
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
+        view.setRemoveAction(this::handleRemoveMovie);
 
         view.addAddAllListener(e -> {
             List<Movie> toAdd = results.isEmpty() ? model.getMovies() : results;
@@ -123,6 +124,12 @@ package student.controller;
              }
          }
          view.showErrorMessage("Movie not in saved list: " + movieTitle);
+     }
+
+
+     public void handleRemoveMovie(Movie movie) {
+         userList.remove(movie);
+         view.viewMovieList(userList.getMovies());
      }
 
      @Override

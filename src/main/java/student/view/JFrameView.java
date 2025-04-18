@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * The main JFrame for the Movie App.
@@ -17,7 +18,7 @@ public class JFrameView extends JFrame implements IView{
     UserMovieListPanel userListPanel;
     private ButtonCommands buttonPanel;
     private JSplitPane splitPane;
-    private List<Movie> userList = new ArrayList<>();
+    private Consumer<Movie> removeAction = movie -> {};
 
 public JFrameView(List<Movie> movies) {
 
@@ -43,13 +44,9 @@ public JFrameView(List<Movie> movies) {
         buttonPanel = new ButtonCommands();
         add(buttonPanel, BorderLayout.NORTH);
 
-       // User list to track added movies (starts empty)
-        userList = new ArrayList<>();
-
-        userListPanel = new UserMovieListPanel(List.of(), "Remove", movie -> {
-            userList.remove(movie);
-            userListPanel.updateMovieList(userList);
-        });
+        // Right panel (user's added movies). Starts out empty and is filled by adding
+        // from movieGrid (left panel).
+         userListPanel = new UserMovieListPanel(List.of(), "Remove", removeAction);
         
 
          // Left panel (movie collection grid)
@@ -68,12 +65,7 @@ public JFrameView(List<Movie> movies) {
         // Right: User Movie List Panel
         
         JScrollPane rightScrollPane = new JScrollPane(userListPanel);
-        
-        // Update user list when a movie is removed
-        userListPanel.getClearButton().addActionListener(e -> {
-            userList.clear();
-            userListPanel.updateMovieList(userList);
-        });
+
 
         // Center: Split Pane
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
@@ -90,10 +82,10 @@ public JFrameView(List<Movie> movies) {
     @Override
     public void viewMovieCollection(List<Movie> movies) {
         MovieGridDisplay movieGrid = new MovieGridDisplay(movies, movie -> {
-            if (!userList.contains(movie)) {
-                userList.add(movie);
-                userListPanel.updateMovieList(userList);
-            }
+             buttonPanel.setSearchQuery(movie.getTitle());
+             for (ActionListener listener : buttonPanel.getAddListeners()) {
+                 listener.actionPerformed(null);
+             }
         });
     
         JScrollPane leftScrollPane = new JScrollPane(movieGrid);
@@ -182,6 +174,11 @@ public void addAddAllListener(ActionListener listener) {
     buttonPanel.addAddAllListener(listener);
 }
 
- }
+@Override
+public void setRemoveAction(Consumer<Movie> removeAction) {
+    this.removeAction = removeAction;
+    userListPanel.setRemoveAction(removeAction);
+}
+}
  
 
