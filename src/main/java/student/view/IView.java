@@ -3,6 +3,7 @@ package student.view;
 import student.model.Movie;
 import java.util.List;
 import java.awt.event.ActionListener;
+import java.util.function.Consumer;
 
 public interface IView {
      /**
@@ -123,21 +124,20 @@ public interface IView {
     void addSaveListener(ActionListener listener);
 
     /**
-* Registers a listener for the "Help" button.
- *
- * @param listener the ActionListener to be notified when the help button is clicked
- */
-void addHelpListener(ActionListener listener);
+    * Registers a listener for the "Help" button.
+    *
+    * @param listener the ActionListener to be notified when the help button is clicked
+    */
+    void addHelpListener(ActionListener listener);
 
-/**
-* Registers a listener for the "add all" button.
-* 
-* @param listener the ActionListener to be notified when the add all button is clicked
-*/
-void addAddAllListener(ActionListener listener);
+    /**
+    * Registers a listener for the "add all" button.
+    *
+    * @param listener the ActionListener to be notified when the add all button is clicked
+    */
+    void addAddAllListener(ActionListener listener);
 
-
-
+    void setRemoveAction(Consumer<Movie> removeAction);
 
 }
 

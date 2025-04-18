@@ -85,9 +85,8 @@ public class MovieCardPanel extends JPanel {
 
    
     /**
-     * Sets the movie for this panel.
+     * Sets the movie for this panel and displays more verbose details.
      *
-     * @param movie The movie object to set.
      */
     private void showFullDetails() {
         JDialog dialog = new JDialog((Frame) SwingUtilities.getWindowAncestor(this), movie.getTitle(), true);
