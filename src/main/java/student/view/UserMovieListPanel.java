@@ -75,6 +75,7 @@ public class UserMovieListPanel extends JPanel {
 
         cardPanel.revalidate();
         cardPanel.repaint();
+        System.out.println("updateMovieList called with " + movies.size() + " movie(s).");
     }
 
     public void addRemoveListener(ActionListener listener) { // NEW

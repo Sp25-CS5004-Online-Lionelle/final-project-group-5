@@ -197,4 +197,17 @@ package student.controller;
      public List<Movie> getResults() {
          return this.results;
      }
+
+     @Override
+    public void handleClearMovieList() {
+        System.out.println("Clearing all movies from user list...");
+        userList.clear();
+    
+        List<Movie> current = userList.getMovies();
+        System.out.println("Cleared list has " + current.size() + " movie(s).");
+    
+        view.viewMovieList(current); 
+        view.showHelpMessage("Movie list has been cleared.");
+}
+
  }

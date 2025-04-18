@@ -56,5 +56,11 @@ public interface IController {
      * @param fileType the file format to use.
      */
     void handleSave(String fileType);
+
+    /**
+     * Clears all movies from the user's saved movie list.
+     */
+    void handleClearMovieList(); 
+
     
 } 

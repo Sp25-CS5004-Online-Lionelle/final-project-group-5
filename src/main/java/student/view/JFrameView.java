@@ -18,7 +18,6 @@ public class JFrameView extends JFrame implements IView{
     UserMovieListPanel userListPanel;
     private ButtonCommands buttonPanel;
     private JSplitPane splitPane;
-    private List<Movie> userList = new ArrayList<>();
 
 public JFrameView(List<Movie> movies, IController controller) {
         this.controller = controller;
@@ -45,12 +44,10 @@ public JFrameView(List<Movie> movies, IController controller) {
         buttonPanel = new ButtonCommands();
         add(buttonPanel, BorderLayout.NORTH);
 
-       // User list to track added movies (starts empty)
-        userList = new ArrayList<>();
-
         userListPanel = new UserMovieListPanel(List.of(), "Remove", movie -> {
-            userList.remove(movie);
-            userListPanel.updateMovieList(userList);
+            if (controller != null) {
+                controller.handleRemoveMovie(movie.getTitle()); 
+            }
         });
         
 
@@ -66,11 +63,6 @@ public JFrameView(List<Movie> movies, IController controller) {
         
         JScrollPane rightScrollPane = new JScrollPane(userListPanel);
         
-        // Update user list when a movie is removed
-        userListPanel.getClearButton().addActionListener(e -> {
-            userList.clear();
-            userListPanel.updateMovieList(userList);
-        });
 
         // Center: Split Pane
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
@@ -82,6 +74,7 @@ public JFrameView(List<Movie> movies, IController controller) {
          add(messageLabel, BorderLayout.SOUTH);
  
          setVisible(true);
+
      }
 
     @Override
@@ -111,6 +104,8 @@ public JFrameView(List<Movie> movies, IController controller) {
 @Override
 public void viewMovieList(List<Movie> movies) {
     userListPanel.updateMovieList(movies); // update the user list panel with the new movies
+    revalidate();  
+    repaint();    
 }
 
 @Override
@@ -190,6 +185,11 @@ public void addAddAllListener(ActionListener listener) {
 
 public void setController(IController controller) { 
     this.controller = controller;
+
+    userListPanel.getClearButton().addActionListener(e -> {
+        System.out.println(" Clear button clicked!");
+        controller.handleClearMovieList();
+    });
 }
 
  }
