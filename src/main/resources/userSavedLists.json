@@ -1,4 +1,12 @@
 [ {
+  "Title" : "Minions",
+  "imdbRating" : 6.4,
+  "Year" : 2015,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : null,
+  "Plot" : "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_SX300.jpg"
+}, {
   "Title" : "Ratatouille",
   "imdbRating" : 8.1,
   "Year" : 2007,
