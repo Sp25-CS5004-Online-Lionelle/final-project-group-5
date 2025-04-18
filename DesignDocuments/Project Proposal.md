@@ -52,7 +52,6 @@
    Special emphasis should be placed on how you plan to break it up
    MVC, presenter, file management, different input validation, testing, documentation, etc.
 
-  
    **Main Entry:** `MovieApp`
 
    **Model:** files to be put in the model package
@@ -131,139 +130,8 @@ src/
     └── [Test files for each major class]
 ```
 
-#### Initial UML (draft)
-```mermaid
-classDiagram
 
-%% === INTERFACES ===
-class IMovieCollection {
-  <<interface>>
-  +filterMovies()
-  +sortMovies()
-}
-class IMovieList {
-  <<interface>>
-  +getMovies()
-  +addMovie()
-  +removeMovie()
-  +rateMovie()
-}
-class IMovieDataFetch {
-  <<interface>>
-  +fetchData(query)
-}
-class student.model.IStorage {
-  <<interface>>
-  +save(data, format)
-  +load(format)
-}
-class IController {
-  <<interface>>
-  +start()
-}
-
-
-%% === MODELS ===
-class Movie {
-  -String title
-  -int year
-  -String genre
-  -int rating
-  -String cast
-  -String description
-  -String image
-  +getters/setters()
-}
-class MovieCollection {
-  -List<Movie> allMovies
-  +addMovie()
-  +removeMovie()
-}
-class MovieList {
-  -List<Movie> savedMovies
-}
-class UserProfile {
-  -Map<Movie, String> ratings
-  -Map<Movie, String> reviews
-}
-
-%% === STORAGE / API ===
-class MovieStorage {
-  +saveToFile()
-  +loadFromFile()
-}
-class UserProfileStorage {
-  +saveProfile()
-  +loadProfile()
-}
-class OMDBMovieData {
-  +fetchData()
-}
-
-%% === CONTROLLER ===
-class MovieApp {
-  +main(String[] args)
-}
-class MovieController {
-  +start()
-}
-
-%% === VIEW ===
-class JFrameView
-class MovieDisplay
-class ButtonCommands
-class ConsoleView
-
-%% === UTILITIES ===
-class MovieFilter {
-  +filterByGenre()
-  +filterByYear()
-  +filterByKeyword()
-}
-class MovieSort {
-  +sortByYear()
-  +sortByRating()
-}
-class InputReader {
-  +readFromCSV()
-  +readFromJSON()
-  +readFromXML()
-}
-class MovieWriter {
-  +writeToCSV()
-  +writeToJSON()
-  +writeToXML()
-}
-
-%% === ENUMS ===
-class Operations {
-  <<enum>>
-  +GENRE
-  +RATING
-  +YEAR
-  +KEYWORD
-}
-
-%% === RELATIONSHIPS ===
-MovieApp --> MovieController : "starts"
-MovieCollection --> Movie : "manages"
-MovieList --> Movie : "contains"
-MovieCollection ..|> IMovieCollection : "implements"
-MovieList ..|> IMovieList : "implements"
-OMDBMovieData ..|> IMovieDataFetch : "implements"
-MovieStorage ..|> student.model.IStorage : "implements"
-UserProfileStorage ..|> student.model.IStorage : "implements"
-MovieController ..|> IController : "implements"
-MovieController --> MovieCollection : "uses"
-MovieController --> MovieList : "uses"
-JFrameView --> MovieController : "interacts with"
-JFrameView --> MovieDisplay : "displays"
-ButtonCommands --> JFrameView : "attached to"
-ConsoleView --> MovieController : "interacts with"
-
-```
-
-**5.  How do you plan to break up the work?**
+**6.  How do you plan to break up the work?**
    We plan to break up the work by using a github projects template to assign tasks to different group members.
    We will initially divide the tasks evenly by class and test file.
 
@@ -307,7 +175,7 @@ CONTROLLER + GUI
  * Demo prep for TA/Albert
 
 
-**6.  What is your teams timeline and major check-in points?**
+**7.  What is your teams timeline and major check-in points?**
    Major check-in points will be weekly check ins on Tuesday during our meeting time: 3/25, 4/1, 4/8, 4/15.
    - By 3/25: Proposal and Initial Design Complete
      - finalize features
