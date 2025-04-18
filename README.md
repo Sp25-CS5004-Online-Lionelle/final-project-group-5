@@ -20,13 +20,13 @@ Here are step by step instructions to run our application and save your movie li
 1. In the class MovieApp.java, click run.
 2. A welcome message should appear, after reading click OK.
 3. The left panel is the Movie Collection (think of it as a movie library!). The right side is where you will create your Movie List to save. 
-4. Click on a movie poster in the Movie Collection, the movie card will pop up with additional information about the movie: title, genre, rating, cast, and description. Feel free to reference these movie card pop ups as you browse. 
+4. Click on any movie poster in the Movie Collection, a movie card will pop up with additional information about the movie: title, genre, rating, cast, and description. Feel free to reference these movie card pop ups as you browse. 
 5. At the top of the window, use the filter searchbox to filter by title, genre, year, or descrption. When you click filter the Movie Collection will update. 
 6. If you want to sort the Movie Collection when filtering, you may sort by rating or year and must click ascending or descending. 
-7. To create your Movie List, use the "Add" button at the bottom of the movie card. If you filter and want to add the whole fltered Movie Collection use the "Add All" button. 
+7. To create your Movie List, use the "Add" button at the bottom of the movie card. If you filter and want to add the whole filtered Movie Collection use the "Add All" button. 
 8. If you need to remove a movie from your movie list, use the "Remove" button on the movie card. 
 9. You can always restart by clearing your movie list or reseting the movie collection. 
-10. Lastly, when you are ready to save your list, just click "Save to File"
+10. Lastly, when you are ready to save your list, just click "Save to File."
 
 Happy Browsing, cinephile!  
 
