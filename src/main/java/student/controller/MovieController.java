@@ -64,7 +64,7 @@ package student.controller;
         });
 
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
-        view.addRemoveMovieListener(e -> handleRemoveMovie(view.getSearchQuery()));
+        view.addRemoveMovieListener(e -> handleResetMovieCollection());
         view.setRemoveAction(this::handleRemoveMovie);
 
 
