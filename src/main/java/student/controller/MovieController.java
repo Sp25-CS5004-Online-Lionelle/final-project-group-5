@@ -126,7 +126,6 @@ package student.controller;
          view.showErrorMessage("Movie not in saved list: " + movieTitle);
      }
 
-
      public void handleRemoveMovie(Movie movie) {
          userList.remove(movie);
          view.viewMovieList(userList.getMovies());
