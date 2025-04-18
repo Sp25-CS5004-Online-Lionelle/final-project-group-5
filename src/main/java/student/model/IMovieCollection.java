@@ -27,7 +27,11 @@ public interface IMovieCollection {
    */
     List<Movie> sortFilteredMovies(FilterType sortType, boolean ascending );
 
-
+    /**
+     *
+     * @return the list of filtered movies
+     */
+    List<Movie> getFilteredMovieList();
     /**
      * Gets an instance of the model using the 'default' class.
      * Good spot to get the InputStream from the DATABASE file, and use that stream to build the

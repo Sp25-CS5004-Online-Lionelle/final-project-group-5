@@ -68,6 +68,11 @@ public class MovieCollection implements IMovieCollection{
         return filteredMovieList;
     }
 
+    @Override
+    public List<Movie> getFilteredMovieList(){
+        return this.filteredMovieList;
+    }
+
     /**
      * To sort the filtered movies by a sort type
      * @param sortType the type we need to the sort base on, such as RATING, YEAR

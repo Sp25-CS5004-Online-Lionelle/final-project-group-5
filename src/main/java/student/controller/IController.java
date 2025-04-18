@@ -46,6 +46,12 @@ public interface IController {
     void handleRemoveMovie(String movieTitle);
 
     /**
+     * reset the movies in the movieCollection
+     */
+    void handleResetMovieCollection();
+
+
+    /**
      * Save the user's movie list to a file in the chosen format.
      * @param fileType the file format to use.
      */
