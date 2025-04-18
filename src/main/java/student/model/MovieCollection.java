@@ -40,6 +40,7 @@ public class MovieCollection implements IMovieCollection{
 	public List<Movie> getMovies() {
         // Convert Set to List
         List<Movie> movieList = new ArrayList<>(movieRecords);
+        System.out.println("getMovies() returning " + movieList.size() + " movies");
         return movieList;
 
     }
@@ -88,7 +89,7 @@ public class MovieCollection implements IMovieCollection{
     }
     @Override
     public void reset() {
-        filteredMovieList.clear();
+        this.filteredMovieList = new ArrayList<>(movieRecords);
     }
 
 

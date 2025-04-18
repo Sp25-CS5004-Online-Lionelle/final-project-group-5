@@ -63,6 +63,9 @@ package student.controller;
 
         });
 
+        view.addResetCollectionListener(e -> handleResetMovieCollection());
+
+
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> {
             String title = e.getActionCommand();
@@ -177,8 +180,10 @@ package student.controller;
 
      @Override
      public void handleResetMovieCollection() {
-         results = model.getMovies();
-         view.viewMovieCollection(results);
+        model.reset();
+        results = model.getMovies();
+        System.out.println("Reset pressed, reloading movie collection with " + results.size() + " movie(s).");
+        view.viewMovieCollection(results);
      }
 
 

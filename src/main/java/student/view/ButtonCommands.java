@@ -31,6 +31,8 @@ public class ButtonCommands extends JPanel {
     private final JButton resetBtn;
     private final JButton helpBtn;
 
+
+
      /**
      * Constructs a new ButtonCommands panel with all interactive components.
      */
@@ -52,6 +54,7 @@ public class ButtonCommands extends JPanel {
     addAllBtn = new JButton("Add All");
     resetBtn = new JButton("Reset Collection");
     helpBtn = new JButton( "Help");
+
 
     // layout all the components
     JPanel filterRow = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -146,7 +149,7 @@ public boolean notAscDec() {
 }
 
 
-    /**
+/**
  * Adds an ActionListener to the Filter button.
  *
  * @param listener the ActionListener to be notified when the filter button is clicked
@@ -200,6 +203,12 @@ public void addHelpListener(ActionListener listener) {
 public void addAddAllListener(ActionListener listener) {
     addAllBtn.addActionListener(listener);
 }
+
+
+public void addResetListener(ActionListener listener) {
+    resetBtn.addActionListener(listener);
+}
+
 
 public void setSearchQuery(String query) {
     searchField.setText(query);

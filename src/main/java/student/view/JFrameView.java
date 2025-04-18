@@ -192,6 +192,13 @@ public void setController(IController controller) {
     });
 }
 
+
+@Override
+public void addResetCollectionListener(ActionListener listener) {
+    buttonPanel.addResetListener(listener); // assuming you have a reset button
+}
+
+
  }
  
 
