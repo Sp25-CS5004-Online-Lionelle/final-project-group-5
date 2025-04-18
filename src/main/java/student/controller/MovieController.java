@@ -65,8 +65,8 @@ package student.controller;
 
         view.addResetCollectionListener(e -> handleResetMovieCollection());
 
-
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
+
         view.addRemoveMovieListener(e -> {
             String title = e.getActionCommand();
             handleRemoveMovie(title);            
@@ -82,6 +82,9 @@ package student.controller;
         });
 
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
+
+        view.addSaveListener(e -> handleSave("json"));
+
     }
     
 
