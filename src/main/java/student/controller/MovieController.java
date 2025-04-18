@@ -76,6 +76,8 @@ package student.controller;
             view.viewMovieList(userList.getMovies());
         });
 
+        view.addSaveListener(e -> handleSave("json"));
+
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
     }
     
