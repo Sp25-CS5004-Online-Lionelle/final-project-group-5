@@ -1,0 +1,817 @@
+[ {
+  "Title" : "The Shawshank Redemption",
+  "imdbRating" : 9.3,
+  "Year" : 1994,
+  "Genre" : "Drama",
+  "Actors" : "Tim Robbins, Morgan Freeman, Bob Gunton",
+  "Plot" : "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Godfather",
+  "imdbRating" : 9.2,
+  "Year" : 1972,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Marlon Brando, Al Pacino, James Caan",
+  "Plot" : "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Dark Knight",
+  "imdbRating" : 9.0,
+  "Year" : 2008,
+  "Genre" : "Action, Crime, Drama",
+  "Actors" : "Christian Bale, Heath Ledger, Aaron Eckhart",
+  "Plot" : "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+}, {
+  "Title" : "The Godfather Part II",
+  "imdbRating" : 9.0,
+  "Year" : 1974,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Al Pacino, Robert De Niro, Robert Duvall",
+  "Plot" : "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDIxMzBlZDktZjMxNy00ZGI4LTgxNDEtYWRlNzRjMjJmOGQ1XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "12 Angry Men",
+  "imdbRating" : 9.0,
+  "Year" : 1957,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Henry Fonda, Lee J. Cobb, Martin Balsam",
+  "Plot" : "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Lord of the Rings: The Return of the King",
+  "imdbRating" : 9.0,
+  "Year" : 2003,
+  "Genre" : "Adventure, Drama, Fantasy",
+  "Actors" : "Elijah Wood, Viggo Mortensen, Ian McKellen",
+  "Plot" : "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Schindler's List",
+  "imdbRating" : 9.0,
+  "Year" : 1993,
+  "Genre" : "Biography, Drama, History",
+  "Actors" : "Liam Neeson, Ralph Fiennes, Ben Kingsley",
+  "Plot" : "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Pulp Fiction",
+  "imdbRating" : 8.9,
+  "Year" : 1994,
+  "Genre" : "Crime, Drama",
+  "Actors" : "John Travolta, Uma Thurman, Samuel L. Jackson",
+  "Plot" : "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Lord of the Rings: The Fellowship of the Ring",
+  "imdbRating" : 8.9,
+  "Year" : 2001,
+  "Genre" : "Adventure, Drama, Fantasy",
+  "Actors" : "Elijah Wood, Ian McKellen, Orlando Bloom",
+  "Plot" : "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Good, the Bad and the Ugly",
+  "imdbRating" : 8.8,
+  "Year" : 1966,
+  "Genre" : "Adventure, Western",
+  "Actors" : "Clint Eastwood, Eli Wallach, Lee Van Cleef",
+  "Plot" : "A bounty-hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMWM5ZjQxM2YtNDlmYi00ZDNhLWI4MWUtN2VkYjBlMTY1ZTkwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Forrest Gump",
+  "imdbRating" : 8.8,
+  "Year" : 1994,
+  "Genre" : "Drama, Romance",
+  "Actors" : "Tom Hanks, Robin Wright, Gary Sinise",
+  "Plot" : "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Lord of the Rings: The Two Towers",
+  "imdbRating" : 8.8,
+  "Year" : 2002,
+  "Genre" : "Adventure, Drama, Fantasy",
+  "Actors" : "Elijah Wood, Ian McKellen, Viggo Mortensen",
+  "Plot" : "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMGQxMDdiOWUtYjc1Ni00YzM1LWE2NjMtZTg3Y2JkMjEzMTJjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Fight Club",
+  "imdbRating" : 8.8,
+  "Year" : 1999,
+  "Genre" : "Drama",
+  "Actors" : "Brad Pitt, Edward Norton, Meat Loaf",
+  "Plot" : "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Inception",
+  "imdbRating" : 8.8,
+  "Year" : 2010,
+  "Genre" : "Action, Adventure, Sci-Fi",
+  "Actors" : "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+  "Plot" : "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Star Wars: Episode V - The Empire Strikes Back",
+  "imdbRating" : 8.7,
+  "Year" : 1980,
+  "Genre" : "Action, Adventure, Fantasy",
+  "Actors" : "Mark Hamill, Harrison Ford, Carrie Fisher",
+  "Plot" : "After the Empire overpowers the Rebel Alliance, Luke Skywalker begins training with Jedi Master Yoda, while Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Matrix",
+  "imdbRating" : 8.7,
+  "Year" : 1999,
+  "Genre" : "Action, Sci-Fi",
+  "Actors" : "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+  "Plot" : "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Goodfellas",
+  "imdbRating" : 8.7,
+  "Year" : 1990,
+  "Genre" : "Biography, Crime, Drama",
+  "Actors" : "Robert De Niro, Ray Liotta, Joe Pesci",
+  "Plot" : "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "One Flew Over the Cuckoo's Nest",
+  "imdbRating" : 8.7,
+  "Year" : 1975,
+  "Genre" : "Drama",
+  "Actors" : "Jack Nicholson, Louise Fletcher, Michael Berryman",
+  "Plot" : "In the Fall of 1963, a Korean War veteran and criminal pleads insanity and is admitted to a mental institution, where he rallies up the scared patients against the tyrannical nurse.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjBkMjgzMzYtNzRiMS00NDc3LWE4YTUtZjYxYjZhNjNhYzhhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Interstellar",
+  "imdbRating" : 8.7,
+  "Year" : 2014,
+  "Genre" : "Adventure, Drama, Sci-Fi",
+  "Actors" : "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+  "Plot" : "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Se7en",
+  "imdbRating" : 8.6,
+  "Year" : 1995,
+  "Genre" : "Crime, Drama, Mystery",
+  "Actors" : "Morgan Freeman, Brad Pitt, Kevin Spacey",
+  "Plot" : "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "It's a Wonderful Life",
+  "imdbRating" : 8.6,
+  "Year" : 1946,
+  "Genre" : "Drama, Family, Fantasy",
+  "Actors" : "James Stewart, Donna Reed, Lionel Barrymore",
+  "Plot" : "An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDM4OWFhYjEtNTE5Yy00NjcyLTg5N2UtZDQwNDZlYjlmNDU5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Silence of the Lambs",
+  "imdbRating" : 8.6,
+  "Year" : 1991,
+  "Genre" : "Crime, Drama, Horror",
+  "Actors" : "Jodie Foster, Anthony Hopkins, Scott Glenn",
+  "Plot" : "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Seven Samurai",
+  "imdbRating" : 8.6,
+  "Year" : 1954,
+  "Genre" : "Action, Drama",
+  "Actors" : "Toshirô Mifune, Takashi Shimura, Keiko Tsushima",
+  "Plot" : "Farmers from a village exploited by bandits hire a veteran samurai for protection, and he gathers six other samurai to join him.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Saving Private Ryan",
+  "imdbRating" : 8.6,
+  "Year" : 1998,
+  "Genre" : "Drama, War",
+  "Actors" : "Tom Hanks, Matt Damon, Tom Sizemore",
+  "Plot" : "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "City of God",
+  "imdbRating" : 8.6,
+  "Year" : 2002,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Alexandre Rodrigues, Leandro Firmino, Matheus Nachtergaele",
+  "Plot" : "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjY4NGI5OTUtY2ZlZS00Zjk4LTk5N2MtN2JmYWVjNGNmMGRlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Green Mile",
+  "imdbRating" : 8.6,
+  "Year" : 1999,
+  "Genre" : "Crime, Drama, Fantasy",
+  "Actors" : "Tom Hanks, Michael Clarke Duncan, David Morse",
+  "Plot" : "Paul Edgecomb, the head guard of a prison, meets an inmate, John Coffey, a black man who is accused of murdering two girls. His life changes drastically when he discovers that John has a special gift.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_SX300.jpg"
+}, {
+  "Title" : "Life Is Beautiful",
+  "imdbRating" : 8.6,
+  "Year" : 1997,
+  "Genre" : "Comedy, Drama, Romance",
+  "Actors" : "Roberto Benigni, Nicoletta Braschi, Giorgio Cantarini",
+  "Plot" : "When an open-minded Jewish waiter and his son become victims of the Holocaust, he uses a perfect mixture of will, humor and imagination to protect his son from the dangers around their camp.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZTBhOGYzZjQtYzE0Mi00MGIwLWE0MWYtNzMxNTM2OTFkM2NjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Terminator 2: Judgment Day",
+  "imdbRating" : 8.6,
+  "Year" : 1991,
+  "Genre" : "Action, Adventure, Sci-Fi",
+  "Actors" : "Arnold Schwarzenegger, Linda Hamilton, Edward Furlong",
+  "Plot" : "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGMyMGNkMDUtMjc2Ni00NWFlLTgyODEtZTY2MzBiZTg0OWZiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Star Wars: Episode IV - A New Hope",
+  "imdbRating" : 8.6,
+  "Year" : 1977,
+  "Genre" : "Action, Adventure, Fantasy",
+  "Actors" : "Mark Hamill, Harrison Ford, Carrie Fisher",
+  "Plot" : "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BOGUwMDk0Y2MtNjBlNi00NmRiLTk2MWYtMGMyMDlhYmI4ZDBjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Back to the Future",
+  "imdbRating" : 8.5,
+  "Year" : 1985,
+  "Genre" : "Adventure, Comedy, Sci-Fi",
+  "Actors" : "Michael J. Fox, Christopher Lloyd, Lea Thompson",
+  "Plot" : "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZmM3ZjE0NzctNjBiOC00MDZmLTgzMTUtNGVlOWFlOTNiZDJiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Spirited Away",
+  "imdbRating" : 8.6,
+  "Year" : 2001,
+  "Genre" : "Animation, Adventure, Family",
+  "Actors" : "Daveigh Chase, Suzanne Pleshette, Miyu Irino",
+  "Plot" : "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches and spirits, and where humans are changed into beasts.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Pianist",
+  "imdbRating" : 8.5,
+  "Year" : 2002,
+  "Genre" : "Biography, Drama, Music",
+  "Actors" : "Adrien Brody, Thomas Kretschmann, Frank Finlay",
+  "Plot" : "During WWII, acclaimed Polish musician Wladyslaw faces various struggles as he loses contact with his family. As the situation worsens, he hides in the ruins of Warsaw in order to survive.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjEwNmEwYjgtNTk3ZC00NjljLTg5ZDctZTY3ZGQwZjRkZmQxXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Gladiator",
+  "imdbRating" : 8.5,
+  "Year" : 2000,
+  "Genre" : "Action, Adventure, Drama",
+  "Actors" : "Russell Crowe, Joaquin Phoenix, Connie Nielsen",
+  "Plot" : "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Parasite",
+  "imdbRating" : 8.5,
+  "Year" : 2019,
+  "Genre" : "Drama, Thriller",
+  "Actors" : "Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong",
+  "Plot" : "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Psycho",
+  "imdbRating" : 8.5,
+  "Year" : 1960,
+  "Genre" : "Horror, Mystery, Thriller",
+  "Actors" : "Anthony Perkins, Janet Leigh, Vera Miles",
+  "Plot" : "A secretary on the run for embezzlement takes refuge at a secluded California motel owned by a repressed man and his overbearing mother.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjZhMzFiZjItODA3ZC00MmRhLWIzMGYtMmVjOWUwYTA3MTRjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Lion King",
+  "imdbRating" : 8.5,
+  "Year" : 1994,
+  "Genre" : "Animation, Adventure, Drama",
+  "Actors" : "Matthew Broderick, Jeremy Irons, James Earl Jones",
+  "Plot" : "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Grave of the Fireflies",
+  "imdbRating" : 8.5,
+  "Year" : 1988,
+  "Genre" : "Animation, Drama, War",
+  "Actors" : "Tsutomu Tatsumi, Ayano Shiraishi, Akemi Yamaguchi",
+  "Plot" : "A young boy and his little sister struggle to survive in Japan during World War II.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTY5MmE2OGMtN2IxNC00MDY4LTkwMGEtZDUzOTYyNWE0ZTNjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Departed",
+  "imdbRating" : 8.5,
+  "Year" : 2006,
+  "Genre" : "Crime, Drama, Thriller",
+  "Actors" : "Leonardo DiCaprio, Matt Damon, Jack Nicholson",
+  "Plot" : "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_SX300.jpg"
+}, {
+  "Title" : "Whiplash",
+  "imdbRating" : 8.5,
+  "Year" : 2014,
+  "Genre" : "Drama, Music",
+  "Actors" : "Miles Teller, J.K. Simmons, Melissa Benoist",
+  "Plot" : "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDFjOWFkYzktYzhhMC00NmYyLTkwY2EtYjViMDhmNzg0OGFkXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Harakiri",
+  "imdbRating" : 8.6,
+  "Year" : 1962,
+  "Genre" : "Drama, Mystery",
+  "Actors" : "Tatsuya Nakadai, Akira Ishihama, Shima Iwashita",
+  "Plot" : "When a ronin requesting seppuku at a feudal lord's palace is told of the brutal suicide of another ronin who previously visited, he reveals how their pasts are intertwined - and in doing so challenges the clan's integrity.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZThiZjU5ZDQtZDI4Mi00ZGYyLTkzOTktYmIzZTFlZTkxYzg5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "American History X",
+  "imdbRating" : 8.5,
+  "Year" : 1998,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Edward Norton, Edward Furlong, Beverly D'Angelo",
+  "Plot" : "Living a life marked by violence, neo-Nazi Derek finally goes to prison after killing two black youths. Upon his release, Derek vows to change; he hopes to prevent his brother, Danny, who idolizes Derek, from following in his foot...",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMzhiOTQ0NDItOTg0Zi00OGVmLWE0OGEtMTI4NDM0NWMxZWU4XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Prestige",
+  "imdbRating" : 8.5,
+  "Year" : 2006,
+  "Genre" : "Drama, Mystery, Sci-Fi",
+  "Actors" : "Christian Bale, Hugh Jackman, Scarlett Johansson",
+  "Plot" : "Rival 19th-century magicians engage in a bitter battle for trade secrets.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_SX300.jpg"
+}, {
+  "Title" : "Léon: The Professional",
+  "imdbRating" : 8.5,
+  "Year" : 1994,
+  "Genre" : "Action, Crime, Drama",
+  "Actors" : "Jean Reno, Gary Oldman, Natalie Portman",
+  "Plot" : "12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGRkYTNhOWQtYmI0Ni00MjZhLWJmMzAtMTA2Mjg4NGNiNDU0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Spider-Man: Across the Spider-Verse",
+  "imdbRating" : 8.5,
+  "Year" : 2023,
+  "Genre" : "Animation, Action, Adventure",
+  "Actors" : "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+  "Plot" : "Traveling across the multiverse, Miles Morales meets a new team of Spider-People, made up of heroes from different dimensions. But when the heroes clash over how to deal with a new threat, Miles finds himself at a crossroads.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Casablanca",
+  "imdbRating" : 8.5,
+  "Year" : 1942,
+  "Genre" : "Drama, Romance, War",
+  "Actors" : "Humphrey Bogart, Ingrid Bergman, Paul Henreid",
+  "Plot" : "A cynical expatriate American cafe owner struggles to decide whether or not to help his former lover and her fugitive husband escape the Nazis in French Morocco.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNWEzN2U1YTYtYTQyMS00NTVkLWE2NGQtZWFlMmM0MDNjMmRiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Usual Suspects",
+  "imdbRating" : 8.5,
+  "Year" : 1995,
+  "Genre" : "Crime, Drama, Mystery",
+  "Actors" : "Kevin Spacey, Gabriel Byrne, Chazz Palminteri",
+  "Plot" : "The sole survivor of a pier shoot-out tells the story of how a notorious criminal influenced the events that began with five criminals meeting in a seemingly random police lineup.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BOTE5MDUxZDUtZWZmZC00NDVmLWFhOGQtNWI2YTc4NzY3MGQ0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Intouchables",
+  "imdbRating" : 8.5,
+  "Year" : 2011,
+  "Genre" : "Comedy, Drama",
+  "Actors" : "François Cluzet, Omar Sy, Anne Le Ny",
+  "Plot" : "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Cinema Paradiso",
+  "imdbRating" : 8.5,
+  "Year" : 1988,
+  "Genre" : "Drama, Romance",
+  "Actors" : "Philippe Noiret, Enzo Cannavale, Antonella Attili",
+  "Plot" : "Salvatore, a famous film director, returns to his hometown for the funeral of the local theater's film projectionist, Alfredo. He reminisces about his life as a young boy falling in love with cinema.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTljNzc4YWEtYTZlMS00ODMyLWIwMTAtNWQxY2VkMDEwYTk5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Modern Times",
+  "imdbRating" : 8.5,
+  "Year" : 1936,
+  "Genre" : "Comedy, Drama, Romance",
+  "Actors" : "Charles Chaplin, Paulette Goddard, Henry Bergman",
+  "Plot" : "The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODVkZGFhNGQtYjdiYi00Njc4LWFmYTItNTlmNzJjMTg1ZDc5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Alien",
+  "imdbRating" : 8.5,
+  "Year" : 1979,
+  "Genre" : "Horror, Sci-Fi",
+  "Actors" : "Sigourney Weaver, Tom Skerritt, John Hurt",
+  "Plot" : "After investigating a mysterious transmission of unknown origin, the crew of a commercial spacecraft encounters a deadly lifeform.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BN2NhMDk2MmEtZDQzOC00MmY5LThhYzAtMDdjZGFjOGZjMjdjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Rear Window",
+  "imdbRating" : 8.5,
+  "Year" : 1954,
+  "Genre" : "Drama, Mystery, Thriller",
+  "Actors" : "James Stewart, Grace Kelly, Wendell Corey",
+  "Plot" : "A bored photographer recovering from a broken leg passes the time by watching his neighbors and begins to suspect one of them of murder.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODZhOWI1ODgtMzdiOS00YjNkLTgwOGUtYmIyZDg5ZmQwMzQ1XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Once Upon a Time in the West",
+  "imdbRating" : 8.5,
+  "Year" : 1968,
+  "Genre" : "Drama, Western",
+  "Actors" : "Henry Fonda, Charles Bronson, Claudia Cardinale",
+  "Plot" : "A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZjYyNGY1MDEtN2I1MC00MGVhLTljZTYtODQ1NzQ0ODc2NzZlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Django Unchained",
+  "imdbRating" : 8.5,
+  "Year" : 2012,
+  "Genre" : "Comedy, Drama, Western",
+  "Actors" : "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio",
+  "Plot" : "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg"
+}, {
+  "Title" : "City Lights",
+  "imdbRating" : 8.5,
+  "Year" : 1931,
+  "Genre" : "Comedy, Drama, Romance",
+  "Actors" : "Charles Chaplin, Virginia Cherrill, Florence Lee",
+  "Plot" : "With the aid of a wealthy erratic tippler, a dewy-eyed tramp who has fallen in love with a sightless flower girl accumulates money to be able to help her medically.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BM2U4NjgzODUtODkyOC00YTE2LTlhNTItYzFlYmM1NTEzZDA2XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Apocalypse Now",
+  "imdbRating" : 8.4,
+  "Year" : 1979,
+  "Genre" : "Drama, Mystery, War",
+  "Actors" : "Martin Sheen, Marlon Brando, Robert Duvall",
+  "Plot" : "A U.S. Army officer serving in Vietnam is tasked with assassinating a renegade Special Forces Colonel who sees himself as a god.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZDhiMTljYjYtODc1Yy00MmEwLTg2OTYtYmE1YTRmNDE4MmEwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Dune: Part Two",
+  "imdbRating" : 8.5,
+  "Year" : 2024,
+  "Genre" : "Action, Adventure, Drama",
+  "Actors" : "Timothée Chalamet, Zendaya, Rebecca Ferguson",
+  "Plot" : "Paul Atreides unites with the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the universe, he endeavors to prevent a terrible fu...",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Memento",
+  "imdbRating" : 8.4,
+  "Year" : 2000,
+  "Genre" : "Mystery, Thriller",
+  "Actors" : "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano",
+  "Plot" : "Leonard Shelby, an insurance investigator, suffers from anterograde amnesia and uses notes and tattoos to hunt for the man he thinks killed his wife, which is the last thing he remembers.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYmQ3MjliNjAtNWFiZS00YWI1LTlmZTktMzBiNDE1NjRhZjU0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "WALL·E",
+  "imdbRating" : 8.4,
+  "Year" : 2008,
+  "Genre" : "Animation, Adventure, Family",
+  "Actors" : "Ben Burtt, Elissa Knight, Jeff Garlin",
+  "Plot" : "A robot who is responsible for cleaning a waste-covered Earth meets another robot and falls in love with her. Together, they set out on a journey that will alter the fate of mankind.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Raiders of the Lost Ark",
+  "imdbRating" : 8.4,
+  "Year" : 1981,
+  "Genre" : "Action, Adventure",
+  "Actors" : "Harrison Ford, Karen Allen, Paul Freeman",
+  "Plot" : "In 1936, archaeologists and adventurers of the U.S. government hired Indiana Jones to find the Ark of the Covenant before the Nazis could obtain its extraordinary powers.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BOGNhMjg2ZjgtYzk4Ni00MTViLTg1MmUtYzM2MDZiYjZlMmU3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Lives of Others",
+  "imdbRating" : 8.4,
+  "Year" : 2006,
+  "Genre" : "Drama, Mystery, Thriller",
+  "Actors" : "Ulrich Mühe, Martina Gedeck, Sebastian Koch",
+  "Plot" : "In 1984 East Berlin, an agent of the secret police conducting surveillance on a writer and his lover finds himself becoming increasingly absorbed by their lives.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYjM1N2Q0YWEtN2E5MC00NDM3LTk2NTEtMTc1NTk5OTA5ZGIzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Avengers: Infinity War",
+  "imdbRating" : 8.4,
+  "Year" : 2018,
+  "Genre" : "Action, Adventure, Sci-Fi",
+  "Actors" : "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo",
+  "Plot" : "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
+}, {
+  "Title" : "Sunset Boulevard",
+  "imdbRating" : 8.4,
+  "Year" : 1950,
+  "Genre" : "Drama, Film-Noir",
+  "Actors" : "William Holden, Gloria Swanson, Erich von Stroheim",
+  "Plot" : "A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_SX300.jpg"
+}, {
+  "Title" : "Spider-Man: Into the Spider-Verse",
+  "imdbRating" : 8.4,
+  "Year" : 2018,
+  "Genre" : "Animation, Action, Adventure",
+  "Actors" : "Shameik Moore, Jake Johnson, Hailee Steinfeld",
+  "Plot" : "Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"
+}, {
+  "Title" : "Paths of Glory",
+  "imdbRating" : 8.4,
+  "Year" : 1957,
+  "Genre" : "Drama, War",
+  "Actors" : "Kirk Douglas, Ralph Meeker, Adolphe Menjou",
+  "Plot" : "A colonel defends three of his soldiers in a court-martial after they abandon a suicidal attack.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNmQ2NmI2ODYtMDQzNS00NzQyLTkzZjgtZmZlYTQ5MTc1OWU3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Witness for the Prosecution",
+  "imdbRating" : 8.4,
+  "Year" : 1957,
+  "Genre" : "Crime, Drama, Mystery",
+  "Actors" : "Tyrone Power, Marlene Dietrich, Charles Laughton",
+  "Plot" : "A veteran British barrister must defend his client in a murder trial that has surprise after surprise.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNjRhNTQzMzQtMWViMi00ODQ1LTg0MTEtYWE4ZWZlYjM4YjJhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Shining",
+  "imdbRating" : 8.4,
+  "Year" : 1980,
+  "Genre" : "Drama, Horror",
+  "Actors" : "Jack Nicholson, Shelley Duvall, Danny Lloyd",
+  "Plot" : "A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNmM5ZThhY2ItOGRjOS00NzZiLWEwYTItNDgyMjFkOTgxMmRiXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Great Dictator",
+  "imdbRating" : 8.4,
+  "Year" : 1940,
+  "Genre" : "Comedy, Drama, War",
+  "Actors" : "Charles Chaplin, Paulette Goddard, Jack Oakie",
+  "Plot" : "Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber tries to avoid persecution from Hynkel's regime.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjc4ZjEwNDUtMjlmZS00NzQ4LTg2N2MtMGI3ZjMyMmM3ZDM2XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "12th Fail",
+  "imdbRating" : 8.8,
+  "Year" : 2023,
+  "Genre" : "Biography, Drama",
+  "Actors" : "Vikrant Massey, Medha Shankr, Anant Joshi",
+  "Plot" : "The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTE3OTIxZDYtNjA0NC00N2YxLTg1NGQtOTYxNmZkMDkwOWNjXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Aliens",
+  "imdbRating" : 8.4,
+  "Year" : 1986,
+  "Genre" : "Action, Adventure, Horror",
+  "Actors" : "Sigourney Weaver, Michael Biehn, Carrie Henn",
+  "Plot" : "Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZjIyNGJhYzYtN2I1My00OTVhLWEyMzItZTVjNDMzOTVkYWViXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Inglourious Basterds",
+  "imdbRating" : 8.4,
+  "Year" : 2009,
+  "Genre" : "Adventure, Drama, War",
+  "Actors" : "Brad Pitt, Diane Kruger, Eli Roth",
+  "Plot" : "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODZhMWJlNjYtNDExNC00MTIzLTllM2ItOGQ2NGVjNDQ3MzkzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Dark Knight Rises",
+  "imdbRating" : 8.4,
+  "Year" : 2012,
+  "Genre" : "Action, Drama, Thriller",
+  "Actors" : "Christian Bale, Tom Hardy, Anne Hathaway",
+  "Plot" : "Bane, an imposing terrorist, attacks Gotham City and disrupts its eight-year-long period of peace. This forces Bruce Wayne to come out of hiding and don the cape and cowl of Batman again.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Coco",
+  "imdbRating" : 8.4,
+  "Year" : 2017,
+  "Genre" : "Animation, Adventure, Drama",
+  "Actors" : "Anthony Gonzalez, Gael García Bernal, Benjamin Bratt",
+  "Plot" : "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDIyM2E2NTAtMzlhNy00ZGUxLWI1NjgtZDY5MzhiMDc5NGU3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Amadeus",
+  "imdbRating" : 8.4,
+  "Year" : 1984,
+  "Genre" : "Biography, Drama, Music",
+  "Actors" : "F. Murray Abraham, Tom Hulce, Elizabeth Berridge",
+  "Plot" : "The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was deeply jealous of Mozart's talent and claimed to have murdered him.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMzc2MjM0NTMtOGY4NC00NzY1LWE2ODUtZjMzY2RhNGNkZDAyXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Toy Story",
+  "imdbRating" : 8.3,
+  "Year" : 1995,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : "Tom Hanks, Tim Allen, Don Rickles",
+  "Plot" : "A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Ant-Man and the Wasp",
+  "imdbRating" : 7.0,
+  "Year" : 2018,
+  "Genre" : "Action, Adventure, Comedy",
+  "Actors" : "Paul Rudd, Evangeline Lilly, Michael Peña",
+  "Plot" : "As Scott Lang balances being both a superhero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Good Will Hunting",
+  "imdbRating" : 8.3,
+  "Year" : 1997,
+  "Genre" : "Drama, Romance",
+  "Actors" : "Robin Williams, Matt Damon, Ben Affleck",
+  "Plot" : "Will Hunting, a janitor at MIT, has a gift for mathematics, but needs help from a psychologist to find direction in his life.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDdjZGQ5YzEtNTc2My00Mjc0LWFlMTctYzkwMzZlNzdiZWYzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Oldboy",
+  "imdbRating" : 8.3,
+  "Year" : 2003,
+  "Genre" : "Action, Drama, Mystery",
+  "Actors" : "Choi Min-sik, Yoo Ji-tae, Kang Hye-jeong",
+  "Plot" : "After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must track down his captor in five days.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg"
+}, {
+  "Title" : "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+  "imdbRating" : 8.3,
+  "Year" : 1964,
+  "Genre" : "Comedy, War",
+  "Actors" : "Peter Sellers, George C. Scott, Sterling Hayden",
+  "Plot" : "A mentally unstable American general orders a hydrogen bomb attack on the Soviet Union, triggering a path to global nuclear holocaust that a war room full of politicians and generals frantically tries to stop.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjFjYzBlOTktMTI2OS00ZWVhLTgxMDUtNzAwODY2NmI3YTAzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "American Beauty",
+  "imdbRating" : 8.3,
+  "Year" : 1999,
+  "Genre" : "Drama",
+  "Actors" : "Kevin Spacey, Annette Bening, Thora Birch",
+  "Plot" : "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDI1MDE0OTMtMmI2MS00Yjc2LTg2MTItMWExYTg5NzA1OGUzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Das Boot",
+  "imdbRating" : 8.4,
+  "Year" : 1981,
+  "Genre" : "Drama, War",
+  "Actors" : "Jürgen Prochnow, Herbert Grönemeyer, Klaus Wennemann",
+  "Plot" : "A German U-boat stalks the frigid waters of the North Atlantic as its young crew experience the sheer terror and claustrophobic life of a submariner in World War II.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGU0MWZlMTUtM2Y3Ny00NGNmLWE5NmEtN2YxOWQzMGM3ZWYzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Braveheart",
+  "imdbRating" : 8.3,
+  "Year" : 1995,
+  "Genre" : "Biography, Drama, War",
+  "Actors" : "Mel Gibson, Sophie Marceau, Patrick McGoohan",
+  "Plot" : "Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNGMxZDBhNGQtYTZlNi00N2UzLWI4NDEtNmUzNWM2NTdmZDA0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Princess Mononoke",
+  "imdbRating" : 8.3,
+  "Year" : 1997,
+  "Genre" : "Animation, Adventure, Fantasy",
+  "Actors" : "Yôji Matsuda, Yuriko Ishida, Yûko Tanaka",
+  "Plot" : "On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNjAzODViNGEtMjBkYi00N2U5LWJjNjAtY2U0MGJhZTEwOTU0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Your Name.",
+  "imdbRating" : 8.4,
+  "Year" : 2016,
+  "Genre" : "Animation, Drama, Fantasy",
+  "Actors" : "Ryunosuke Kamiki, Mone Kamishiraishi, Ryo Narita",
+  "Plot" : "Two teenagers share a profound, magical connection upon discovering they are swapping bodies. Things manage to become even more complicated when the boy and girl decide to meet in person.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "High and Low",
+  "imdbRating" : 8.4,
+  "Year" : 1963,
+  "Genre" : "Crime, Drama, Mystery",
+  "Actors" : "Toshirô Mifune, Yutaka Sada, Tatsuya Nakadai",
+  "Plot" : "An executive of a Yokohama shoe company becomes a victim of extortion when his chauffeur's son is kidnapped by mistake and held for ransom.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMGJiNzllYjktODAzNS00OGUzLTlmY2MtMjA2ZTZhYTY1OTc4XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "3 Idiots",
+  "imdbRating" : 8.4,
+  "Year" : 2009,
+  "Genre" : "Comedy, Drama",
+  "Actors" : "Aamir Khan, Madhavan, Mona Singh",
+  "Plot" : "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them \"idiots\".",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNzc4ZWQ3NmYtODE0Ny00YTQ4LTlkZWItNTBkMGQ0MmUwMmJlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Joker",
+  "imdbRating" : 8.3,
+  "Year" : 2019,
+  "Genre" : "Crime, Drama, Thriller",
+  "Actors" : "Joaquin Phoenix, Robert De Niro, Zazie Beetz",
+  "Plot" : "Arthur Fleck, a party clown and a failed stand-up comedian, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of chaos in Gotham City.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Once Upon a Time in America",
+  "imdbRating" : 8.3,
+  "Year" : 1984,
+  "Genre" : "Crime, Drama",
+  "Actors" : "Robert De Niro, James Woods, Elizabeth McGovern",
+  "Plot" : "A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan 35 years later, where he must once again confront the ghosts and regrets of his old life.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMDQ0ZTg2OGUtZjMyOC00M2M5LThkMmItZmM2MmUzMmIxMWJhXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Capernaum",
+  "imdbRating" : 8.4,
+  "Year" : 2018,
+  "Genre" : "Drama",
+  "Actors" : "Zain Al Rafeea, Yordanos Shiferaw, Boluwatife Treasure Bankole",
+  "Plot" : "While serving a five-year sentence for a violent crime, a 12-year-old boy sues his parents for neglect.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYzEyMzQ1OTktZTljZi00OWQzLWE2ZmUtZjQyNzBjYjE1NTc0XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Singin' in the Rain",
+  "imdbRating" : 8.3,
+  "Year" : 1952,
+  "Genre" : "Comedy, Musical, Romance",
+  "Actors" : "Gene Kelly, Donald O'Connor, Debbie Reynolds",
+  "Plot" : "A silent film star falls for a chorus girl just as he and his delusionally jealous screen partner are trying to make the difficult transition to talking pictures in 1920s Hollywood.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMGQzZDFjZWUtZDU4ZS00ZjM3LTgyYmItYjA3YmIwYzRkZWY3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Come and See",
+  "imdbRating" : 8.4,
+  "Year" : 1985,
+  "Genre" : "Drama, Thriller, War",
+  "Actors" : "Aleksey Kravchenko, Olga Mironova, Liubomiras Laucevicius",
+  "Plot" : "After finding an old rifle, a young boy joins the Soviet resistance movement against ruthless German forces and experiences the horrors of World War II.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDlkZmVkZDAtZGFmMS00OWIzLWJkY2YtNWE5NjNhNjhiZGE3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Requiem for a Dream",
+  "imdbRating" : 8.3,
+  "Year" : 2000,
+  "Genre" : "Drama",
+  "Actors" : "Ellen Burstyn, Jared Leto, Jennifer Connelly",
+  "Plot" : "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BN2ZlMjIzZjctYzA2My00ZWYyLWI4ZjctMGI2NWYyNzFiZjAwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Toy Story 3",
+  "imdbRating" : 8.3,
+  "Year" : 2010,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : "Tom Hanks, Tim Allen, Joan Cusack",
+  "Plot" : "The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Star Wars: Episode VI - Return of the Jedi",
+  "imdbRating" : 8.3,
+  "Year" : 1983,
+  "Genre" : "Action, Adventure, Fantasy",
+  "Actors" : "Mark Hamill, Harrison Ford, Carrie Fisher",
+  "Plot" : "After rescuing Han Solo from Jabba the Hutt, the Rebel Alliance attempts to destroy the second Death Star while Luke struggles to help Darth Vader back from the dark side.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNWEwOTI0MmUtMGNmNy00ODViLTlkZDQtZTg1YmQ3MDgyNTUzXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Hunt",
+  "imdbRating" : 8.3,
+  "Year" : 2012,
+  "Genre" : "Drama",
+  "Actors" : "Mads Mikkelsen, Thomas Bo Larsen, Annika Wedderkopp",
+  "Plot" : "A teacher lives a lonely life, all the while struggling over his son's custody. His life slowly gets better as he finds love and receives good news from his son, but his new luck is about to be brutally shattered by an innocent li...",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_SX300.jpg"
+}, {
+  "Title" : "Ikiru",
+  "imdbRating" : 8.3,
+  "Year" : 1952,
+  "Genre" : "Drama",
+  "Actors" : "Takashi Shimura, Nobuo Kaneko, Shin'ichi Himori",
+  "Plot" : "A bureaucrat tries to find meaning in his life after he discovers he has terminal cancer.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BZTk4OGEwNDQtOGI2MC00MTU2LTk0YTEtNmU5NTIxMWNkNDhlXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Eternal Sunshine of the Spotless Mind",
+  "imdbRating" : 8.3,
+  "Year" : 2004,
+  "Genre" : "Drama, Romance, Sci-Fi",
+  "Actors" : "Jim Carrey, Kate Winslet, Tom Wilkinson",
+  "Plot" : "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories forever.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_SX300.jpg"
+}, {
+  "Title" : "2001: A Space Odyssey",
+  "imdbRating" : 8.3,
+  "Year" : 1968,
+  "Genre" : "Adventure, Sci-Fi",
+  "Actors" : "Keir Dullea, Gary Lockwood, William Sylvester",
+  "Plot" : "When a mysterious artifact is uncovered on the Moon, a spacecraft manned by two humans and one supercomputer is sent to Jupiter to find its origins.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNjU0NDFkMTQtZWY5OS00MmZhLTg3Y2QtZmJhMzMzMWYyYjc2XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Reservoir Dogs",
+  "imdbRating" : 8.3,
+  "Year" : 1992,
+  "Genre" : "Crime, Thriller",
+  "Actors" : "Harvey Keitel, Tim Roth, Michael Madsen",
+  "Plot" : "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMmMzYjg4NDctYWY0Mi00OGViLWIzMTMtYWNlZGY5ZDJmYjk3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "The Apartment",
+  "imdbRating" : 8.3,
+  "Year" : 1960,
+  "Genre" : "Comedy, Drama, Romance",
+  "Actors" : "Jack Lemmon, Shirley MacLaine, Fred MacMurray",
+  "Plot" : "A Manhattan insurance clerk tries to rise in his company by letting its executives use his apartment for trysts, but office politics and his own romantic hopes complicate matters.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNDdhMzVhOWQtNDU2Mi00ZmZmLWJiZDMtY2QxMjhjY2Y1ZTI5XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Incendies",
+  "imdbRating" : 8.3,
+  "Year" : 2010,
+  "Genre" : "Drama, Mystery, War",
+  "Actors" : "Lubna Azabal, Mélissa Désormeaux-Poulin, Maxim Gaudette",
+  "Plot" : "Twins journey to the Middle East to discover their family history and fulfill their mother's last wishes.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BYWFmMjdmNjctNzhhOC00ZmMzLTkwOGItMmVmZDU4MjE2MTYwXkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Spring Breakers",
+  "imdbRating" : 5.3,
+  "Year" : 2012,
+  "Genre" : "Crime, Drama, Thriller",
+  "Actors" : "Vanessa Hudgens, Selena Gomez, Ashley Benson",
+  "Plot" : "Four college girls hold up a restaurant in order to fund their spring break vacation. While partying, drinking, and taking drugs, they are arrested, only to be bailed out by a drug and arms dealer.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BNTk3NjMwMjYtODg3Ny00ZDU2LTgzZDAtNDJjYjlmYjJjNGQ3XkEyXkFqcGc@._V1_SX300.jpg"
+}, {
+  "Title" : "Ratatouille",
+  "imdbRating" : 8.1,
+  "Year" : 2007,
+  "Genre" : "Animation, Adventure, Comedy",
+  "Actors" : "Brad Garrett, Lou Romano, Patton Oswalt",
+  "Plot" : "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.",
+  "Poster" : "https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+} ]
