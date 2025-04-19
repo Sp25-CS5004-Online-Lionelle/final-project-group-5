@@ -59,6 +59,11 @@ package student.controller;
                         FilterType.RATING,
                         view.getSort()
                 );
+            } else if (view.getSelectedSort().toUpperCase().equalsIgnoreCase("TITLE")){
+                handleSort(
+                        FilterType.TITLE,
+                        view.getSort()
+                );
             }
 
         });

@@ -17,7 +17,7 @@ public class MovieCollection implements IMovieCollection{
     /**
      * A set of all Movie objects in the local file.
      */
-    private Set<Movie> movieRecords = new HashSet<>();
+    private Set<Movie> movieRecords;
 
     /**
      * A list if filtered movie objects
@@ -29,7 +29,8 @@ public class MovieCollection implements IMovieCollection{
      * constructor. load all movies that saved in the local Json file.
      */
         public MovieCollection() {
-            movieRecords = MovieStorage.loadDatabase().stream().collect(Collectors.toSet());
+            this.movieRecords = new TreeSet<>(Comparator.comparing(Movie::getTitle, String.CASE_INSENSITIVE_ORDER));
+            movieRecords.addAll(MovieStorage.loadDatabase());
         }
     /**
      * add the movie records to the movieRecords set.

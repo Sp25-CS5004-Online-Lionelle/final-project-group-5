@@ -17,6 +17,13 @@ public class MovieSort implements IMovieSort{
     public List<Movie> sort(List<Movie> filteredMovieList, FilterType filterType, boolean ascending) {
         List<Movie> sortedFilteredMovies = new ArrayList<>(filteredMovieList);
         switch (filterType) {
+            case TITLE:
+            if (ascending)  {
+                sortedFilteredMovies.sort((m1, m2) -> m1.getTitle().toLowerCase().compareTo(m2.getTitle().toLowerCase()));
+            } else {
+                sortedFilteredMovies.sort((m1, m2) -> m2.getTitle().toLowerCase().compareTo(m1.getTitle().toLowerCase()));
+            }
+            return sortedFilteredMovies;
             case RATING:
             if (ascending){
                 sortedFilteredMovies.sort((m1, m2) -> Double.compare(m1.getAverageRating(), m2.getAverageRating()));
