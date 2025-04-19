@@ -174,6 +174,10 @@ public void addSaveListener(ActionListener listener) {
     userListPanel.getSaveButton().addActionListener(listener);
 }
 
+public void addClearListener(ActionListener listener) {
+    userListPanel.getClearButton().addActionListener(listener);
+}
+
 @Override
 public void addHelpListener(ActionListener listener) {
     buttonPanel.addHelpListener(listener);
