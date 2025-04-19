@@ -82,7 +82,7 @@ package student.controller;
         });
 
         view.addSaveListener(e -> handleSave("json"));
-
+        view.addClearListener(e -> handleClearList());
         view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
     }
     
@@ -173,6 +173,11 @@ package student.controller;
         } catch (Exception e) {
             view.showErrorMessage("Failed to save list: " + e.getMessage());
         }
+     }
+
+     public void handleClearList() {
+         userList.clear();
+         view.viewMovieList(userList.getMovies());
      }
 
      public List<Movie> getResults() {
