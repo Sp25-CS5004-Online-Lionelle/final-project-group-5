@@ -42,7 +42,7 @@ public class ButtonCommands extends JPanel {
     searchField = new JTextField(15);
     filterDropdown = new JComboBox<>(new String[]{"Title", "Genre", "Year", "Description"});
     operatorDropdown = new JComboBox<>(new String[]{"==", "!=", ">=", "<=", ">", "<", "~="});
-    sortDropdown = new JComboBox<>(new String []{"Rating", "Year"});
+    sortDropdown = new JComboBox<>(new String []{"Rating","Year"});
     sortAscCheckbox = new JCheckBox("Ascending");
     sortDecCheckbox = new JCheckBox("Descending");
 
