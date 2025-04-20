@@ -23,34 +23,34 @@ Before you begin, please ensure you have the following:
 
 The application's purpose is to allow the user to browse and filter a movie collection by title, year, genre, or description and then create their own movie list to save to a file. 
 When the GUI lanches you will see:
-    1. A searh bar and filter button at the top
-    2. A large movie collection will display on the left
-    3. An empty "My Movie List" panel on the right.
-    4. Functional buttons along the top and bottom of the program frame. 
+1. A searh bar and filter button at the top
+2. A large movie collection will display on the left
+3. An empty "My Movie List" panel on the right.
+4. Functional buttons along the top and bottom of the program frame. 
 
 
 ### Filtering Movies
 The application allows the user to narrow down the movie collection for easier browsing by filtering.
-    1. Type into the filter field to search by:
-        * Title
-        * Genre
-        * Year
-        * Description
-    2. Use the dropdown menu to select the filter parameter and an operator:
-        * == (equals)
-        * != (does not equal)
-        * >  (greater than)
-        * <  (less than)
-        * >= (greater than or equal to)
-        * <= (less than or equal to)
-        * ~=  (contains)
-    3. Click the filter button to apply your filter
+1. Type into the filter field to search by:
+    * Title
+    * Genre
+    * Year
+    * Description
+2. Use the dropdown menu to select the filter parameter and an operator:
+    * == (equals)
+    * != (does not equal)
+    * >  (greater than)
+    * <  (less than)
+    * >= (greater than or equal to)
+    * <= (less than or equal to)
+    * ~=  (contains)
+3. Click the filter button to apply your filter
 
 ### Sorting Movies
 The user may apply the sort function to the movie collection after it has been filtered. Note: The movie collection will automatically be sorted by title.
-    1. Use the sort dropdown menu to select the sort parameter (title, year, or rating)
-    2. Select Ascending or Decending order
-    3. click the sort button
+1. Use the sort dropdown menu to select the sort parameter (title, year, or rating)
+2. Select Ascending or Decending order
+3. click the sort button
 
 ### Movie Collection (Left Panel)
     * The movie collection is displayed in the left panel
