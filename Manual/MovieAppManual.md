@@ -32,18 +32,18 @@ When the GUI lanches you will see:
 ### Filtering Movies
 The application allows the user to narrow down the movie collection for easier browsing by filtering.
 1. Type into the filter field to search by:
-    * Title
-    * Genre
-    * Year
-    * Description
+* Title
+* Genre
+* Year
+* Description
 2. Use the dropdown menu to select the filter parameter and an operator:
-    * == (equals)
-    * != (does not equal)
-    * `>` (greater than)
-    * <  (less than)
-    * >= (greater than or equal to)
-    * <= (less than or equal to)
-    * ~=  (contains)
+* `==` (equals)
+* `!=` (does not equal)
+* `>` (greater than)
+* `<`  (less than)
+* `>=` (greater than or equal to)
+* `<=` (less than or equal to)
+* `~=`  (contains)
 3. Click the filter button to apply your filter
 
 ### Sorting Movies
@@ -53,25 +53,25 @@ The user may apply the sort function to the movie collection after it has been f
 3. click the sort button
 
 ### Movie Collection (Left Panel)
-    * The movie collection is displayed in the left panel
-    * The movies are displayed as cards with the movie poster images and titles.
-    * Click on the movie poster to display the full movie card.
-    * Click the Add button on any card to move that movie to your personal movie list on the right. 
+* The movie collection is displayed in the left panel
+* The movies are displayed as cards with the movie poster images and titles.
+* Click on the movie poster to display the full movie card.
+* Click the Add button on any card to move that movie to your personal movie list on the right. 
 
 ### My Movie List (Right Panel)
-    * The panel of the right is your personalized movie list. 
-    * Movies you add appear in the same card format as the movie collection.
-    * Click the Remove button at any time to remove a movie from your movie list. 
-    * You may add as many movies as you would like to My Movie List. As it grows, scroll through it. 
-    * If you would like to start over, click clear list to remove all movies. 
+* The panel of the right is your personalized movie list. 
+* Movies you add appear in the same card format as the movie collection.
+* Click the Remove button at any time to remove a movie from your movie list. 
+* You may add as many movies as you would like to My Movie List. As it grows, scroll through it. 
+* If you would like to start over, click clear list to remove all movies. 
 
 ### Individual Movie Cards
 Every movie in the movie collection has a movie card with additional information outside of the filtering parameters. To access the movie card click on the movie poster in the movie collection or movie list. The movie card includes
-    * Title
-    * Genre: includes multiple genres
-    * Rating: IMDB rating on a scale of 10
-    * Cast: leading cast memebers
-    * Description or plot
+* Title
+* Genre: includes multiple genres
+* Rating: IMDB rating on a scale of 10
+* Cast: leading cast memebers
+* Description or plot
 
 ### Buttons Explained
 * **Add All:** Adds all visible movies in the movie collection to My Movie List. 
