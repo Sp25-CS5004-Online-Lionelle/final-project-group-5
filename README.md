@@ -13,7 +13,7 @@ This movie application is a Java program using MVC design artichtecture which al
 [Project Proposal](DesignDocuments/Project%20Proposal.md)<br>
 [Initial UML Design](DesignDocuments/Initial%20UML%20Design.md)<br>
 [Final UML Design](DesignDocuments/Final%20UML%20Design.md)<br>
-[Program Manual](Manual/README.md)<br>
+[Program Manual](Manual/MovieAppManual.md)<br>
 
 ## Running the Application (Instructions)
 Here are step by step instructions to run our application and save your movie list:
