@@ -39,7 +39,7 @@ The application allows the user to narrow down the movie collection for easier b
 2. Use the dropdown menu to select the filter parameter and an operator:
     * == (equals)
     * != (does not equal)
-    * >  (greater than)
+    * `>` (greater than)
     * <  (less than)
     * >= (greater than or equal to)
     * <= (less than or equal to)
