@@ -30,4 +30,4 @@ Here are step by step instructions to run our application and save your movie li
 
 Happy Browsing, cinephile!  
 
-For more detailed instructions, please refer to the [Program Manual](Manual/README.md)
+For more detailed instructions, please refer to the [Program Manual](Manual/MovieAppManual.md)

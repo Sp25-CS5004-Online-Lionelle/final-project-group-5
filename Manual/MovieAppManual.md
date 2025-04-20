@@ -88,5 +88,8 @@ The program allows your to save My Movie List as a local file once you are done 
 * Add Movies to My Movie List.
 * Click Save List to save your list to `userSavedLists.json`.
 
+### Can't find a Movie?
+If you can't find a movie you're looking for, don't worry! Our program is using a local file with movie data, and if you can't find what you're looking for simply search for the movie using the Title filter and the data should be fetched from OMDB. 
+
 When you are done creating your Movie List, close the program. 
 Thanks for running our program!
