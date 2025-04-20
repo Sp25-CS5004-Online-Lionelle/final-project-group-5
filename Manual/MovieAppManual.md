@@ -50,7 +50,7 @@ The application allows the user to narrow down the movie collection for easier b
 The user may apply the sort function to the movie collection after it has been filtered. Note: The movie collection will automatically be sorted by title.
 1. Use the sort dropdown menu to select the sort parameter (title, year, or rating)
 2. Select Ascending or Decending order
-3. click the sort button
+3. click the Sort button
 
 ### Movie Collection (Left Panel)
 * The movie collection is displayed in the left panel
@@ -68,7 +68,7 @@ The user may apply the sort function to the movie collection after it has been f
 ### Individual Movie Cards
 Every movie in the movie collection has a movie card with additional information outside of the filtering parameters. To access the movie card click on the movie poster in the movie collection or movie list. The movie card includes
 * Title
-* Genre: includes multiple genres
+* Genre: includes one or multiple applicable genres
 * Rating: IMDB rating on a scale of 10
 * Cast: leading cast memebers
 * Description or plot
@@ -89,4 +89,4 @@ The program allows your to save My Movie List as a local file once you are done 
 * Click Save List to save your list to `userSavedLists.json`.
 
 When you are done creating your Movie List, close the program. 
-Thanks for running my program!
+Thanks for running our program!
