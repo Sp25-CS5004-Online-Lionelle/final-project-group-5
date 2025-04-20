@@ -74,19 +74,19 @@ Every movie in the movie collection has a movie card with additional information
     * Description or plot
 
 ### Buttons Explained
-    * Add All: Adds all visible movies in the movie collection to My Movie List. 
-    * Reset Collection: Resets the filters and shows the full movie database again. 
-    * Help: displays a detailed informational help message for users
-    * Add: adds the single movie to My Movie List
-    * Remove: removes a single movie from My Movie List
-    * Clear List: cleans entire Movie List 
-    * Save List: exports the users current Movie List to a JSON file.
+* **Add All:** Adds all visible movies in the movie collection to My Movie List. 
+* **Reset Collection:** Resets the filters and shows the full movie database again. 
+* **Help:** displays a detailed informational help message for users
+* **Add:** adds the single movie to My Movie List
+* **Remove:** removes a single movie from My Movie List
+* **Clear List:** cleans entire Movie List 
+* **Save List:** exports the users current Movie List to a JSON file.
 
 ### Saving your Movie List
 The program allows your to save My Movie List as a local file once you are done browsing. 
-    * Browse, Filter, Sort the movie collection.
-    * Add Movies to My Movie List.
-    * Click Save List to save your list to `userSavedLists.json`.
+* Browse, Filter, Sort the movie collection.
+* Add Movies to My Movie List.
+* Click Save List to save your list to `userSavedLists.json`.
 
 When you are done creating your Movie List, close the program. 
 Thanks for running my program!
