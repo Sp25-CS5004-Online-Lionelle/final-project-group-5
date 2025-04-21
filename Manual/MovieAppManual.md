@@ -35,7 +35,10 @@ Our Movie Program includes the following features:
 
 ![MovieApp.java](images/PM2.jpg)
 
-![MovieApp.java](images/PM1.jpg)
+<p align="center">
+  <img src="images/PM1.jpg" alt="PM1" width="500"/>
+</p>
+
 
 
 
@@ -76,7 +79,7 @@ The user may apply the sort function to the movie collection after it has been f
 2. Select Ascending or Decending order
 3. click the Sort button
 
-![Movie Card](images/PM5.jpg)
+![Movie Sort](images/PM5.jpg)
 
 ### Movie Collection (Left Panel)
 * The movie collection is displayed in the left panel
