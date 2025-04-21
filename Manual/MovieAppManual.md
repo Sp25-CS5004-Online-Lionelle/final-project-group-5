@@ -76,7 +76,7 @@ The user may apply the sort function to the movie collection after it has been f
 2. Select Ascending or Decending order
 3. click the Sort button
 
-![Movie Sort](PMimages/PM5.jpg)
+![Movie Sort](PMimages/PM6.jpg)
 
 ### Movie Collection (Left Panel)
 * The movie collection is displayed in the left panel
