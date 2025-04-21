@@ -35,10 +35,7 @@ Our Movie Program includes the following features:
 
 ![MovieApp.java](PMimages/PM2.jpg)
 
-<p align="center">
-  <img src="PMimages/PM1.jpg" alt="PM1" width="500"/>
-</p>
-
+![MovieApp.java](PMimages/PM1.jpg)
 
 
 
@@ -51,7 +48,7 @@ When the GUI lanches you will see:
 3. An empty "My Movie List" panel on the right.
 4. Functional buttons along the top and bottom of the program frame. 
 
-![Main Program View](images/PM3.jpg)
+![Main Program View](PMimages/PM3.jpg)
 
 
 ### Filtering Movies
@@ -71,7 +68,7 @@ The application allows the user to narrow down the movie collection for easier b
 * `~=`  (contains)
 3. Click the filter button to apply your filter
 
-![Movie Filter](images/PM5.jpg)
+![Movie Filter](PMimages/PM5.jpg)
 
 ### Sorting Movies
 The user may apply the sort function to the movie collection after it has been filtered. Note: The movie collection will automatically be sorted by title.
@@ -79,7 +76,7 @@ The user may apply the sort function to the movie collection after it has been f
 2. Select Ascending or Decending order
 3. click the Sort button
 
-![Movie Sort](images/PM5.jpg)
+![Movie Sort](PMimages/PM5.jpg)
 
 ### Movie Collection (Left Panel)
 * The movie collection is displayed in the left panel
@@ -102,7 +99,7 @@ Every movie in the movie collection has a movie card with additional information
 * Cast: leading cast memebers
 * Description or plot
 
-![Movie Card](images/PM4.jpg)
+![Movie Card](PMimages/PM4.jpg)
 
 ### Buttons Explained
 * **Add All:** Adds all visible movies in the movie collection to My Movie List. 
