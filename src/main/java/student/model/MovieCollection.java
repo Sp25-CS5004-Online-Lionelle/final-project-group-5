@@ -26,15 +26,16 @@ public class MovieCollection implements IMovieCollection{
 
 
     /**
-     * constructor. load all movies that saved in the local Json file.
+     * constructor. load all movies that saved in the local Json file. The movie sorted in ascending order by title
      */
         public MovieCollection() {
             this.movieRecords = new TreeSet<>(Comparator.comparing(Movie::getTitle, String.CASE_INSENSITIVE_ORDER));
             movieRecords.addAll(MovieStorage.loadDatabase());
         }
+
     /**
-     * add the movie records to the movieRecords set.
-     * @param in the input stream where we want to load the movies from
+     * Get all movies in the movie collection
+     * @return all movies in the movie collection
      */
 
 	@Override

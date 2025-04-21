@@ -37,7 +37,6 @@ public interface IMovieCollection {
      * Good spot to get the InputStream from the DATABASE file, and use that stream to build the
      * model.
      *
-     * @param database the name of the file to use
      * @return the instance of the model
      */
     static IMovieCollection getInstance() {
