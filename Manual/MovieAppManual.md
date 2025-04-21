@@ -33,10 +33,10 @@ Our Movie Program includes the following features:
 3. Click the **Run** above `public static void main(String[] args)`.
 4. The GUI should launch. 
 
-![MovieApp.java](images/PM2.jpg)
+![MovieApp.java](PMimages/PM2.jpg)
 
 <p align="center">
-  <img src="images/PM1.jpg" alt="PM1" width="500"/>
+  <img src="PMimages/PM1.jpg" alt="PM1" width="500"/>
 </p>
 
 
