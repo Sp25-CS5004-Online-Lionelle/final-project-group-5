@@ -4,9 +4,24 @@
 
 Before you begin, please ensure you have the following:
 
-- Java installed (version 8 or above)
-- An IDE like IntelliJ or VSCode
-- The source code of the project downloaded
+* Java installed (version 8 or above)
+* An IDE like IntelliJ or VSCode
+* The source code of the project downloaded
+  
+### Program Introduction
+This movie application is a Java program using MVC design artichtecture which allows users to browse, filter, sort, and save movies from a large movie collection to a user movie list. The GUI, created with Swing, displays movies in a visually appealing format with posters, titles, and interactive buttons. Users can filter movies by title, genre, year, and description. The filter results can be sorted by title, rating, or year in ascending or descending order. With the custom button panel, users are able to add all movies to their list, reset the movie collection, or gain insight be using the "help" button. Each movie card includes an "Add" button that lets users build a personalized list in the right panel titled "My Movie List." In the separate "my movie list" panel users are able to remove individual titles by clicking the "Remove" button as well as clear the entire list using "Clear List", or save the list to a file using "Save to File". 
+
+### Features Implmented
+Our Movie Program includes the following features:
+* Graphical User Interface
+* Ability to view entire Movie Collection in ascending order by title
+* Ability to build a Movie List from the Movie Collection
+* Ability to save the Movie List to a JSON file 
+* Ability to search the Movie Collection and API by title
+* Ability to filter the Movie Collection by title, genre, year, and description
+* Ability to sort the filtered movies by title, rating, or year in ascending or descending order
+* Use of OMDB API for the Movie Collection 
+* Visible images (movie posters) for each Movie object
 
 
 ### How to run the program
