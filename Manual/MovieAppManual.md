@@ -31,7 +31,11 @@ Our Movie Program includes the following features:
 1. Open the project folder in your IDE.
 2. Locate the main class file [MovieApp.java](../src/main/java/student/MovieApp.java) 
 3. Click the **Run** above `public static void main(String[] args)`.
-4. The GUI should launch.
+4. The GUI should launch. 
+
+![MovieApp.java](images/PM1.jpg)
+![Movie Card Pane](images/PM)
+
 
 
 ### Getting Started
@@ -106,5 +110,5 @@ The program allows your to save My Movie List as a local file once you are done 
 ### Can't find a Movie?
 If you can't find a movie you're looking for, don't worry! Our program is using a local file with movie data, and if you can't find what you're looking for simply search for the movie using the Title filter and the data should be fetched from OMDB. 
 
-When you are done creating your Movie List, close the program. 
+When you are done creating your Movie List, close the program. <br>
 Thanks for running our program!
