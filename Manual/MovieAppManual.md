@@ -33,8 +33,9 @@ Our Movie Program includes the following features:
 3. Click the **Run** above `public static void main(String[] args)`.
 4. The GUI should launch. 
 
+![MovieApp.java](images/PM2.jpg)
+
 ![MovieApp.java](images/PM1.jpg)
-![Movie Card Pane](images/PM)
 
 
 
@@ -46,6 +47,8 @@ When the GUI lanches you will see:
 2. A large movie collection will display on the left
 3. An empty "My Movie List" panel on the right.
 4. Functional buttons along the top and bottom of the program frame. 
+
+![Main Program View](images/PM3.jpg)
 
 
 ### Filtering Movies
@@ -65,11 +68,15 @@ The application allows the user to narrow down the movie collection for easier b
 * `~=`  (contains)
 3. Click the filter button to apply your filter
 
+![Movie Filter](images/PM5.jpg)
+
 ### Sorting Movies
 The user may apply the sort function to the movie collection after it has been filtered. Note: The movie collection will automatically be sorted by title.
 1. Use the sort dropdown menu to select the sort parameter (title, year, or rating)
 2. Select Ascending or Decending order
 3. click the Sort button
+
+![Movie Card](images/PM5.jpg)
 
 ### Movie Collection (Left Panel)
 * The movie collection is displayed in the left panel
@@ -91,6 +98,8 @@ Every movie in the movie collection has a movie card with additional information
 * Rating: IMDB rating on a scale of 10
 * Cast: leading cast memebers
 * Description or plot
+
+![Movie Card](images/PM4.jpg)
 
 ### Buttons Explained
 * **Add All:** Adds all visible movies in the movie collection to My Movie List. 
