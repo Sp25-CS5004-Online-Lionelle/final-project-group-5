@@ -17,7 +17,7 @@ public class MovieStorage {
 // ----------------------------------------------Update If Needed------------------------------------------------------
     private static final String DATABASE = "src/main/resources/CompressedDatabase.json";
     /** The default output location.*/
-    private static final String DEFAULT_OUTPUT_LOCATION = "src/main/resources/movieList.json";
+    private static final String DEFAULT_OUTPUT_LOCATION = "src/main/resources/CompressedDatabase.json";
 // ----------------------------------------------Update If Needed------------------------------------------------------
 
 
