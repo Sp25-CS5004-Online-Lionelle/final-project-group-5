@@ -98,7 +98,7 @@ public class TestMovieCollection {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             movieCollection.getFilteredMovies("2022.2", Operations.CONTAINS, FilterType.YEAR);
         });
-        String expectedMessage = "Invalid input";
+        String expectedMessage = "Invalid year format";
         String actualMessage = exception.getMessage();
 
         assertTrue(actualMessage.contains(expectedMessage));
