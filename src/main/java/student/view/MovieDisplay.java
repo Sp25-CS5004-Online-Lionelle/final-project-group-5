@@ -104,6 +104,11 @@ public class MovieDisplay extends JPanel {
         add(contentPanel, BorderLayout.NORTH); // Align everything to top
     }
 
+    /**
+     * Sets the movie details in the display.
+     *
+     * @param movie the Movie object containing details to display
+     */
     public void setMovie(Movie movie) {
         if (movie == null) return;
 

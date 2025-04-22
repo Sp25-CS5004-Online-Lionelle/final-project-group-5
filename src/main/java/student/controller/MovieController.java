@@ -1,14 +1,14 @@
 package student.controller;
 
- import student.model.*;
- import student.view.IView;
+import student.model.*;
+import student.view.IView;
 
- import java.util.ArrayList;
- import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
- /**
-  * MovieController is responsible for handling user interactions and updating the model and view accordingly.
-  */
+/**
+ * MovieController is responsible for handling user interactions and updating the model and view accordingly.
+*/
  public class MovieController implements IController {
      /**
       * The model representing the movie collection.
@@ -24,6 +24,7 @@ package student.controller;
      private final IView view;
 
      private List<Movie> results = new ArrayList<>();
+
      /**
       * Constructor for MovieController.
       *
@@ -37,6 +38,9 @@ package student.controller;
          this.view = view;
      }
 
+     /**
+      * Starts the controller, making the view visible and setting up event listeners.
+      */
      @Override
      public void start() {
         view.setVisible(true);
@@ -95,7 +99,13 @@ Reference the program manual for additional help.
 """));
     }
     
-
+    /**
+     * Handles the search operation.
+     *  
+     * @param value the search query
+     * @param op the operation to perform (e.g., EQUALS, NOT_EQUALS)
+     * @param filterType the type of filter to apply (e.g., TITLE, GENRE)
+     */
      @Override
      public void handleSearch(String value, Operations op, FilterType filterType) {
          try {
@@ -106,6 +116,13 @@ Reference the program manual for additional help.
          }
      }
 
+     /**
+      * Handles the filter operation.
+      *
+      * @param filter the filter type (e.g., TITLE, GENRE)
+      * @param operator the operator to use (e.g., ==, !=)
+      * @param value the value to filter by
+      */
      @Override
      public void handleFilter(String filter, String operator, String value) {
         try {
@@ -118,6 +135,12 @@ Reference the program manual for additional help.
         }
      }
 
+    /**
+     * Handles the sort operation.
+     * 
+     * @param filterType the type of filter to apply (e.g., YEAR, RATING)
+     * @param ascending whether to sort in ascending order
+     */
      @Override
      public void handleSort(FilterType filterType, boolean ascending) {
          if (model.getFilteredMovieList().size() == 0){
@@ -136,6 +159,11 @@ Reference the program manual for additional help.
         }
      }
 
+    /**
+     * Handles the addition of a movie to the user's list.
+     * 
+     * @param movieTitle the title of the movie to add
+     */
      @Override
      public void handleAddMovie(String movieTitle) {
          for (Movie movie : model.getMovies()) {
@@ -148,6 +176,11 @@ Reference the program manual for additional help.
          view.showErrorMessage("Movie not found: " + movieTitle);
      }
 
+     /**
+      * Handles the removal of a movie from the user's list.
+      * 
+      * @param movieTitle the title of the movie to remove
+      */
      @Override
      public void handleRemoveMovie(String movieTitle) {
          for (Movie movie : userList.getMovies()) {
@@ -160,6 +193,11 @@ Reference the program manual for additional help.
          view.showErrorMessage("Movie not in saved list: " + movieTitle);
      }
 
+    /**
+    * Handles the removal of a movie from the user's list.
+    * 
+    * @param movie the movie to remove
+    */
      public void handleRemoveMovie(Movie movie) {
          userList.remove(movie);
          view.viewMovieList(userList.getMovies());
@@ -172,6 +210,11 @@ Reference the program manual for additional help.
      }
 
 
+    /**
+    * Handles the saving of the user's movie list.
+    * 
+    * @param fileType the type of file to save as (e.g., json, xml)
+    */
      @Override
      public void handleSave(String fileType) {
         try {
@@ -184,11 +227,16 @@ Reference the program manual for additional help.
         }
      }
 
+    /**
+     * Handles the clearing of the user's movie list.
+     * 
+     */
      public void handleClearList() {
          userList.clear();
          view.viewMovieList(userList.getMovies());
      }
 
+    
      public List<Movie> getResults() {
          return this.results;
      }

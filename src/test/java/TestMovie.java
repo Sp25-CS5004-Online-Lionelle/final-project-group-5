@@ -7,12 +7,12 @@ public class TestMovie {
 
     @Test
     public void testMovieEquality() {
-        Movie m1 = new Movie("Inception", 8.8, 2010, "Sci-Fi",
+        Movie m1 = new Movie("Inception", 8.8, 2010, List.of("Sci-Fi"),
                 List.of("Leonardo DiCaprio", "Joseph Gordon-Levitt"), 
                 "A thief steals corporate secrets through dream-sharing tech.",
                 "https://image.url");
 
-        Movie m2 = new Movie("Inception", 8.8, 2010, "Sci-Fi",
+        Movie m2 = new Movie("Inception", 8.8, 2010, List.of("Sci-Fi"),
                 List.of("Leonardo DiCaprio", "Joseph Gordon-Levitt"), 
                 "A thief steals corporate secrets through dream-sharing tech.",
                 "https://image.url");
@@ -23,7 +23,7 @@ public class TestMovie {
 
     @Test
     public void testMovieToString() {
-        Movie movie = new Movie("Interstellar", 8.6, 2014, "Sci-Fi",
+        Movie movie = new Movie("Interstellar", 8.6, 2014, List.of("Sci-Fi"),
                 List.of("Matthew McConaughey", "Anne Hathaway"), 
                 "A team travels through a wormhole in search of a new home.",
                 "https://image.url");
