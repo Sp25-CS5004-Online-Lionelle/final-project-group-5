@@ -6,7 +6,6 @@ import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -35,6 +34,7 @@ public JFrameView(List<Movie> movies) {
             "<html><div style='text-align: center;'>🎬 <b>Welcome to our Movie App!</b><br><br>" +
             "Use the filter and sort options to explore movies.<br>" +
             "Add your favorites to a list and save them to a file!<br><br>" +
+            "Click the help button if you get stuck!<br>" +
             "Enjoy browsing! </div></html>",
             "Welcome",
             JOptionPane.INFORMATION_MESSAGE

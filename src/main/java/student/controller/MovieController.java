@@ -83,7 +83,16 @@ package student.controller;
 
         view.addSaveListener(e -> handleSave("json"));
         view.addClearListener(e -> handleClearList());
-        view.addHelpListener(e -> view.showHelpMessage("Use filters to narrow down movies. Click sort to reorder. Add to build your list."));
+        view.addHelpListener(e -> view.showHelpMessage("""
+<html>
+Use the filter bar to narrow movies by title, genre, year, or more.<br><br>
+Choose an operator (==, !=, >=, etc.), then click Filter.<br><br>
+Sort your results using Ascending or Descending order.<br><br>
+Click "Add" to add movies to your movie list on the right.<br><br>
+Use Save to download your list, or Clear to start over.<br><br>
+Reference the program manual for additional help. 
+</html>
+"""));
     }
     
 
@@ -167,7 +176,7 @@ package student.controller;
      public void handleSave(String fileType) {
         try {
             userList.save(fileType);
-            view.showHelpMessage("🎉 Your movie list was saved as a ." + fileType + " file!");
+            view.showHelpMessage("Your movie list was saved as a ." + fileType + " file. Default file is userSavedLists.json in the resources package.");
         } catch (UnsupportedOperationException e) {
             view.showErrorMessage("Unsupported file type: " + fileType);
         } catch (Exception e) {

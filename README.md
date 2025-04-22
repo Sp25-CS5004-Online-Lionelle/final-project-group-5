@@ -7,13 +7,13 @@
 * Aaron Gordoa github: agordoa
 
 ## App Name - Description
-This movie application is a Java program using MVC design artichtecture which allows users to browse, filter, sort, and save movies from a large movie collection to a user movie list. The GUI, created with Swing, displays movies in a visually appealing format with posters, titles, and interactive buttons. Users can filter movies by title, genre, year, and description. The filter results can be sorted by rating or year in ascending or descending order. With the custom button panel, users are able to add all movies to their list, reset the movie collection, or gain insight be using the "help" button. Each movie card includes an "Add" button that lets users build a personalized list in the right panel titled "My Movie List." In the separate "my movie list" panel users are able to remove individual titles by clicking the "Remove" button as well as clear the entire list using "Clear List", or save the list to a file using "Save to File". 
+This movie application is a Java program using MVC design artichtecture which allows users to browse, filter, sort, and save movies from a large movie collection to a user movie list. The GUI, created with Swing, displays movies in a visually appealing format with posters, titles, and interactive buttons. Users can filter movies by title, genre, year, and description. The filter results can be sorted by title, rating, or year in ascending or descending order. With the custom button panel, users are able to add all movies to their list, reset the movie collection, or gain insight be using the "help" button. Each movie card includes an "Add" button that lets users build a personalized list in the right panel titled "My Movie List." In the separate "my movie list" panel users are able to remove individual titles by clicking the "Remove" button as well as clear the entire list using "Clear List", or save the list to a file using "Save to File". 
 
 ## Design Documents + Program Manuals Links
 [Project Proposal](DesignDocuments/Project%20Proposal.md)<br>
 [Initial UML Design](DesignDocuments/Initial%20UML%20Design.md)<br>
 [Final UML Design](DesignDocuments/Final%20UML%20Design.md)<br>
-[Program Manual](Manual/README.md)<br>
+[Program Manual](Manual/MovieAppManual.md)<br>
 
 ## Running the Application (Instructions)
 Here are step by step instructions to run our application and save your movie list:
@@ -30,4 +30,4 @@ Here are step by step instructions to run our application and save your movie li
 
 Happy Browsing, cinephile!  
 
-For more detailed instructions, please refer to the [Program Manual](Manual/README.md)
+For more detailed instructions, please refer to the [Program Manual](Manual/MovieAppManual.md)
