@@ -4,12 +4,15 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public interface IMovieFilter {
-/**
- *
- * @param operation the filter to apply to the movie collections.
- * @return A stream of movies that match the filter
- */
-Stream<Movie> filter(List<Movie> movieList, Operations op, FilterType filterType, String value);
+    /**
+     *
+     * @param movieList the list of movies to be filtered
+     * @param op operations, such as CONTAINS, EQUALS, etc
+     * @param filterType, filterType, such as TITLE, YEAR, etc
+     * @param value, THE value to filter based on
+     * @return a stream of movie
+     */
+    Stream<Movie> filter(List<Movie> movieList, Operations op, FilterType filterType, String value);
 
 /**
  * clear the filteredMovieList

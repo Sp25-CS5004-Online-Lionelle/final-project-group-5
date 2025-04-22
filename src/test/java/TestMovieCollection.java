@@ -14,6 +14,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class TestMovieCollection {
@@ -88,6 +90,66 @@ public class TestMovieCollection {
         assertEquals("Moon", firstMovie.getTitle());
         Movie secondMovie = sortedMovieList1.get(1);
         assertEquals("Minions", secondMovie.getTitle());
+    }
+
+    @Test
+    public void testInvalidYear() {
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            movieCollection.getFilteredMovies("2022.2", Operations.CONTAINS, FilterType.YEAR);
+        });
+        String expectedMessage = "Invalid input";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testNoYear() {
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            movieCollection.getFilteredMovies("", Operations.CONTAINS, FilterType.YEAR);
+        });
+        String expectedMessage = "Please enter a year";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testNoTitle() {
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            movieCollection.getFilteredMovies("", Operations.CONTAINS, FilterType.TITLE);
+        });
+        String expectedMessage = "Please enter a title";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testNoGenre() {
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            movieCollection.getFilteredMovies("", Operations.CONTAINS, FilterType.GENRE);
+        });
+        String expectedMessage = "Please enter a Genre";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testNoDescription() {
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            movieCollection.getFilteredMovies("", Operations.CONTAINS, FilterType.DESCRIPTION);
+        });
+        String expectedMessage = "Please some description";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
     }
 
 }
