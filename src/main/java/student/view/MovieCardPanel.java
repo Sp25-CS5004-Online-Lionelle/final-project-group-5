@@ -79,6 +79,12 @@ public class MovieCardPanel extends JPanel {
             }
         });
     }
+
+    /**
+     * Sets the action button label.
+     *
+     * @param label The label to set for the action button.
+     */
     public JButton getActionButton() {
         return actionButton;
     }

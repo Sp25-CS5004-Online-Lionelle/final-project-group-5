@@ -10,8 +10,8 @@ public class TestMovieList {
     @Test
     public void testAddAndRetrieveMovies() {
         MovieList list = new MovieList();
-        Movie m1 = new Movie("Inception", 8.8, 2010, "Sci-Fi", List.of(), "", "");
-        Movie m2 = new Movie("The Matrix", 8.7, 1999, "Sci-Fi", List.of(), "", "");
+        Movie m1 = new Movie("Inception", 8.8, 2010, List.of("Sci-Fi"), List.of(), "", "");
+        Movie m2 = new Movie("The Matrix", 8.7, 1999, List.of("Sci-Fi"), List.of(), "", "");
 
         list.add(m1);
         list.add(m2);
@@ -25,8 +25,8 @@ public class TestMovieList {
     @Test
     public void testNoDuplicates() {
         MovieList list = new MovieList();
-        Movie m1 = new Movie("Inception", 8.8, 2010, "Sci-Fi", List.of(), "", "");
-        Movie m2 = new Movie("Inception", 9.0, 2010, "Action", List.of(), "", "");
+        Movie m1 = new Movie("Inception", 8.8, 2010, List.of("Sci-Fi"), List.of(), "", "");
+        Movie m2 = new Movie("Inception", 9.0, 2010, List.of("Action"), List.of(), "", "");
 
         list.add(m1);
         list.add(m2);
