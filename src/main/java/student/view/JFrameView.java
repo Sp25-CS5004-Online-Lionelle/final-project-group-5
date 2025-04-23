@@ -21,8 +21,8 @@ public class JFrameView extends JFrame implements IView{
 
 public JFrameView(List<Movie> movies) {
 
-        setTitle("Movie App");
-        setSize(1000, 1000);
+        setTitle("Reel It In");
+        setSize(1200, 1000);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -69,7 +69,7 @@ public JFrameView(List<Movie> movies) {
 
         // Center: Split Pane
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
-        splitPane.setDividerLocation(500);
+        splitPane.setDividerLocation(600);
         add(splitPane, BorderLayout.CENTER);
 
          // Optional bottom message label
@@ -96,7 +96,7 @@ public JFrameView(List<Movie> movies) {
         }
     
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftScrollPane, rightScrollPane);
-        splitPane.setDividerLocation(500);
+        splitPane.setDividerLocation(600);
         add(splitPane, BorderLayout.CENTER);
     
         revalidate();

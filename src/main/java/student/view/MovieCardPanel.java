@@ -22,7 +22,7 @@ public class MovieCardPanel extends JPanel {
     public MovieCardPanel(Movie movie, String buttonLabel) {
         this.movie = movie;
         setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(150, 200));
+        setPreferredSize(new Dimension(180, 280));
         setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
@@ -33,7 +33,7 @@ public class MovieCardPanel extends JPanel {
         try {
             if (movie.getImageUrl() != null && !movie.getImageUrl().isEmpty()) {
                 ImageIcon poster = new ImageIcon(new URL(movie.getImageUrl()));
-                Image scaled = poster.getImage().getScaledInstance(150, 200, Image.SCALE_SMOOTH);
+                Image scaled = poster.getImage().getScaledInstance(160, 220, Image.SCALE_SMOOTH);
                 imageLabel.setIcon(new ImageIcon(scaled));
             } else {
                 imageLabel.setText("No Image");

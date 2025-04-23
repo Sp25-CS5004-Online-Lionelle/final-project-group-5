@@ -57,6 +57,8 @@ public class UserMovieListPanel extends JPanel {
         for (Movie movie : movies) {
             MovieCardPanel card = new MovieCardPanel(movie, "Remove");
             card.getActionButton().addActionListener(e -> removeAction.accept(movie));
+            card.setMaximumSize(new Dimension(180, 280));  // Force max size
+            card.setPreferredSize(new Dimension(180,280));
             cardPanel.add(card);
         }
 
