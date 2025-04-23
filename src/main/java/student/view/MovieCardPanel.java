@@ -20,21 +20,21 @@ public class MovieCardPanel extends JPanel {
      * @param movie The movie object to display.
      */
     public MovieCardPanel(Movie movie, String buttonLabel) {
-        this.movie = movie;
-        setLayout(new BorderLayout());
-        setPreferredSize(new Dimension(180, 280));
-        setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        this.movie = movie; // Movie object
+        setLayout(new BorderLayout()); // Set layout manager
+        setPreferredSize(new Dimension(180, 280)); // Set preferred size
+        setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY)); // Set border
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // Set cursor to hand
 
         // Poster image
-        JLabel imageLabel = new JLabel();
-        imageLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel imageLabel = new JLabel(); // Set up image label
+        imageLabel.setHorizontalAlignment(SwingConstants.CENTER); // Center the image
 
         try {
-            if (movie.getImageUrl() != null && !movie.getImageUrl().isEmpty()) {
-                ImageIcon poster = new ImageIcon(new URL(movie.getImageUrl()));
-                Image scaled = poster.getImage().getScaledInstance(160, 220, Image.SCALE_SMOOTH);
-                imageLabel.setIcon(new ImageIcon(scaled));
+            if (movie.getImageUrl() != null && !movie.getImageUrl().isEmpty()) { // Check if image URL is not null or empty
+                ImageIcon poster = new ImageIcon(new URL(movie.getImageUrl())); // Create ImageIcon from URL
+                Image scaled = poster.getImage().getScaledInstance(160, 220, Image.SCALE_SMOOTH); // Scale the image
+                imageLabel.setIcon(new ImageIcon(scaled)); // Set the scaled image
             } else {
                 imageLabel.setText("No Image");
             }
@@ -42,7 +42,7 @@ public class MovieCardPanel extends JPanel {
             imageLabel.setText("Image Error");
         }
 
-        add(imageLabel, BorderLayout.CENTER);
+        add(imageLabel, BorderLayout.CENTER); // Add image label to center of card
 
         // Bottom panel with vertical layout
         JPanel bottomPanel = new JPanel();

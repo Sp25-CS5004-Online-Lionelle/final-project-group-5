@@ -140,6 +140,8 @@ public interface IView {
     void setRemoveAction(Consumer<Movie> removeAction);
 
     void addClearListener(ActionListener listener);
+
+    void setAddAction(Consumer<Movie> addAction);
 }
 
     
