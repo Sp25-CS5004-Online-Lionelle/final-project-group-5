@@ -75,6 +75,8 @@ import java.util.List;
         view.addAddMovieListener(e -> handleAddMovie(view.getSearchQuery()));
         view.addRemoveMovieListener(e -> handleResetMovieCollection());
         view.setRemoveAction(this::handleRemoveMovie);
+        view.setAddAction((Movie m) -> handleAddMovie(m));
+
 
 
         view.addAddAllListener(e -> {
@@ -241,4 +243,10 @@ Reference the program manual for additional help.
      public List<Movie> getResults() {
          return this.results;
      }
+
+     public void handleAddMovie(Movie movie) {
+        userList.add(movie);
+        view.viewMovieList(userList.getMovies());
+    }
+    
  }
