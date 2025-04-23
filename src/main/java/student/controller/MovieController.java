@@ -205,6 +205,7 @@ Reference the program manual for additional help.
 
      @Override
      public void handleResetMovieCollection() {
+         model.reset();
          results = model.getMovies();
          view.viewMovieCollection(results);
      }
